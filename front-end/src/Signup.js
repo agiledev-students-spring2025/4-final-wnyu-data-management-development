@@ -24,15 +24,15 @@ const Signup = () => {
         <form className="signup-box" onSubmit={handleSubmit}>
             <h3>Sign Up</h3>
 
-            {/** username */}
+            {/** Username */}
             <label className="input-label">Username</label>
             <input type="text" className="input-field" placeholder=""/>
 
-            {/** email */}
+            {/** Email */}
             <label className="input-label">Email</label>
             <input type="email" className="input-field" placeholder=""/>
 
-            {/** password */}
+            {/** Password */}
             <label className="input-label">Password</label>
             <input
             type="password"
@@ -43,7 +43,7 @@ const Signup = () => {
             required
             />
 
-            {/** confirm password */}
+            {/** Confirm Password */}
             <label className="input-label">Confirm Password</label>
             <input
             type="password"
@@ -54,15 +54,15 @@ const Signup = () => {
             required
             />
 
-            {/* error Message */}
+            {/* Error Message */}
             {error && <p className="error-message">{error}</p>}
 
-            {/* sign Up Button */}
+            {/* Sign Up Button */}
             <button type="submit" className="signup-button">
             Sign Up
             </button>
 
-            {/* already have an account? */}
+            {/* Already have an account? */}
             <div className="login-text">
             Already have an account? Login
             </div>

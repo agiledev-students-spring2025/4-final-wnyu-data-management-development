@@ -8,11 +8,11 @@ const Login = () => {
          <img src="/wnyu_logo2.png" alt="logo" className="logo"/>
 
          <div className="login-box">
-            {/** username */}
+            {/** Username */}
             <label className="input-label">Username</label>
             <input type="text" className="input-field" placeholder=""/>
 
-            {/** password */}
+            {/** Password */}
             <label className="input-label">Password</label>
             <input type="password" className="input-field" placeholder=""/>
 
