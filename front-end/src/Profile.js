@@ -1,15 +1,39 @@
-import React from 'react'
+import React from "react";
 
 const Profile = () => {
-  return (
-    /** Header */
-    /** Profile pic */
-    /** Firstname Lastname */
-    /** User/admin label */
-    /** email */
-    /** Log out button */
-    <div>Profile</div>
-  )
-}
+  // Example user data
+  const user = {
+    firstName: "John",
+    lastName: "Doe",
+    role: "Admin",
+    email: "johndoe@example.com",
+    profilePic: "/example-pic.png", 
+  };
 
-export default Profile
+  return (
+    <div className="profile-container">
+      {/* Header */}
+
+      {/* Profile Picture */}
+      <img src={user.profilePic} alt="Profile" className="profile-pic" />
+
+      {/* User Name */}
+      <h2 className="profile-name">
+        {user.firstName} {user.lastName}
+      </h2>
+
+      {/* User Role */}
+      <p className="profile-role">{user.role}</p>
+
+      {/* Email */}
+      <p className="profile-email">{user.email}</p>
+
+      {/* Log Out Button */}
+      <button className="logout-button">
+        Log Out
+      </button>
+    </div>
+  );
+};
+
+export default Profile;
