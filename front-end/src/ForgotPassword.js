@@ -18,6 +18,9 @@ const ForgotPassword = () => {
     <div className="forgot-password-container">
       {/* Header */}
 
+      {/* Logo */}
+      <img src="/wnyu_logo2.png" alt="logo" className="logo"/>
+
       {/* Forgot Password Label */}
       <h2 className="forgot-password-title">Forgot Password</h2>
 
