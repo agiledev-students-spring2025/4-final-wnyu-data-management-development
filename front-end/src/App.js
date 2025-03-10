@@ -7,6 +7,7 @@ import Login from './Login';
 import Signup from './Signup';
 import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
+import Footer from './Footer';
 
 const newlyAddedAlbums = [
   { id: 1, title: "Album 1", imageUrl: "/bitchesbrew.png" },
@@ -72,6 +73,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }
