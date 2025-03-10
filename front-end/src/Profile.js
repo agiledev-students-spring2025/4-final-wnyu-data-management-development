@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './Profile.css';
 
 const Profile = () => {
@@ -10,6 +11,8 @@ const Profile = () => {
     email: "johndoe@example.com",
     profilePic: "/example-pic.png", 
   };
+
+  const navigate = useNavigate()
 
   return (
     <div className="profile-container">
@@ -30,9 +33,7 @@ const Profile = () => {
       <p className="profile-email">{user.email}</p>
 
       {/* Log Out Button */}
-      <button className="logout-button">
-        Log Out
-      </button>
+      <button className="logout-button" onClick={() => navigate('/')}>Log Out </button>
     </div>
   );
 };

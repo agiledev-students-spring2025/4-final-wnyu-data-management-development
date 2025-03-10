@@ -64,7 +64,7 @@ const Signup = () => {
             <button className="signup-button" onClick={() => navigate('/profile')}>Sign Up</button>
 
             {/* Already have an account? */}
-            Already have an account? <Link to="/">Login</Link>
+            Already have an account? <Link to="/login">Login</Link>
         </form>
     </div>
   )
