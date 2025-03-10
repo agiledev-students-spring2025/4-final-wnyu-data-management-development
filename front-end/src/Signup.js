@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import './Signup.css';
 
 const Signup = () => {
   const [password, setPassword] = useState("");
@@ -13,7 +14,7 @@ const Signup = () => {
       setError("Passwords do not match!");
     } else {
       setError("");
-      alert("Account created successfully!"); // Replace with actual sign-up logic
+      alert("Account created successfully!"); 
     }
   };
     
