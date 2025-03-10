@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -58,14 +60,10 @@ const Signup = () => {
             {error && <p className="error-message">{error}</p>}
 
             {/* Sign Up Button */}
-            <button type="submit" className="signup-button">
-            Sign Up
-            </button>
+            <button className="signup-button" onClick={() => navigate('/profile')}>Sign Up</button>
 
             {/* Already have an account? */}
-            <div className="login-text">
-            Already have an account? Login
-            </div>
+            Already have an account? <Link to="/login">Login</Link>
         </form>
     </div>
   )

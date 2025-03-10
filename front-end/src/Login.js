@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate(); 
+
   return (
     <div className="login-contianer">
         {/** Header */}
@@ -17,10 +21,10 @@ const Login = () => {
             <input type="password" className="input-field" placeholder=""/>
 
             {/** Login button */}
-            <button className="login-button">Login</button>
+            <button className="login-button" onClick={() => navigate('/profile')}>Login</button>
 
             {/** Forgot password */}
-            <div className="forgot-password">
+            <div className="forgot-password" onClick={() => navigate('/forgot-password')}>
                 <p>Forgot password?</p>
             </div>
 
@@ -28,7 +32,7 @@ const Login = () => {
             <div className="signup-text">Don't have an account?</div>
 
             {/** Sign up button */}
-            <button className="signup-button">Sign Up</button>
+            <button className="signup-button" onClick={() => navigate('/signup')}>Sign Up</button>
          </div>
     </div>
   )

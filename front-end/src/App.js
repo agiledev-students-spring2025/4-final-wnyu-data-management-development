@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from './Header';
 import Home from './Home';
 import './App.css';
+import Login from './Login';
+import Signup from './Signup';
+import ForgotPassword from './ForgotPassword';
+import Profile from './Profile';
 
 const newlyAddedAlbums = [
   { id: 1, title: "Album 1", imageUrl: "/bitchesbrew.png" },
@@ -34,7 +38,7 @@ const staffFavorites = [
   { id: 24, title: "Staff Favorite 12", imageUrl: "/bitchesbrew.png" },
 ];
 
-function App() {
+const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
   const handleAlbumClick = (album) => {
@@ -44,7 +48,7 @@ function App() {
       setExpandedAlbum(album); // Expand the clicked album
     }
   };
-
+    
   return (
     <Router>
       <Header /> {/* Add the header here */}
@@ -62,6 +66,10 @@ function App() {
               />
             }
           />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>
