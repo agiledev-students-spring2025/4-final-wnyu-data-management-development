@@ -6,8 +6,6 @@ import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
 
 const App = () => {
-    const navigate = useNavigate(); 
-    
   return (
     <Router>
       <Routes>
