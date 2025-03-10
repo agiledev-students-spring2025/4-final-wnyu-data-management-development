@@ -1,0 +1,29 @@
+/* Wrapper for the whole page to center content */
+.centered-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px; /* Optional padding for spacing */
+    background-color: #f0f0f0; /* Background color for the page */
+  }
+  
+  /* Styling for the horizontal scrollable container */
+  .scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px;
+    gap: 10px; /* Space between album items */
+    width: 80%; /* Set the width for the slider, can be adjusted */
+    max-width: 100%; /* Prevent the container from overflowing */
+  }
+  
+  /* Each album item inside the slider */
+  .album-item {
+    flex: 0 0 auto; /* Prevents the items from growing or shrinking */
+    width: 200px; /* Width of each album item */
+    height: 300px; /* Height of each album item */
+    background: #ccc; /* Placeholder background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
