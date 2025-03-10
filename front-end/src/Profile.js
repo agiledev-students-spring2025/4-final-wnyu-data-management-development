@@ -11,7 +11,6 @@ const Profile = () => {
     email: "johndoe@example.com",
     profilePic: "/example-pic.png", 
   };
-
   const navigate = useNavigate()
 
   return (
