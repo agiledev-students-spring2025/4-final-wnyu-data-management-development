@@ -1,0 +1,69 @@
+/* Wrapper for the whole page to center content */
+.home-container {
+    display: flex;
+    flex-direction: column; /* Stack the sliders vertically */
+    align-items: center; /* Center them horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    padding: 20px;
+    background-color: #f0f0f0; /* Background color for the page */
+    min-height: 100vh; /* Ensure it fills the viewport */
+  }
+  
+  /* Title for each slider section */
+  .slider-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Wrapper for each slider section */
+  .slider-section {
+    margin-bottom: 40px; /* Adds space between the two sliders */
+    width: 100%; /* Ensures the sliders fill the container */
+    display: flex;
+    flex-direction: column; /* Stack the title and slider */
+    align-items: center; /* Center the slider inside this section */
+  }
+  
+  /* Styling for the horizontal scrollable container */
+  .scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px;
+    gap: 10px; /* Space between album items */
+    width: 80%; /* Set the width for the slider */
+    max-width: 100%; /* Prevent the container from overflowing */
+    justify-content: center; /* Center the items inside the slider */
+  }
+  
+  /* Each album item inside the slider */
+  .album-item {
+    flex: 0 0 auto; /* Prevents the items from growing or shrinking */
+    width: 200px; /* Width of each album item */
+    height: 300px; /* Height of each album item */
+    background: #ccc; /* Placeholder background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure the content doesn't leak out */
+    display: flex;
+    flex-direction: column; /* Align the image and text vertically */
+    justify-content: space-between; /* Space out the image and text */
+  }
+  
+  /* Ensure the image fits inside the album item */
+  .album-item img {
+    width: 100%; /* Make the image fill the album item horizontally */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container, may crop the image */
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .album-item h3 {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  
