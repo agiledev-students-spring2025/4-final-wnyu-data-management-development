@@ -11,8 +11,8 @@ const Footer = () => (
           pulvinar facilisis justo mollis, auctor consequat urna.
         </p>
         <div className="contact">
-          <span><i className="fas fa-phone"></i> &nbsp; 123-456-789</span>
-          <span><i className="fas fa-envelope"></i> &nbsp; info@wnyu.com</span>
+          <span><i className="fas fa-phone"></i> &nbsp; 123-456-7890</span>
+          <span><i className="fas fa-envelope"></i> &nbsp; email@nyu.edu</span>
         </div>
         <div className="socials">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
@@ -44,10 +44,6 @@ const Footer = () => (
           </button>
         </form>
       </div>
-    </div>
-
-    <div className="footer-bottom">
-      &copy; wnyu.com | Designed by Student
     </div>
   </footer>
 );
