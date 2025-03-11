@@ -63,12 +63,11 @@ function App() {
             path="/album/:id"
             element={<AlbumPage album={expandedAlbum} />}
           />
+          <Route
+            path="/Collection"
+            element={<Collection albums={newlyAddedAlbums} />}
+          />
         </Routes>
-        <Route
-          path="/Collection"
-          element={<Collection albums={newlyAddedAlbums} />}
-        />
-        <Footer />
       </div>
     </Router>
   );
