@@ -2,6 +2,7 @@ import React from 'react';
 
 const AlbumPage = ({ album }) => {
   if (!album) return <div>No album selected</div>;
+
   return (
     <div className="album-page">
       <img src={album.imageUrl} alt={album.title} className="album-photo" />

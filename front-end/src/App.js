@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './Header';
 import Home from './Home';
-import './App.css';
 import AlbumPage from './components/AlbumPage';
-
+import Footer from './components/Footer';
+import './App.css';
 
 const newlyAddedAlbums = [
   { id: 1, title: "Album 1", imageUrl: "/bitchesbrew.png" },
@@ -40,11 +40,6 @@ function App() {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
   const handleAlbumClick = (album) => {
-    // if (expandedAlbum && expandedAlbum.id === album.id) {
-    //   setExpandedAlbum(null); // Collapse if the same album is clicked again
-    // } else {
-    //   setExpandedAlbum(album); // Expand the clicked album
-    // }
     setExpandedAlbum(album);
   };
 
@@ -59,7 +54,6 @@ function App() {
               <Home
                 newlyAddedAlbums={newlyAddedAlbums}
                 staffFavorites={staffFavorites}
-                expandedAlbum={expandedAlbum}
                 onAlbumClick={handleAlbumClick}
               />
             }
@@ -69,6 +63,7 @@ function App() {
             element={<AlbumPage album={expandedAlbum} />}
           />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

@@ -1,21 +1,8 @@
 import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
-import { Link } from 'react-router-dom';
 
-const Home = ({ newlyAddedAlbums, staffFavorites, expandedAlbum, onAlbumClick }) => {
-  <div>
-    <h2>Newly Added Albums</h2>
-    <div className="albums">
-      {newlyAddedAlbums.map((album) => (
-        <Link to={`/album/${album.id}`} key={album.id} onClick={() => onAlbumClick(album)}>
-          <img src={album.imageUrl} alt={album.title} />
-          <p>{album.title}</p>
-        </Link>
-      ))}
-    </div>
-    {/* Repeat for staffFavorites if needed */}
-  </div>
-
+const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
 
@@ -24,7 +11,7 @@ const Home = ({ newlyAddedAlbums, staffFavorites, expandedAlbum, onAlbumClick })
     if (!scrollContainer) return;
     
     let scrollAmount = 1; // Pixels per frame
-    let scrollInterval; 
+    let scrollInterval;
 
     const scroll = () => {
       if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
@@ -57,10 +44,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites, expandedAlbum, onAlbumClick })
         <div className="scroll-container" ref={scrollRef1}>
           <div className="scroll-wrapper">
             {extendedNewlyAdded.map((album, index) => (
-              <div key={index} className="album-item">
-                <img src={album.imageUrl} alt={album.title} />
-                <h3>{album.title}</h3>
-              </div>
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+                <div className="album-item">
+                  <img src={album.imageUrl} alt={album.title} />
+                  <h3>{album.title}</h3>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -72,10 +61,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites, expandedAlbum, onAlbumClick })
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <div key={index} className="album-item">
-                <img src={album.imageUrl} alt={album.title} />
-                <h3>{album.title}</h3>
-              </div>
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+                <div className="album-item">
+                  <img src={album.imageUrl} alt={album.title} />
+                  <h3>{album.title}</h3>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
