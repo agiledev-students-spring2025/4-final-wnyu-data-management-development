@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AlbumPage = ({ album }) => {
-  if (!album) return <div>No album selected</div>;
+const AlbumPage = ({ album }) =>{
+  if(!album) return <div>No album selected</div>;
 
   return (
-    <div className="album-page">
-      <img src={album.imageUrl} alt={album.title} className="album-photo" />
+    <div className="album-page"> 
+      <img src={album.imageUrl} alt={album.title} className="album-photo"  style={{ width: '300px', height: 'auto' }} />
       <h1>{album.title}</h1>
       <p>Genre: {album.genre}</p>
       <p>Year: {album.year}</p>
