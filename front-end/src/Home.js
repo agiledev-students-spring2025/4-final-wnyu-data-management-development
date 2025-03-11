@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, {useRef, useEffect} from "react";
+import {Link} from "react-router-dom";
 import "./Home.css";
 
-const Home = ({ newlyAddedAlbums, staffFavorites }) => {
+const Home = ({newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
 
@@ -9,10 +10,10 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
   const startScrolling = (scrollContainer) => {
     if (!scrollContainer) return;
     
-    let scrollAmount = 1; // Pixels per frame
+    let scrollAmount = 1;
     let scrollInterval;
 
-    const scroll = () => {
+    const scroll = () =>{
       if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
         // Reset scroll when reaching the duplicate point
         scrollContainer.scrollLeft = 0;
@@ -21,7 +22,6 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
     };
 
     scrollInterval = setInterval(scroll, 20); // Smooth scrolling interval
-
     scrollContainer.addEventListener("mouseenter", () => clearInterval(scrollInterval)); // Pause on hover
     scrollContainer.addEventListener("mouseleave", () => (scrollInterval = setInterval(scroll, 20))); // Resume on leave
   };
@@ -34,7 +34,6 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
   // Duplicate albums to create seamless looping effect
   const extendedNewlyAdded = [...newlyAddedAlbums, ...newlyAddedAlbums];
   const extendedStaffFavorites = [...staffFavorites, ...staffFavorites];
-
   return (
     <div className="home-container">
       {/* Newly Added Section */}
@@ -43,10 +42,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
         <div className="scroll-container" ref={scrollRef1}>
           <div className="scroll-wrapper">
             {extendedNewlyAdded.map((album, index) => (
-              <div key={index} className="album-item">
-                <img src={album.imageUrl} alt={album.title} />
-                <h3>{album.title}</h3>
-              </div>
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+                <div className="album-item">
+                  <img src={album.imageUrl} alt={album.title} />
+                  <h3>{album.title}</h3>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -58,10 +59,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <div key={index} className="album-item">
-                <img src={album.imageUrl} alt={album.title} />
-                <h3>{album.title}</h3>
-              </div>
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+                <div className="album-item">
+                  <img src={album.imageUrl} alt={album.title} />
+                  <h3>{album.title}</h3>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
