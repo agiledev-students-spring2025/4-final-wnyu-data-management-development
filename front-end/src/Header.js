@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./Header.css"; 
 
-const Header = () => {
-  return (
+const Header = () =>{
+  return(
     <header className="header">
       <div className="logo">WNYU</div>
       <nav className="nav-menu">

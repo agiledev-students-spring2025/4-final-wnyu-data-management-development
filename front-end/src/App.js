@@ -60,7 +60,7 @@ function App() {
           />
           <Route
             path="/album/:id"
-            element={<AlbumPage album={expandedAlbum} />}
+            element={<AlbumPage album={expandedAlbum}/>}
           />
         </Routes>
         <Footer />

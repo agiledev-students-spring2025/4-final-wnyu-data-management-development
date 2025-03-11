@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => (
+const Footer = () =>(
   <footer>
     <p>© 2025 WNYU Data Management</p>
     <p>
@@ -12,3 +12,4 @@ const Footer = () => (
 );
 
 export default Footer;
+
