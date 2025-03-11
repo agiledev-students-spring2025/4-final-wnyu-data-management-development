@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from './Header';
-import Home from './Home';
-import AlbumPage from './components/AlbumPage';
-import Footer from './components/Footer';
-import './App.css';
+import Header from "./Header";
+import Home from "./Home";
+import Collection from "./Collection";
+import AlbumPage from "./components/AlbumPage";
+import Footer from "./components/Footer";
+import "./App.css";
 
 const newlyAddedAlbums = [
   { id: 1, title: "Album 1", imageUrl: "/bitchesbrew.png" },
@@ -60,9 +61,13 @@ function App() {
           />
           <Route
             path="/album/:id"
-            element={<AlbumPage album={expandedAlbum}/>}
+            element={<AlbumPage album={expandedAlbum} />}
           />
         </Routes>
+        <Route
+          path="/Collection"
+          element={<Collection albums={newlyAddedAlbums} />}
+        />
         <Footer />
       </div>
     </Router>

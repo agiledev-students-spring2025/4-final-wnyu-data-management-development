@@ -1,0 +1,37 @@
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  justify-content: center;
+}
+
+.album-item {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.album-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.album-info {
+  margin-top: 10px;
+}
+
+.album-title {
+  font-weight: bold;
+}
+
+.artist-name {
+  font-style: italic;
+  color: gray;
+}
