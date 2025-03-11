@@ -40,29 +40,33 @@ function App() {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
   const handleAlbumClick = (album) => {
-    if (expandedAlbum && expandedAlbum.id === album.id) {
-      setExpandedAlbum(null); // Collapse if the same album is clicked again
-    } else {
-      setExpandedAlbum(album); // Expand the clicked album
-    }
+    // if (expandedAlbum && expandedAlbum.id === album.id) {
+    //   setExpandedAlbum(null); // Collapse if the same album is clicked again
+    // } else {
+    //   setExpandedAlbum(album); // Expand the clicked album
+    // }
+    setExpandedAlbum(album);
   };
 
   return (
     <Router>
-      <Header /> {/* Add the header here */}
+      <Header />
       <div className="App">
         <Routes>
-          {/* Wrap Home inside Route and use element prop */}
           <Route
             path="/"
             element={
               <Home
-              newlyAddedAlbums={newlyAddedAlbums}
-              staffFavorites={staffFavorites}
-              expandedAlbum={expandedAlbum}
-              onAlbumClick={handleAlbumClick}
+                newlyAddedAlbums={newlyAddedAlbums}
+                staffFavorites={staffFavorites}
+                expandedAlbum={expandedAlbum}
+                onAlbumClick={handleAlbumClick}
               />
             }
+          />
+          <Route
+            path="/album/:id"
+            element={<AlbumPage album={expandedAlbum} />}
           />
         </Routes>
       </div>
