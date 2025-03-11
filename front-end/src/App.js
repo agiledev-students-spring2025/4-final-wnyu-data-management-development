@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from './Header';
 import Home from './Home';
 import './App.css';
+import AlbumPage from './components/AlbumPage';
+
 
 const newlyAddedAlbums = [
   { id: 1, title: "Album 1", imageUrl: "/bitchesbrew.png" },
