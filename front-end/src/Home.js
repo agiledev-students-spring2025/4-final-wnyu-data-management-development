@@ -5,31 +5,44 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
 
-  // Function to start infinite scrolling
-  const startScrolling = (scrollContainer) => {
-    if (!scrollContainer) return;
-    
-    let scrollAmount = 1; // Pixels per frame
-    let scrollInterval;
+  // Custom Hook for Infinite Scrolling with Pause on Hover
+  const useInfiniteScroll = (scrollRef) => {
+    useEffect(() => {
+      const scrollContainer = scrollRef.current;
+      if (!scrollContainer) return;
 
-    const scroll = () => {
-      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-        // Reset scroll when reaching the duplicate point
-        scrollContainer.scrollLeft = 0;
-      }
-      scrollContainer.scrollLeft += scrollAmount; // Move right
-    };
+      let scrollAmount = 0.5; // Speed of scrolling
+      let scrollInterval;
 
-    scrollInterval = setInterval(scroll, 20); // Smooth scrolling interval
+      const startScrolling = () => {
+        scrollInterval = setInterval(() => {
+          if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+            scrollContainer.scrollLeft = 0; // Reset for infinite loop
+          }
+          scrollContainer.scrollLeft += scrollAmount;
+        }, 25);
+      };
 
-    scrollContainer.addEventListener("mouseenter", () => clearInterval(scrollInterval)); // Pause on hover
-    scrollContainer.addEventListener("mouseleave", () => (scrollInterval = setInterval(scroll, 20))); // Resume on leave
+      const stopScrolling = () => clearInterval(scrollInterval);
+
+      // Start scrolling on load
+      startScrolling();
+
+      // Pause when hovered, resume on leave
+      scrollContainer.addEventListener("mouseenter", stopScrolling);
+      scrollContainer.addEventListener("mouseleave", startScrolling);
+
+      return () => {
+        clearInterval(scrollInterval);
+        scrollContainer.removeEventListener("mouseenter", stopScrolling);
+        scrollContainer.removeEventListener("mouseleave", startScrolling);
+      };
+    }, []);
   };
 
-  useEffect(() => {
-    startScrolling(scrollRef1.current);
-    startScrolling(scrollRef2.current);
-  }, []);
+  // Apply the scrolling effect to both album sections
+  useInfiniteScroll(scrollRef1);
+  useInfiniteScroll(scrollRef2);
 
   // Duplicate albums to create seamless looping effect
   const extendedNewlyAdded = [...newlyAddedAlbums, ...newlyAddedAlbums];

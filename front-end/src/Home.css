@@ -15,6 +15,8 @@
     font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
 }
 
 /* Wrapper for each slider */
@@ -30,11 +32,12 @@
     position: relative;
     width: 80%;
     max-width: 900px;
-    overflow-x: hidden;
+    overflow: hidden;
     white-space: nowrap;
     padding: 10px 0;
     display: flex;
     flex-direction: row;
+    user-select: none;
 }
 
 /* Scroll wrapper for infinite loop */
@@ -43,6 +46,17 @@
     gap: 15px;
     flex-wrap: nowrap;
     width: fit-content;
+    transition: transform 0.1s linear;
+}
+
+/* Hide scrollbar while allowing manual scrolling */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Album items */
@@ -57,6 +71,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 /* Album image */
