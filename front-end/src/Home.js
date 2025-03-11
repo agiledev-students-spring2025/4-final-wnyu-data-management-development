@@ -2,8 +2,20 @@ import React, { useRef, useEffect } from "react";
 import "./Home.css";
 import { Link } from 'react-router-dom';
 
+const Home = ({ newlyAddedAlbums, staffFavorites, expandedAlbum, onAlbumClick }) => {
+  <div>
+    <h2>Newly Added Albums</h2>
+    <div className="albums">
+      {newlyAddedAlbums.map((album) => (
+        <Link to={`/album/${album.id}`} key={album.id} onClick={() => onAlbumClick(album)}>
+          <img src={album.imageUrl} alt={album.title} />
+          <p>{album.title}</p>
+        </Link>
+      ))}
+    </div>
+    {/* Repeat for staffFavorites if needed */}
+  </div>
 
-const Home = ({ newlyAddedAlbums, staffFavorites }) => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
 
