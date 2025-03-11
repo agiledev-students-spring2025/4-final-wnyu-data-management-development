@@ -10,7 +10,7 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
     if (!scrollContainer) return;
     
     let scrollAmount = 1; // Pixels per frame
-    let scrollInterval;
+    let scrollInterval; 
 
     const scroll = () => {
       if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
