@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
 import Collection from "./Collection";
+import Contacts from "./Contacts";
 import AlbumPage from "./components/AlbumPage";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -37,6 +38,14 @@ const staffFavorites = [
   { id: 24, title: "Staff Favorite 12", imageUrl: "/bitchesbrew.png" },
 ];
 
+const staffContacts = [
+  {id: 1, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 2, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 3, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 4, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 5, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+];
+
 function App() {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
@@ -66,6 +75,10 @@ function App() {
           <Route
             path="/Collection"
             element={<Collection albums={newlyAddedAlbums} />}
+          />
+          <Route
+            path="/Contacts"
+            element={<Contacts contacts={staffContacts} />}
           />
         </Routes>
       </div>
