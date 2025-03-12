@@ -7,7 +7,10 @@ import Login from './Login';
 import Signup from './Signup';
 import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
-import Footer from './Footer';
+import Collection from "./Collection";
+import AlbumPage from "./components/AlbumPage";
+import Footer from "./components/Footer";
+import "./App.css";
 
 const newlyAddedAlbums = [
   { id: 1, title: "Album 1", imageUrl: "/bitchesbrew.png" },
@@ -43,27 +46,21 @@ const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
   const handleAlbumClick = (album) => {
-    if (expandedAlbum && expandedAlbum.id === album.id) {
-      setExpandedAlbum(null); // Collapse if the same album is clicked again
-    } else {
-      setExpandedAlbum(album); // Expand the clicked album
-    }
+    setExpandedAlbum(album);
   };
     
   return (
     <Router>
-      <Header /> {/* Add the header here */}
+      <Header />
       <div className="App">
         <Routes>
-          {/* Wrap Home inside Route and use element prop */}
           <Route
             path="/"
             element={
               <Home
-              newlyAddedAlbums={newlyAddedAlbums}
-              staffFavorites={staffFavorites}
-              expandedAlbum={expandedAlbum}
-              onAlbumClick={handleAlbumClick}
+                newlyAddedAlbums={newlyAddedAlbums}
+                staffFavorites={staffFavorites}
+                onAlbumClick={handleAlbumClick}
               />
             }
           />
@@ -71,6 +68,14 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
+          <Route
+            path="/album/:id"
+            element={<AlbumPage album={expandedAlbum} />}
+          />
+          <Route
+            path="/Collection"
+            element={<Collection albums={newlyAddedAlbums} />}
+          />
         </Routes>
       </div>
     </Router>
