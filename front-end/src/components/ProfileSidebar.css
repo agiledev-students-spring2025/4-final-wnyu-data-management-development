@@ -1,0 +1,44 @@
+.profile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden initially */
+    width: 200px;
+    height: 100vh;
+    background: #333;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .profile-sidebar.open {
+    right: 0; /* Slide in when open */
+  }
+  
+  .profile-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-sidebar li {
+    margin: 20px 0;
+  }
+  
+  .profile-sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .profile-sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Profile Container */
+  .profile-container {
+    position: relative;
+  }
+  
