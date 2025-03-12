@@ -37,7 +37,7 @@ const Home = ({ newlyAddedAlbums, staffFavorites }) => {
         scrollContainer.removeEventListener("mouseenter", stopScrolling);
         scrollContainer.removeEventListener("mouseleave", startScrolling);
       };
-    }, []);
+    }, [scrollRef]);
   };
 
   // Apply the scrolling effect to both album sections
