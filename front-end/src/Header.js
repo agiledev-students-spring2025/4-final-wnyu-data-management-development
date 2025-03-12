@@ -4,6 +4,7 @@ import "./Header.css";
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [allowHover, setAllowHover] = useState(true); // Controls hover behavior

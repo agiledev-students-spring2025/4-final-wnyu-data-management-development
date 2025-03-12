@@ -8,8 +8,6 @@ const Login = () => {
   return (
     <div className="login-contianer">
         {/** Header */}
-         {/** Logo */}
-         <img src="/wnyu_logo2.png" alt="logo" className="logo"/>
 
          <div className="login-box">
             {/** Username */}

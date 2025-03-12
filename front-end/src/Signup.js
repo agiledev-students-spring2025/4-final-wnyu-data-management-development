@@ -21,8 +21,6 @@ const Signup = () => {
   return (
     <div className="signup-container">
         {/** Header */}
-        {/** Logo */}
-        <img src="/wnyu_logo2.png" alt="logo" className="logo"/>
 
         <form className="signup-box" onSubmit={handleSubmit}>
             <h3>Sign Up</h3>
