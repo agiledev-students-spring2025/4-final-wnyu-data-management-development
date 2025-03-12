@@ -1,9 +1,7 @@
-import React from "react";
 import {Link} from "react-router-dom";
+import React, { useState } from "react";
 import "./Header.css"; 
-import { useState } from "react";
 import Sidebar from "./components/Sidebar";
-
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -8,6 +8,7 @@ import Signup from './Signup';
 import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
 import Collection from "./Collection";
+import Contacts from "./Contacts";
 import AlbumPage from "./components/AlbumPage";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -40,6 +41,14 @@ const staffFavorites = [
   { id: 22, title: "Staff Favorite 10", imageUrl: "/bitchesbrew.png" },
   { id: 23, title: "Staff Favorite 11", imageUrl: "/bitchesbrew.png" },
   { id: 24, title: "Staff Favorite 12", imageUrl: "/bitchesbrew.png" },
+];
+
+const staffContacts = [
+  {id: 1, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 2, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 3, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 4, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 5, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
 ];
 
 const App = () => {
@@ -75,6 +84,10 @@ const App = () => {
           <Route
             path="/Collection"
             element={<Collection albums={newlyAddedAlbums} />}
+          />
+          <Route
+            path="/Contacts"
+            element={<Contacts contacts={staffContacts} />}
           />
         </Routes>
       </div>
