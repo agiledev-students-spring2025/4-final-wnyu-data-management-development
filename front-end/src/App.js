@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Header from './Header';
+import Header from './components/Header';
 import Home from './Home';
 import './App.css';
 import Login from './Login';
@@ -8,7 +8,7 @@ import Signup from './Signup';
 import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
 import Collection from "./Collection";
-import AlbumPage from "./components/AlbumPage";
+import AlbumPage from "./AlbumPage";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -48,35 +48,37 @@ const App = () => {
   const handleAlbumClick = (album) => {
     setExpandedAlbum(album);
   };
-    
+
   return (
     <Router>
-      <Header />
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                newlyAddedAlbums={newlyAddedAlbums}
-                staffFavorites={staffFavorites}
-                onAlbumClick={handleAlbumClick}
-              />
-            }
-          />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route
-            path="/album/:id"
-            element={<AlbumPage album={expandedAlbum} />}
-          />
-          <Route
-            path="/Collection"
-            element={<Collection albums={newlyAddedAlbums} />}
-          />
-        </Routes>
+      <div className="app-container">
+        <Header />
+        <div className="main-content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  newlyAddedAlbums={newlyAddedAlbums}
+                  staffFavorites={staffFavorites}
+                  onAlbumClick={handleAlbumClick}
+                />
+              }
+            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route
+              path="/album/:id"
+              element={<AlbumPage album={expandedAlbum} />}
+            />
+            <Route
+              path="/Collection"
+              element={<Collection albums={newlyAddedAlbums} />}
+            />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
