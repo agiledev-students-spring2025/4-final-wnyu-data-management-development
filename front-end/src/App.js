@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Header";
-import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Header from './Header';
+import Home from './Home';
+import './App.css';
+import Login from './Login';
+import Signup from './Signup';
+import ForgotPassword from './ForgotPassword';
+import Profile from './Profile';
 import Collection from "./Collection";
 import AlbumPage from "./components/AlbumPage";
 import Footer from "./components/Footer";
@@ -37,13 +42,13 @@ const staffFavorites = [
   { id: 24, title: "Staff Favorite 12", imageUrl: "/bitchesbrew.png" },
 ];
 
-function App() {
+const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
   const handleAlbumClick = (album) => {
     setExpandedAlbum(album);
   };
-
+    
   return (
     <Router>
       <Header />
@@ -59,6 +64,10 @@ function App() {
               />
             }
           />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/profile" element={<Profile />} />
           <Route
             path="/album/:id"
             element={<AlbumPage album={expandedAlbum} />}

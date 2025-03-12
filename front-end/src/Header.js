@@ -1,24 +1,29 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import "./Header.css"; 
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
+import { useState } from "react";
+import Sidebar from "./components/Sidebar";
 
-const Header = () =>{
-  return(
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [allowHover, setAllowHover] = useState(true); // Controls hover behavior
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   const handleMenuClick = () => {
     setIsMenuOpen(true); // Show back arrow
     setAllowHover(false); // Disable hover until mouse leaves and re-enters
+    toggleSidebar();
   };
 
   const handleBackClick = () => {
     setIsMenuOpen(false); // Switch back to menu
     setAllowHover(false); // Prevent hover until mouse leaves and re-enters
+    toggleSidebar();
   };
 
   const handleMouseEnter = () => {
@@ -53,7 +58,12 @@ const Header = () => {
       </Link>
 
       {/* Profile Icon */}
-      <img src="/profile.png" alt="Profile" className="profile" />
+      <Link to="/login">
+        <img src="/profile.png" alt="Profile" className="profile" />
+      </Link>
+
+      {/* Sidebar Component */}
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </header>
   );
 };
