@@ -9,6 +9,7 @@ import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
 import Collection from "./Collection";
 import AlbumPage from "./AlbumPage";
+import Contacts from "./Contacts";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -42,6 +43,14 @@ const staffFavorites = [
   { id: 24, title: "Staff Favorite 12", imageUrl: "/bitchesbrew.png" },
 ];
 
+const staffContacts = [
+  {id: 1, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 2, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 3, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 4, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 5, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+];
+
 const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
@@ -51,7 +60,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="app-container">
+<div className="app-container">
         <Header />
         <div className="main-content">
           <Routes>
@@ -76,6 +85,10 @@ const App = () => {
             <Route
               path="/Collection"
               element={<Collection albums={newlyAddedAlbums} />}
+            />
+            <Route
+              path="/Contacts"
+              element={<Contacts contacts={staffContacts} />}
             />
           </Routes>
         </div>
