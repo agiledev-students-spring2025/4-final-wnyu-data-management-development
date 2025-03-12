@@ -1,7 +1,12 @@
+import React from "react";
+import {Link} from "react-router-dom";
+import "./Header.css"; 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
+const Header = () =>{
+  return(
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [allowHover, setAllowHover] = useState(true); // Controls hover behavior
@@ -54,3 +59,4 @@ const Header = () => {
 };
 
 export default Header;
+

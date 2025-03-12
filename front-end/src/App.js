@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Header from './Header';
-import Home from './Home';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import Home from "./Home";
+import Collection from "./Collection";
+import AlbumPage from "./components/AlbumPage";
+import Footer from "./components/Footer";
+import "./App.css";
 
 const newlyAddedAlbums = [
   { id: 1, title: "Album 1", imageUrl: "/bitchesbrew.png" },
@@ -38,29 +41,31 @@ function App() {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
 
   const handleAlbumClick = (album) => {
-    if (expandedAlbum && expandedAlbum.id === album.id) {
-      setExpandedAlbum(null); // Collapse if the same album is clicked again
-    } else {
-      setExpandedAlbum(album); // Expand the clicked album
-    }
+    setExpandedAlbum(album);
   };
 
   return (
     <Router>
-      <Header /> {/* Add the header here */}
+      <Header />
       <div className="App">
         <Routes>
-          {/* Wrap Home inside Route and use element prop */}
           <Route
             path="/"
             element={
               <Home
-              newlyAddedAlbums={newlyAddedAlbums}
-              staffFavorites={staffFavorites}
-              expandedAlbum={expandedAlbum}
-              onAlbumClick={handleAlbumClick}
+                newlyAddedAlbums={newlyAddedAlbums}
+                staffFavorites={staffFavorites}
+                onAlbumClick={handleAlbumClick}
               />
             }
+          />
+          <Route
+            path="/album/:id"
+            element={<AlbumPage album={expandedAlbum} />}
+          />
+          <Route
+            path="/Collection"
+            element={<Collection albums={newlyAddedAlbums} />}
           />
         </Routes>
       </div>

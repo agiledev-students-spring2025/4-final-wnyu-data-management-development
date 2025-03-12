@@ -15,7 +15,7 @@ const HorizontalScroll = ({ albums, expandedAlbum, onAlbumClick }) => {
               <p>{expandedAlbum.description}</p>
               <img src={expandedAlbum.imageUrl} alt={expandedAlbum.title} />
             </div>
-          )}
+          )} 
         </div>
       ))}
     </div>
