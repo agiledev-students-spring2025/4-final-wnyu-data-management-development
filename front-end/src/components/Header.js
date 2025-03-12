@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Sidebar from "./Sidebar"; // Import Sidebar
+import Sidebar from "./Sidebar"; 
 import "./Header.css";
 import "./Sidebar.css";
 
@@ -48,7 +48,9 @@ const Header = () => {
           </div>
         </Link>
 
-        <img src="/profile.png" alt="Profile" className="profile" />
+        <Link to="/login">
+                <img src="/profile.png" alt="Profile" className="profile" />
+        </Link>
       </header>
     </>
   );
