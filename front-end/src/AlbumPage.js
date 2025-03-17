@@ -1,4 +1,5 @@
 import React from 'react';
+import "./AlbumPage.css";
 
 const AlbumPage = ({ album }) =>{
   if(!album) return <div>No album selected</div>;
