@@ -10,6 +10,7 @@ import Profile from './Profile';
 import Collection from "./Collection";
 import AlbumPage from "./AlbumPage";
 import Contacts from "./Contacts";
+import Contact from "./Contact";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -44,19 +45,34 @@ const staffFavorites = [
 ];
 
 const staffContacts = [
-  {id: 1, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
-  {id: 2, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
-  {id: 3, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
-  {id: 4, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
-  {id: 5, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png"},
+  {id: 1, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 2, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 3, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 4, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 5, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 6, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 7, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 8, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 9, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 10, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 11, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 12, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 13, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 14, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
+  {id: 15, name: "Staff Member", title: "admin", email: "abc123@nyu.edu", phone: "012-345-6789", photoURL: "/profile.png", bio: "My name is and I was born in"},
 ];
 
 const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
+  const [selectedContact, setSelectedContact] = useState(null);
 
   const handleAlbumClick = (album) => {
     setExpandedAlbum(album);
   };
+
+  const handleContactClick = (contact) => {
+    setSelectedContact(contact);
+  }
 
   return (
     <Router>
@@ -88,7 +104,11 @@ const App = () => {
             />
             <Route
               path="/Contacts"
-              element={<Contacts contacts={staffContacts} />}
+              element={<Contacts contacts={staffContacts} onContactClick={handleContactClick} />}
+            />
+            <Route
+              path="/contact/:id"
+              element={<Contact contact={selectedContact} />}
             />
           </Routes>
         </div>
