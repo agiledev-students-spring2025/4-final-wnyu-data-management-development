@@ -1,37 +1,80 @@
 .home-container {
   padding: 20px;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 10px;
+  width: 100%;
+  max-width: 800px;
   justify-content: center;
 }
 
 .album-item {
   background: #f5f5f5;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 150px;
 }
 
 .album-image {
   width: 100%;
+  max-width: 130px;
   height: auto;
   border-radius: 8px;
 }
 
 .album-info {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .album-title {
   font-weight: bold;
+  font-size: 14px;
 }
 
 .artist-name {
   font-style: italic;
   color: gray;
+  font-size: 12px;
+}
+
+/* Mobile: Default to 2 columns */
+@media (max-width: 600px) {
+  .album-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+}
+
+/* Tablets: 3 columns */
+@media (min-width: 601px) and (max-width: 900px) {
+  .album-grid {
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+  }
+}
+
+/* Larger Screens: 4 columns */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .album-grid {
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+  }
+}
+
+/* Extra Large Screens: 5+ columns */
+@media (min-width: 1201px) {
+  .album-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
 }
