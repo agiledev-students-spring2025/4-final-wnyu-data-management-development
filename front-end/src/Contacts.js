@@ -5,7 +5,10 @@ import "./Contacts.css";
 const Contacts = ({ contacts = [], onContactClick }) => {
     return (
         <div className="contacts-container">
-            <h2>Contacts</h2>
+            <div className="contacts-header">
+                <h2>Contacts</h2>
+                <Link to="/AddContact" className="add-contact-button">Add Contact</Link>
+            </div>
             <div className="contacts-grid">
                 {contacts.map((contact, index) => (
                     <div key={contact.id} className="contact-card">

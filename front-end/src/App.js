@@ -11,6 +11,7 @@ import Collection from "./Collection";
 import AlbumPage from "./AlbumPage";
 import Contacts from "./Contacts";
 import Contact from "./Contact";
+import AddContact from "./AddContact";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -106,6 +107,7 @@ const App = () => {
               path="/contact/:id"
               element={<Contact contact={selectedContact} />}
             />
+            <Route path="/AddContact" element={<AddContact />} />
           </Routes>
         </div>
       </div>

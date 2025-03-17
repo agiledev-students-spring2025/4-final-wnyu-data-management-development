@@ -6,6 +6,27 @@
     max-width: 1200px;
     display: flex;
     flex-direction: column;
+    padding-top: 1500px;
+}
+
+.contacts-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-contact-button {
+    padding: 6px 10px;
+    background-color: #d3d3d3;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-contact-button:hover {
+    transform: scale(1.05);
 }
 
 .contacts-grid {
@@ -51,5 +72,9 @@
 @media (max-width: 768px) {
     .contacts-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contacts-container {
+        padding-top: 3200px;
     }
 }
