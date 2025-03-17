@@ -63,7 +63,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
               >
                 <div className="album-item">
                   <img src={album.imageUrl} alt={album.title} />
-                  <h3>{album.title}</h3>
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
+                    <p className="album-genre">{album.genre}</p>
+                    <p className="album-format">{album.format}</p>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -84,7 +89,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
               >
                 <div className="album-item">
                   <img src={album.imageUrl} alt={album.title} />
-                  <h3>{album.title}</h3>
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
+                    <p className="album-genre">{album.genre}</p>
+                    <p className="album-format">{album.format}</p>
+                  </div>
                 </div>
               </Link>
             ))}
