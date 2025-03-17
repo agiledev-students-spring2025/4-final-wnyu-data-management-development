@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: flex-start;
     overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
 }
 
 /* Title for each section */
