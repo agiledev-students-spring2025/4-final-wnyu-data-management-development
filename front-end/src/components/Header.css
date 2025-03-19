@@ -139,27 +139,77 @@
     }
 }
   
-@media (max-width: 480px) {
+@media (max-width: 430px) {
+    html, body {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
     .header {
-      height: 65px;
-      padding: 8px 15px;
+      height: 90px;
+      width: 100vw;
+      box-sizing: border-box; 
+      padding: 8px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      border-bottom: 1px solid black;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .logo-container {
+      width: 75px;
+      height: auto;
+      position: absolute;
+      left: 27%;
     }
   
     .logo {
-      width: 65px;
-      max-height: 45px;
+      width: 75px;
+      height: auto;
     }
   
+    .stacked-text {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      text-align: center;
+      display: flex;
+      align-items: flex-start;
+    }
+
     .stacked-text h1 {
       font-size: 18px;
+      align-items: flex-start;
+      align-items: left;
     }
   
     .stacked-text h2 {
-      font-size: 10px;
+      font-size: 12px;
+      white-space: nowrap
+    }
+
+    .logo-container {
+      transition: transform 0.3s ease;
     }
   
-    .menu,
+    .logo-container:active {
+      transform: none; 
+    }
+  
+    .menu {
+      width: 30px;
+      padding-left: 15px;
+    }
+
     .profile {
       width: 30px;
+      padding-right: 15px;
     }
 }

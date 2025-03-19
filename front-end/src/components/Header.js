@@ -43,7 +43,7 @@ const Header = () => {
         <Link to="/" className="logo-container">
           <img src="/wnyu_logo2.png" alt="WNYU Logo" className="logo" />
           <div className="stacked-text">
-            <h1>Archive</h1>
+            <h1>Cache</h1>
             <h2>WNYU's stored media</h2>
           </div>
         </Link>

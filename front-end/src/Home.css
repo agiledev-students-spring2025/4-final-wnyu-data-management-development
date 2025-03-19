@@ -2,7 +2,7 @@
     width: 100vw;
     max-width: 100vw;
     padding: 20px;
-    padding-top: 400px;
+    margin-top: 50px;
     background-color: white;
     min-height: 100vh;
     display: flex;
@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: flex-start;
     overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
 }
 
 /* Title for each section */
@@ -51,6 +53,7 @@
     flex-wrap: nowrap;
     width: fit-content;
     transition: transform 0.1s linear;
+    text-decoration: none;
 }
 
 /* Hide scrollbar while allowing manual scrolling */
@@ -67,31 +70,59 @@
 .album-item {
     flex: 0 0 auto;
     width: 200px;
-    height: 300px;
-    background: #ccc;
+    height: 320px;
+    background: #f8f8f8;
+    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     cursor: pointer; 
-    border: 1px solid black;
+    transition: transform 0.2s ease-in-out;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
 }
 
-/* Album image */
+.album-item:hover {
+    transform: scale(1.05);
+}
+
 .album-item img {
     width: 100%;
-    height: auto;
+    height: 150px;
     object-fit: cover;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid black;
 }
 
-/* Album title */
-.album-item h3 {
+.album-details {
     padding: 10px;
-    text-align: center;
-    margin: 0;
-    background-color: #fff;
+    background: white;
+}
+
+.album-title {
     font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: black;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+
+.album-artist,
+.album-genre,
+.album-format {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0;
+}
+
+.album-item a,
+.album-item a:visited,
+.album-item a:hover,
+.album-item a:active {
+    text-decoration: none;
+    color: inherit;
 }
