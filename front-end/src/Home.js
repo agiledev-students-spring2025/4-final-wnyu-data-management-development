@@ -6,30 +6,30 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
 
-  // Custom Hook for Infinite Scrolling with Pause on Hover
   const useInfiniteScroll = (scrollRef) => {
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
 
-      let scrollAmount = 0.5; // Speed of scrolling
-      let scrollInterval;
+      let scrollAmount = 0.5;
+      let scrollInterval = null;
 
       const startScrolling = () => {
+        if (scrollInterval) clearInterval(scrollInterval); // Prevent multiple intervals
         scrollInterval = setInterval(() => {
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-            scrollContainer.scrollLeft = 0; // Reset for infinite loop
+            scrollContainer.scrollLeft = 0;
           }
           scrollContainer.scrollLeft += scrollAmount;
         }, 25);
       };
 
-      const stopScrolling = () => clearInterval(scrollInterval);
+      const stopScrolling = () => {
+        if (scrollInterval) clearInterval(scrollInterval);
+      };
 
-      // Start scrolling on load
       startScrolling();
 
-      // Pause when hovered, resume on leave
       scrollContainer.addEventListener("mouseenter", stopScrolling);
       scrollContainer.addEventListener("mouseleave", startScrolling);
 
@@ -41,13 +41,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
     }, [scrollRef]);
   };
 
-  // Apply the scrolling effect to both album sections
   useInfiniteScroll(scrollRef1);
   useInfiniteScroll(scrollRef2);
 
-  // Duplicate albums to create seamless looping effect
   const extendedNewlyAdded = [...newlyAddedAlbums, ...newlyAddedAlbums];
   const extendedStaffFavorites = [...staffFavorites, ...staffFavorites];
+
   return (
     <div className="home-container">
       {/* Newly Added Section */}
@@ -56,11 +55,7 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
         <div className="scroll-container" ref={scrollRef1}>
           <div className="scroll-wrapper">
             {extendedNewlyAdded.map((album, index) => (
-              <Link
-                to={`/album/${album.id}`}
-                key={index}
-                onClick={() => onAlbumClick(album)}
-              >
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <img src={album.imageUrl} alt={album.title} />
                   <div className="album-details">
@@ -82,11 +77,7 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <Link
-                to={`/album/${album.id}`}
-                key={index}
-                onClick={() => onAlbumClick(album)}
-              >
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <img src={album.imageUrl} alt={album.title} />
                   <div className="album-details">
