@@ -5,8 +5,7 @@ import './Profile.css';
 const Profile = () => {
   // Example user data
   const user = {
-    firstName: "John",
-    lastName: "Doe",
+    userName: "admin123",
     role: "Admin",
     email: "johndoe@example.com",
     profilePic: "/example-pic.png", 
