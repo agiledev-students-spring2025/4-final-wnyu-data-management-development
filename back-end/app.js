@@ -1,14 +1,10 @@
-import express from 'express';
+import express from "express";
 
 const app = express();
+app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the WNYU Archives');
+app.get("/", (req, res) => {
+  res.send("Welcome to the WNYU Archives");
 });
 
-
-
-console.log("Starting server...");
-app.listen(process.env.PORT ?? 8080, () => {
-    console.log("Server running on port", process.env.PORT ?? 8080);
-});
+export default app;
