@@ -1,13 +1,13 @@
 import chai from "chai";
 import chaiHttp from "chai-http";
-import app from "../app.js";
+import app from "../app.js"; // Ensure this path correctly points to your app.js
 
 chai.use(chaiHttp);
 const { expect } = chai;
 
 describe("Album Routes", () => {
   it("should get all albums", (done) => {
-    chai.request(server)
+    chai.request(app)
       .get("/albums")
       .end((err, res) => {
         expect(res).to.have.status(200);
@@ -17,7 +17,7 @@ describe("Album Routes", () => {
   });
 
   it("should get a single album by ID", (done) => {
-    chai.request(server)
+    chai.request(app)
       .get("/albums/1")
       .end((err, res) => {
         expect(res).to.have.status(200);
@@ -35,11 +35,11 @@ describe("Album Routes", () => {
       genre: "Pop",
       format: "CD"
     };
-    chai.request(server)
+    chai.request(app)
       .post("/albums")
       .send(newAlbum)
       .end((err, res) => {
-        expect(res).to.have.status(201);
+        expect(res).to have.status(201);
         expect(res.body).to.be.an("object");
         expect(res.body).to.have.property("title", newAlbum.title);
         done();
@@ -54,7 +54,7 @@ describe("Album Routes", () => {
       genre: "Rock",
       format: "Vinyl"
     };
-    chai.request(server)
+    chai.request(app)
       .put("/albums/1")
       .send(updatedAlbum)
       .end((err, res) => {
@@ -66,7 +66,7 @@ describe("Album Routes", () => {
   });
 
   it("should delete an album", (done) => {
-    chai.request(server)
+    chai.request(app)
       .delete("/albums/1")
       .end((err, res) => {
         expect(res).to.have.status(200);
