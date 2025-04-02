@@ -17,7 +17,16 @@ const loadUsers = () => {
       console.error("Error reading users.json:", error);
       return []; // Return an empty array if the file is missing
     }
-  };
+};
+
+// Save users to the JSON file
+const saveUsers = (users) => {
+    try {
+        fs.writeFileSync('./users.json', JSON.stringify(users, null, 2), 'utf-8');
+    } catch (error) {
+        console.error("Error saving users.json:", error);
+    }
+};
 
 // Login Route
 app.post('/login', (req, res) => {
@@ -42,17 +51,27 @@ app.post('/login', (req, res) => {
 
 // Signup Route
 app.post('/signup', (req, res) => {
-  const { username, password, email, role } = req.body;
+    const { username, password, email, role } = req.body;
+    let users = loadUsers();
 
-  res.status(201).json({
-    message: 'User registered',
-    user: {
-      username,
-      email,
-      role
+    // Check if user already exists
+    if (users.some(user => user.username === username)) {
+        return res.status(400).json({ message: 'Username already taken' });
     }
-  });
+
+    // Create new user object
+    const newUser = { username, password, email, role };
+    
+    // Append user to array and save
+    users.push(newUser);
+    saveUsers(users);
+
+    res.status(201).json({
+        message: 'User registered successfully',
+        user: { username, email, role }
+    });
 });
+
 
 // Server Start
 console.log("Starting server...");
