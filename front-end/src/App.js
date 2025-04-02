@@ -75,13 +75,7 @@ const App = () => {
           <Routes>
             <Route
               path="/"
-              element={
-                <Home
-                  newlyAddedAlbums={newlyAddedAlbums}
-                  staffFavorites={staffFavorites}
-                  onAlbumClick={handleAlbumClick}
-                />
-              }
+              element={<Home onAlbumClick={handleAlbumClick} />}
             />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
