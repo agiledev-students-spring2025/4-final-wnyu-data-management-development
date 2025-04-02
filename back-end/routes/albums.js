@@ -32,4 +32,30 @@ router.get("/staff-favorites", (req, res) => {
   res.json(staffFavorites);
 });
 
+// Add a single album endpoint to get album by ID
+router.get("/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const allAlbums = [...newlyAddedAlbums, ...staffFavorites];
+  const album = allAlbums.find(a => a.id === id);
+  
+  if (album) {
+    res.json(album);
+  } else {
+    res.status(404).json({ message: "Album not found" });
+  }
+});
+
+// Add albums search endpoint
+router.get("/search/:term", (req, res) => {
+  const term = req.params.term.toLowerCase();
+  const allAlbums = [...newlyAddedAlbums, ...staffFavorites];
+  const results = allAlbums.filter(album => 
+    album.title.toLowerCase().includes(term) || 
+    album.artist.toLowerCase().includes(term) ||
+    album.genre.toLowerCase().includes(term)
+  );
+  
+  res.json(results);
+});
+
 export default router;
