@@ -1,0 +1,32 @@
+[
+  {
+    "username": "katewnyu",
+    "password": "admin123",
+    "role": "Admin",
+    "email": "kateh@wnyu.com"
+  },
+  {
+    "username": "emilywnyu",
+    "password": "staff123",
+    "role": "Staff",
+    "email": "emilya@wnyu.com"
+  },
+  {
+    "username": "danielwnyu",
+    "password": "staff123",
+    "role": "Staff",
+    "email": "danielp@wnyu.com"
+  },
+  {
+    "username": "lilywnyu",
+    "password": "staff123",
+    "role": "Staff",
+    "email": "lilyc@wnyu.com"
+  },
+  {
+    "username": "janewnyu",
+    "password": "staff123",
+    "email": "janek@wnyu.com",
+    "role": "Staff"
+  }
+]
