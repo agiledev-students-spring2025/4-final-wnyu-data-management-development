@@ -3,35 +3,25 @@ import { useNavigate } from "react-router-dom";
 import './Profile.css';
 
 const Profile = () => {
-  // Example user data
-  const user = {
-    userName: "admin123",
-    role: "Admin",
-    email: "johndoe@example.com",
-    profilePic: "/example-pic.png", 
+  const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem('user')) || {
+    firstName: "Guest",
+    role: "Unknown",
+    email: "N/A",
   };
-  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/');
+  };
 
   return (
     <div className="profile-container">
-      {/* Header */}
-
-      {/* Profile Picture */}
-      <img src={user.profilePic} alt="Profile" className="profile-pic" />
-
-      {/* User Name */}
-      <h2 className="profile-name">
-        {user.firstName} {user.lastName}
-      </h2>
-
-      {/* User Role */}
-      <p className="profile-role">{user.role}</p>
-
-      {/* Email */}
-      <p className="profile-email">{user.email}</p>
-
-      {/* Log Out Button */}
-      <button className="logout-button" onClick={() => navigate('/')}>Log Out </button>
+      <h2>{user.username}</h2>
+      <p>Role: {user.role}</p>
+      <p>Email: {user.email}</p>
+      <button className="logout-button" onClick={handleLogout}>Log Out</button>
     </div>
   );
 };
