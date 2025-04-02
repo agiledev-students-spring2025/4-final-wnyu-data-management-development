@@ -1,10 +1,30 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
+const Home = ({ onAlbumClick }) => {
+  const [newlyAddedAlbums, setNewlyAddedAlbums] = useState([]);
+  const [staffFavorites, setStaffFavorites] = useState([]);
+
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const resNew = await fetch("http://localhost:8080/api/albums/new");
+        const resStaff = await fetch("http://localhost:8080/api/albums/staff-favorites");
+        const newData = await resNew.json();
+        const staffData = await resStaff.json();
+        setNewlyAddedAlbums(newData);
+        setStaffFavorites(staffData);
+      } catch (err) {
+        console.error("Failed to fetch albums:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const useInfiniteScroll = (scrollRef) => {
     useEffect(() => {
@@ -15,7 +35,7 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
       let scrollInterval = null;
 
       const startScrolling = () => {
-        if (scrollInterval) clearInterval(scrollInterval); // Prevent multiple intervals
+        if (scrollInterval) clearInterval(scrollInterval);
         scrollInterval = setInterval(() => {
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
             scrollContainer.scrollLeft = 0;
@@ -29,7 +49,6 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
       };
 
       startScrolling();
-
       scrollContainer.addEventListener("mouseenter", stopScrolling);
       scrollContainer.addEventListener("mouseleave", startScrolling);
 
@@ -49,7 +68,6 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
 
   return (
     <div className="home-container">
-      {/* Newly Added Section */}
       <div className="slider-section">
         <h2 className="slider-title">Newly Added</h2>
         <div className="scroll-container" ref={scrollRef1}>
@@ -71,7 +89,6 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
         </div>
       </div>
 
-      {/* Staff Favorites Section */}
       <div className="slider-section">
         <h2 className="slider-title">Staff Favorites</h2>
         <div className="scroll-container" ref={scrollRef2}>
