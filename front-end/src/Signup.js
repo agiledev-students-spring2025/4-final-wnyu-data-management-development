@@ -1,70 +1,62 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 
 const Signup = () => {
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [role, setRole] = useState('Staff'); // Default role
+    const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password !== confirmPassword) {
-      setError("Passwords do not match!");
-    } else {
-      setError("");
-      alert("Account created successfully!"); 
-    }
-  };
-    
-  return (
-    <div className="signup-container">
-        {/** Header */}
+    const handleSignup = async () => {
+        try {
+            const response = await fetch('http://localhost:8080/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password, email, role })
+            });
 
-        <form className="signup-box" onSubmit={handleSubmit}>
-            <h3>Sign Up</h3>
+            const data = await response.json();
+            console.log('Signup response:', data);
+            
+            navigate('/login');
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
 
-            {/** Username */}
-            <label className="input-label">Username</label>
-            <input type="text" className="input-field" placeholder=""/>
-
-            {/** Email */}
-            <label className="input-label">Email</label>
-            <input type="email" className="input-field" placeholder=""/>
-
-            {/** Password */}
-            <label className="input-label">Password</label>
-            <input
-            type="password"
-            className="input-field"
-            placeholder=""
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
+    return (
+        <div className="signup-container">
+            <h2>Signup</h2>
+            <input 
+                type="text" 
+                placeholder="Username" 
+                value={username} 
+                onChange={(e) => setUsername(e.target.value)}
             />
-
-            {/** Confirm Password */}
-            <label className="input-label">Confirm Password</label>
-            <input
-            type="password"
-            className="input-field"
-            placeholder="Confirm your password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
+            <input 
+                type="password" 
+                placeholder="Password" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)}
             />
+            <input 
+                type="email" 
+                placeholder="Email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <select value={role} onChange={(e) => setRole(e.target.value)}>
+                <option value="Staff">Staff</option>
+                <option value="Admin">Admin</option>
+            </select>
+            
+            <button onClick={handleSignup}>Sign Up</button>
+        </div>
+    );
+};
 
-            {/* Error Message */}
-            {error && <p className="error-message">{error}</p>}
-
-            {/* Sign Up Button */}
-            <button className="signup-button" onClick={() => navigate('/profile')}>Sign Up</button>
-
-            {/* Already have an account? */}
-            Already have an account? <Link to="/login">Login</Link>
-        </form>
-    </div>
-  )
-}
-export default Signup
+export default Signup;
