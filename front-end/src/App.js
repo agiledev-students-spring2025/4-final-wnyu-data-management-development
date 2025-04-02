@@ -65,7 +65,7 @@ const App = () => {
             />
             <Route
               path="/Collection"
-              element={<Collection albums={newlyAddedAlbums} />}
+              element={<Collection />}
             />
             <Route
               path="/Contacts"
