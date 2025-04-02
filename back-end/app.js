@@ -1,8 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
+import albumRoutes from './routes/albums.js';
 
 const app = express();
+const PORT = process.env.PORT || 8080;
+
+app.use(cors());
+
+app.use('/api/albums', albumRoutes);
 
 // Middleware
 app.use(express.json());
@@ -78,3 +84,9 @@ console.log("Starting server...");
 app.listen(process.env.PORT ?? 8080, () => {
   console.log("Server running on port", process.env.PORT ?? 8080);
 });
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the WNYU Archives');
+});
+
+export default app;

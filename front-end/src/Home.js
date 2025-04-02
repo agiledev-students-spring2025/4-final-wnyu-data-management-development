@@ -1,35 +1,54 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
+const Home = ({ onAlbumClick }) => {
+  const [newlyAddedAlbums, setNewlyAddedAlbums] = useState([]);
+  const [staffFavorites, setStaffFavorites] = useState([]);
+
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
 
-  // Custom Hook for Infinite Scrolling with Pause on Hover
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const resNew = await fetch("http://localhost:8080/api/albums/new");
+        const resStaff = await fetch("http://localhost:8080/api/albums/staff-favorites");
+        const newData = await resNew.json();
+        const staffData = await resStaff.json();
+        setNewlyAddedAlbums(newData);
+        setStaffFavorites(staffData);
+      } catch (err) {
+        console.error("Failed to fetch albums:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const useInfiniteScroll = (scrollRef) => {
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
 
-      let scrollAmount = 0.5; // Speed of scrolling
-      let scrollInterval;
+      let scrollAmount = 0.5;
+      let scrollInterval = null;
 
       const startScrolling = () => {
+        if (scrollInterval) clearInterval(scrollInterval);
         scrollInterval = setInterval(() => {
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-            scrollContainer.scrollLeft = 0; // Reset for infinite loop
+            scrollContainer.scrollLeft = 0;
           }
           scrollContainer.scrollLeft += scrollAmount;
         }, 25);
       };
 
-      const stopScrolling = () => clearInterval(scrollInterval);
+      const stopScrolling = () => {
+        if (scrollInterval) clearInterval(scrollInterval);
+      };
 
-      // Start scrolling on load
       startScrolling();
-
-      // Pause when hovered, resume on leave
       scrollContainer.addEventListener("mouseenter", stopScrolling);
       scrollContainer.addEventListener("mouseleave", startScrolling);
 
@@ -41,26 +60,20 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
     }, [scrollRef]);
   };
 
-  // Apply the scrolling effect to both album sections
   useInfiniteScroll(scrollRef1);
   useInfiniteScroll(scrollRef2);
 
-  // Duplicate albums to create seamless looping effect
   const extendedNewlyAdded = [...newlyAddedAlbums, ...newlyAddedAlbums];
   const extendedStaffFavorites = [...staffFavorites, ...staffFavorites];
+
   return (
     <div className="home-container">
-      {/* Newly Added Section */}
       <div className="slider-section">
         <h2 className="slider-title">Newly Added</h2>
         <div className="scroll-container" ref={scrollRef1}>
           <div className="scroll-wrapper">
             {extendedNewlyAdded.map((album, index) => (
-              <Link
-                to={`/album/${album.id}`}
-                key={index}
-                onClick={() => onAlbumClick(album)}
-              >
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <img src={album.imageUrl} alt={album.title} />
                   <div className="album-details">
@@ -76,17 +89,12 @@ const Home = ({ newlyAddedAlbums, staffFavorites, onAlbumClick }) => {
         </div>
       </div>
 
-      {/* Staff Favorites Section */}
       <div className="slider-section">
         <h2 className="slider-title">Staff Favorites</h2>
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <Link
-                to={`/album/${album.id}`}
-                key={index}
-                onClick={() => onAlbumClick(album)}
-              >
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <img src={album.imageUrl} alt={album.title} />
                   <div className="album-details">

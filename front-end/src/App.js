@@ -18,12 +18,12 @@ import "./App.css";
 const newlyAddedAlbums = [
   { id: 1, title: "Bitches Brew 1", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
   { id: 2, title: "Bitches Brew 2", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 3, title: "Bitches Brew 1", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 4, title: "Bitches Brew 1", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 5, title: "Bitches Brew 1", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 6, title: "Bitches Brew 1", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 7, title: "Bitches Brew 1", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 8, title: "Bitches Brew 1", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
+  { id: 3, title: "Bitches Brew 3", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
+  { id: 4, title: "Bitches Brew 4", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
+  { id: 5, title: "Bitches Brew 5", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
+  { id: 6, title: "Bitches Brew 6", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
+  { id: 7, title: "Bitches Brew 7", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
+  { id: 8, title: "Bitches Brew 8", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
 ];
 
 const staffFavorites = [
@@ -35,10 +35,6 @@ const staffFavorites = [
   { id: 18, title: "Staff Favorite 6", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
   { id: 19, title: "Staff Favorite 7", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
   { id: 20, title: "Staff Favorite 8", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 21, title: "Staff Favorite 9", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 22, title: "Staff Favorite 10", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 23, title: "Staff Favorite 11", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
-  { id: 24, title: "Staff Favorite 12", imageUrl: "/bitchesbrew.png", artist: "Miles Davis", genre: "Jazz", format: "Vinyl" },
 ];
 
 const staffContacts = [
@@ -79,13 +75,7 @@ const App = () => {
           <Routes>
             <Route
               path="/"
-              element={
-                <Home
-                  newlyAddedAlbums={newlyAddedAlbums}
-                  staffFavorites={staffFavorites}
-                  onAlbumClick={handleAlbumClick}
-                />
-              }
+              element={<Home onAlbumClick={handleAlbumClick} />}
             />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
