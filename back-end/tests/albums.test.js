@@ -7,8 +7,8 @@ describe("Albums API Routes", () => {
   describe("GET /api/albums/new", () => {
     it("should return newly added albums with status 200", async () => {
       const res = await request(app).get("/api/albums/new");
-      expect(res.status).to.equal(200);
-      expect(res.body).to.be.an("array");
+      expect(res.status).to.equal(200); 
+      expect(res.body).to.be.an("array"); 
       expect(res.body).to.have.length.at.least(1);
       expect(res.body[0]).to.have.keys(["id", "title", "artist", "genre", "format", "imageUrl"]);
     });
@@ -56,7 +56,6 @@ describe("Albums API Routes", () => {
       expect(res.body.id).to.equal(1);
       expect(res.body).to.have.keys(["id", "title", "artist", "genre", "format", "imageUrl"]);
     });
-
     it("should return 404 when invalid ID is provided", async () => {
       const res = await request(app).get("/api/albums/9999");
       expect(res.status).to.equal(404);
@@ -84,7 +83,6 @@ describe("Albums API Routes", () => {
       expect(res.body).to.be.an("array");
       expect(res.body).to.have.length(0);
     });
-
     it("should be case insensitive", async () => {
       const res = await request(app).get("/api/albums/search/miles");
       expect(res.status).to.equal(200);
