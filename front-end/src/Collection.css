@@ -51,6 +51,10 @@
   font-size: 12px;
 }
 
+.collection-container h2 {
+  text-align: center;
+}
+
 /* Mobile: Default to 2 columns */
 @media (max-width: 600px) {
   .album-grid {
