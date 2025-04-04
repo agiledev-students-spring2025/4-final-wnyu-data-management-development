@@ -33,7 +33,6 @@ const staffContacts = [
 ];
 
 const App = () => {
-  const [newlyAddedAlbums, setNewlyAddedAlbums] = useState([]);
   const [expandedAlbum, setExpandedAlbum] = useState(null);
   const [selectedContact, setSelectedContact] = useState(null);
 
