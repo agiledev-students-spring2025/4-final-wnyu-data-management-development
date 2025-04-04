@@ -75,12 +75,25 @@ const Home = ({ onAlbumClick }) => {
             {extendedNewlyAdded.map((album, index) => (
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
-                  <img src={album.imageUrl} alt={album.title} />
+                  {/* Format box and ID */}
+                  <div className="album-meta">
+                    <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
+                      {album.format}
+                    </span>
+                    <span className="album-id">{album.id}</span>
+                  </div>
+
+                  {/* Separator Line */}
+                  <div className="separator"></div>
+
+                  {/* Album Image */}
+                  <img src={album.imageUrl} alt={album.title} className="album-image" />
+
+                  {/* Album Details */}
                   <div className="album-details">
                     <h3 className="album-title">{album.title}</h3>
                     <p className="album-artist">{album.artist}</p>
                     <p className="album-genre">{album.genre}</p>
-                    <p className="album-format">{album.format}</p>
                   </div>
                 </div>
               </Link>
@@ -96,12 +109,25 @@ const Home = ({ onAlbumClick }) => {
             {extendedStaffFavorites.map((album, index) => (
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
-                  <img src={album.imageUrl} alt={album.title} />
+                  {/* Format box and ID */}
+                  <div className="album-meta">
+                    <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
+                      {album.format}
+                    </span>
+                    <span className="album-id">{album.id}</span>
+                  </div>
+
+                  {/* Separator Line */}
+                  <div className="separator"></div>
+
+                  {/* Album Image */}
+                  <img src={album.imageUrl} alt={album.title} className="album-image" />
+
+                  {/* Album Details */}
                   <div className="album-details">
                     <h3 className="album-title">{album.title}</h3>
                     <p className="album-artist">{album.artist}</p>
                     <p className="album-genre">{album.genre}</p>
-                    <p className="album-format">{album.format}</p>
                   </div>
                 </div>
               </Link>
