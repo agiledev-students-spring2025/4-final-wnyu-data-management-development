@@ -1,7 +1,7 @@
 .profile-sidebar {
     position: fixed;
     top: 0;
-    right: -250px; /* Hidden initially */
+    right: -250px; 
     width: 200px;
     height: 100vh;
     background: #333;
@@ -9,36 +9,51 @@
     transition: right 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start; 
+    justify-content: flex-start; 
     padding: 20px;
-  }
-  
-  .profile-sidebar.open {
-    right: 0; /* Slide in when open */
-  }
-  
-  .profile-sidebar ul {
+    padding-top: 40px; 
+}
+
+.profile-sidebar.open {
+    right: 0; 
+}
+
+.profile-sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .profile-sidebar li {
-    margin: 20px 0;
-  }
-  
-  .profile-sidebar a {
+    width: 100%;
+}
+
+.profile-sidebar li {
+    width: 100%;
+}
+
+.profile-sidebar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-  }
-  
-  .profile-sidebar a:hover {
+    display: block;
+    padding: 10px 0;
+}
+
+.profile-sidebar a:hover {
     text-decoration: underline;
-  }
-  
-  /* Profile Container */
-  .profile-container {
-    position: relative;
-  }
-  
+}
+
+/* Logout Button */
+.logout-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    text-decoration: underline;
+}

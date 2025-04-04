@@ -78,6 +78,18 @@ app.post('/signup', (req, res) => {
     });
 });
 
+app.post('/resend-reset-link', (req, res) => {
+    const { email } = req.body;
+  
+    if (!email) {
+      return res.status(400).json({ message: 'Email is required' });
+    }
+  
+    // Simulate sending a reset link
+    console.log(`Password reset link sent to ${email}`);
+    
+    return res.status(200).json({ message: 'Password Reset Email is sent' });
+});
 
 // Server Start
 console.log("Starting server...");
