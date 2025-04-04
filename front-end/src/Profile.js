@@ -17,7 +17,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="profile-container">
+    <div className="profile-page-container">
       <h2>{user.username}</h2>
       <p>Role: {user.role}</p>
       <p>Email: {user.email}</p>

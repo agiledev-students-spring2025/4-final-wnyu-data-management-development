@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ProfileSidebar.css";
 
-const ProfileSidebar = ({ isOpen }) => {
+const ProfileSidebar = ({ isOpen, handleLogout }) => {
   return (
     <div className={`profile-sidebar ${isOpen ? "open" : ""}`}>
       <ul>
@@ -10,7 +10,9 @@ const ProfileSidebar = ({ isOpen }) => {
           <Link to="/profile">Profile</Link>
         </li>
         <li>
-          <Link to="/logout">Logout</Link>
+          <button onClick={handleLogout} className="logout-button">
+            Logout
+          </button>
         </li>
       </ul>
     </div>
