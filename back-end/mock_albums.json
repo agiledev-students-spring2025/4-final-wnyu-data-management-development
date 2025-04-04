@@ -1,0 +1,5002 @@
+[
+  {
+    "id": 1,
+    "title": "Whats Going On",
+    "imageUrl": "",
+    "artist": "Marvin Gaye",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1971",
+    "description": "'Whats Going On' by Marvin Gaye is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 2,
+    "title": "Pet Sounds",
+    "imageUrl": "",
+    "artist": "The Beach Boys",
+    "genre": "Rock",
+    "format": "CD",
+    "releaseDate": "1966",
+    "description": "'Pet Sounds' by The Beach Boys is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 3,
+    "title": "Blue",
+    "imageUrl": "",
+    "artist": "Joni Mitchell",
+    "genre": "Folk",
+    "format": "LP",
+    "releaseDate": "1971",
+    "description": "'Blue' by Joni Mitchell is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 4,
+    "title": "Songs in the Key of Life",
+    "imageUrl": "",
+    "artist": "Stevie Wonder",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1976",
+    "description": "'Songs in the Key of Life' by Stevie Wonder is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 5,
+    "title": "Abbey Road",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1969",
+    "description": "'Abbey Road' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 6,
+    "title": "Nevermind",
+    "imageUrl": "",
+    "artist": "Nirvana",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1991",
+    "description": "'Nevermind' by Nirvana is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 7,
+    "title": "Rumours",
+    "imageUrl": "",
+    "artist": "Fleetwood Mac",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1977",
+    "description": "'Rumours' by Fleetwood Mac is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 8,
+    "title": "Purple Rain",
+    "imageUrl": "",
+    "artist": "Prince and the Revolution",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1984",
+    "description": "'Purple Rain' by Prince and the Revolution is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 9,
+    "title": "Blood on the Tracks",
+    "imageUrl": "",
+    "artist": "Bob Dylan",
+    "genre": "Folk",
+    "format": "DAT",
+    "releaseDate": "1975",
+    "description": "'Blood on the Tracks' by Bob Dylan is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 10,
+    "title": "The Miseducation of Lauryn Hill",
+    "imageUrl": "",
+    "artist": "Lauryn Hill",
+    "genre": "R&B",
+    "format": "LP",
+    "releaseDate": "1998",
+    "description": "'The Miseducation of Lauryn Hill' by Lauryn Hill is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 11,
+    "title": "Revolver",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "LP",
+    "releaseDate": "1966",
+    "description": "'Revolver' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 12,
+    "title": "Thriller",
+    "imageUrl": "",
+    "artist": "Michael Jackson",
+    "genre": "R&B",
+    "format": "DAT",
+    "releaseDate": "1982",
+    "description": "'Thriller' by Michael Jackson is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 13,
+    "title": "I Never Loved a Man the Way I Love You",
+    "imageUrl": "",
+    "artist": "Aretha Franklin",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1967",
+    "description": "'I Never Loved a Man the Way I Love You' by Aretha Franklin is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 14,
+    "title": "Exile on Main Street",
+    "imageUrl": "",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Exile on Main Street' by The Rolling Stones is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 15,
+    "title": "It Takes a Nation of Millions to Hold Us Back",
+    "imageUrl": "",
+    "artist": "Public Enemy",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1988",
+    "description": "'It Takes a Nation of Millions to Hold Us Back' by Public Enemy is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 16,
+    "title": "London Calling",
+    "imageUrl": "",
+    "artist": "The Clash",
+    "genre": "Punk",
+    "format": "CD",
+    "releaseDate": "1979",
+    "description": "'London Calling' by The Clash is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 17,
+    "title": "My Beautiful Dark Twisted Fantasy",
+    "imageUrl": "",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "format": "Cassette",
+    "releaseDate": "2010",
+    "description": "'My Beautiful Dark Twisted Fantasy' by Kanye West is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 18,
+    "title": "Highway 61 Revisited",
+    "imageUrl": "",
+    "artist": "Bob Dylan",
+    "genre": "Folk",
+    "format": "Cassette",
+    "releaseDate": "1965",
+    "description": "'Highway 61 Revisited' by Bob Dylan is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 19,
+    "title": "To Pimp a Butterfly",
+    "imageUrl": "",
+    "artist": "Kendrick Lamar",
+    "genre": "Hip-Hop",
+    "format": "LP",
+    "releaseDate": "2015",
+    "description": "'To Pimp a Butterfly' by Kendrick Lamar is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 20,
+    "title": "Kid A",
+    "imageUrl": "",
+    "artist": "Radiohead",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2000",
+    "description": "'Kid A' by Radiohead is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 21,
+    "title": "Born to Run",
+    "imageUrl": "",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1975",
+    "description": "'Born to Run' by Bruce Springsteen is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 22,
+    "title": "Ready to Die",
+    "imageUrl": "",
+    "artist": "The Notorious B.I.G.",
+    "genre": "Hip-Hop",
+    "format": "DAT",
+    "releaseDate": "1994",
+    "description": "'Ready to Die' by The Notorious B.I.G. is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 23,
+    "title": "The Velvet Underground and Nico",
+    "imageUrl": "",
+    "artist": "The Velvet Underground",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1967",
+    "description": "'The Velvet Underground and Nico' by The Velvet Underground is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 24,
+    "title": "Sgt. Pepper\u2019s Lonely Hearts Club Band",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "CD",
+    "releaseDate": "1967",
+    "description": "'Sgt. Pepper\u2019s Lonely Hearts Club Band' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 25,
+    "title": "Tapestry",
+    "imageUrl": "",
+    "artist": "Carole King",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1971",
+    "description": "'Tapestry' by Carole King is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 26,
+    "title": "Horses",
+    "imageUrl": "",
+    "artist": "Patti Smith",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1975",
+    "description": "'Horses' by Patti Smith is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 27,
+    "title": "Enter the Wu-Tang(36 Chambers)",
+    "imageUrl": "",
+    "artist": "Wu-Tang Clan",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1993",
+    "description": "'Enter the Wu-Tang(36 Chambers)' by Wu-Tang Clan is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 28,
+    "title": "Voodoo",
+    "imageUrl": "",
+    "artist": "D\u2019Angelo",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2000",
+    "description": "'Voodoo' by D\u2019Angelo is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 29,
+    "title": "White Album",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "DAT",
+    "releaseDate": "1968",
+    "description": "'White Album' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 30,
+    "title": "Are You Experienced",
+    "imageUrl": "",
+    "artist": "Jimi Hendrix",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1967",
+    "description": "'Are You Experienced' by Jimi Hendrix is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 31,
+    "title": "Kind of Blue",
+    "imageUrl": "",
+    "artist": "Miles Davis",
+    "genre": "Jazz",
+    "format": "CD",
+    "releaseDate": "1959",
+    "description": "'Kind of Blue' by Miles Davis is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 32,
+    "title": "Lemonade",
+    "imageUrl": "",
+    "artist": "Beyonce\u0301",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2016",
+    "description": "'Lemonade' by Beyonce\u0301 is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 33,
+    "title": "Back to Black",
+    "imageUrl": "",
+    "artist": "Amy Winehouse",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2006",
+    "description": "'Back to Black' by Amy Winehouse is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 34,
+    "title": "Innervisions",
+    "imageUrl": "",
+    "artist": "Stevie Wonder",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1973",
+    "description": "'Innervisions' by Stevie Wonder is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 35,
+    "title": "Rubber Soul",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "CD",
+    "releaseDate": "1965",
+    "description": "'Rubber Soul' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 36,
+    "title": "Off the Wall",
+    "imageUrl": "",
+    "artist": "Michael Jackson",
+    "genre": "R&B",
+    "format": "DAT",
+    "releaseDate": "1979",
+    "description": "'Off the Wall' by Michael Jackson is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 37,
+    "title": "The Chronic",
+    "imageUrl": "",
+    "artist": "Dr. Dre",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1992",
+    "description": "'The Chronic' by Dr. Dre is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 38,
+    "title": "Blonde on Blonde",
+    "imageUrl": "",
+    "artist": "Bob Dylan",
+    "genre": "Folk",
+    "format": "Cassette",
+    "releaseDate": "1966",
+    "description": "'Blonde on Blonde' by Bob Dylan is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 39,
+    "title": "Remain in Light",
+    "imageUrl": "",
+    "artist": "Talking Heads",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1980",
+    "description": "'Remain in Light' by Talking Heads is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 40,
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
+    "imageUrl": "",
+    "artist": "David Bowie",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1972",
+    "description": "'The Rise and Fall of Ziggy Stardust and the Spiders From Mars' by David Bowie is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 41,
+    "title": "Let It Bleed",
+    "imageUrl": "",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1969",
+    "description": "'Let It Bleed' by The Rolling Stones is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 42,
+    "title": "OK Computer",
+    "imageUrl": "",
+    "artist": "Radiohead",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1997",
+    "description": "'OK Computer' by Radiohead is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 43,
+    "title": "The Low End Theory",
+    "imageUrl": "",
+    "artist": "A Tribe Called Quest",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1991",
+    "description": "'The Low End Theory' by A Tribe Called Quest is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 44,
+    "title": "Illmatic",
+    "imageUrl": "",
+    "artist": "Nas",
+    "genre": "Hip-Hop",
+    "format": "CD",
+    "releaseDate": "1994",
+    "description": "'Illmatic' by Nas is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 45,
+    "title": "Sign O the Times",
+    "imageUrl": "",
+    "artist": "Prince",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1987",
+    "description": "'Sign O the Times' by Prince is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 46,
+    "title": "Graceland",
+    "imageUrl": "",
+    "artist": "Paul Simon",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1986",
+    "description": "'Graceland' by Paul Simon is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 47,
+    "title": "Ramones",
+    "imageUrl": "",
+    "artist": "Ramones",
+    "genre": "Punk",
+    "format": "Cassette",
+    "releaseDate": "1976",
+    "description": "'Ramones' by Ramones is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 48,
+    "title": "Legend",
+    "imageUrl": "",
+    "artist": "Bob Marley and the Wailers",
+    "genre": "Reggae",
+    "format": "Cassette",
+    "releaseDate": "1984",
+    "description": "'Legend' by Bob Marley and the Wailers is a defining work in reggae music, praised for its lasting impact."
+  },
+  {
+    "id": 49,
+    "title": "Aquemini",
+    "imageUrl": "",
+    "artist": "OutKast",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1998",
+    "description": "'Aquemini' by OutKast is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 50,
+    "title": "The Blueprint",
+    "imageUrl": "",
+    "artist": "Jay-Z",
+    "genre": "Hip-Hop",
+    "format": "LP",
+    "releaseDate": "2001",
+    "description": "'The Blueprint' by Jay-Z is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 51,
+    "title": "The Great Twenty-Eight",
+    "imageUrl": "",
+    "artist": "Chuck Berry",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1982",
+    "description": "'The Great Twenty-Eight' by Chuck Berry is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 52,
+    "title": "Station to Station",
+    "imageUrl": "",
+    "artist": "David Bowie",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1976",
+    "description": "'Station to Station' by David Bowie is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 53,
+    "title": "Electric Ladyland",
+    "imageUrl": "",
+    "artist": "Jimi Hendrix",
+    "genre": "Folk",
+    "format": "CD",
+    "releaseDate": "1968",
+    "description": "'Electric Ladyland' by Jimi Hendrix is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 54,
+    "title": "Star Time",
+    "imageUrl": "",
+    "artist": "James Brown",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1991",
+    "description": "'Star Time' by James Brown is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 55,
+    "title": "The Dark Side of the Moon",
+    "imageUrl": "",
+    "artist": "Pink Floyd",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1973",
+    "description": "'The Dark Side of the Moon' by Pink Floyd is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 56,
+    "title": "Exile in Guyville",
+    "imageUrl": "",
+    "artist": "Liz Phair",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1993",
+    "description": "'Exile in Guyville' by Liz Phair is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 57,
+    "title": "The Band",
+    "imageUrl": "",
+    "artist": "The Band",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1969",
+    "description": "'The Band' by The Band is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 58,
+    "title": "Led Zeppelin IV",
+    "imageUrl": "",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1971",
+    "description": "'Led Zeppelin IV' by Led Zeppelin is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 59,
+    "title": "Talking Book",
+    "imageUrl": "",
+    "artist": "Stevie Wonder",
+    "genre": "R&B",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Talking Book' by Stevie Wonder is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 60,
+    "title": "Astral Weeks",
+    "imageUrl": "",
+    "artist": "Van Morrison",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1968",
+    "description": "'Astral Weeks' by Van Morrison is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 61,
+    "title": "Paid in Full",
+    "imageUrl": "",
+    "artist": "Eric B. and Rakim",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1987",
+    "description": "'Paid in Full' by Eric B. and Rakim is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 62,
+    "title": "Appetite for Destruction",
+    "imageUrl": "",
+    "artist": "Guns N\u2019 Roses",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1987",
+    "description": "'Appetite for Destruction' by Guns N\u2019 Roses is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 63,
+    "title": "Aja",
+    "imageUrl": "",
+    "artist": "Steely Dan",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1977",
+    "description": "'Aja' by Steely Dan is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 64,
+    "title": "Stankonia",
+    "imageUrl": "",
+    "artist": "OutKast",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2000",
+    "description": "'Stankonia' by OutKast is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 65,
+    "title": "Live at the Apollo",
+    "imageUrl": "",
+    "artist": "James Brown",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1963",
+    "description": "'Live at the Apollo' by James Brown is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 66,
+    "title": "A Love Supreme",
+    "imageUrl": "",
+    "artist": "John Coltrane",
+    "genre": "Jazz",
+    "format": "CD",
+    "releaseDate": "1965",
+    "description": "'A Love Supreme' by John Coltrane is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 67,
+    "title": "Reasonable Doubt",
+    "imageUrl": "",
+    "artist": "Jay-Z",
+    "genre": "Hip-Hop",
+    "format": "DAT",
+    "releaseDate": "1996",
+    "description": "'Reasonable Doubt' by Jay-Z is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 68,
+    "title": "Hounds of Love",
+    "imageUrl": "",
+    "artist": "Kate Bush",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1985",
+    "description": "'Hounds of Love' by Kate Bush is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 69,
+    "title": "Jagged Little Pill",
+    "imageUrl": "",
+    "artist": "Alanis Morissette",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1995",
+    "description": "'Jagged Little Pill' by Alanis Morissette is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 70,
+    "title": "Straight Outta Compton",
+    "imageUrl": "",
+    "artist": "N.W.A",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1988",
+    "description": "'Straight Outta Compton' by N.W.A is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 71,
+    "title": "Exodus",
+    "imageUrl": "",
+    "artist": "Bob Marley and the Wailers",
+    "genre": "Reggae",
+    "format": "DAT",
+    "releaseDate": "1977",
+    "description": "'Exodus' by Bob Marley and the Wailers is a defining work in reggae music, praised for its lasting impact."
+  },
+  {
+    "id": 72,
+    "title": "Harvest",
+    "imageUrl": "",
+    "artist": "Neil Young",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1972",
+    "description": "'Harvest' by Neil Young is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 73,
+    "title": "Loveless",
+    "imageUrl": "",
+    "artist": "My Bloody Valentine",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1991",
+    "description": "'Loveless' by My Bloody Valentine is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 74,
+    "title": "The College Dropout",
+    "imageUrl": "",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "format": "CD",
+    "releaseDate": "2004",
+    "description": "'The College Dropout' by Kanye West is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 75,
+    "title": "Lady Soul",
+    "imageUrl": "",
+    "artist": "Aretha Franklin",
+    "genre": "R&B",
+    "format": "LP",
+    "releaseDate": "1968",
+    "description": "'Lady Soul' by Aretha Franklin is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 76,
+    "title": "Superfly",
+    "imageUrl": "",
+    "artist": "Curtis Mayfield",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Superfly' by Curtis Mayfield is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 77,
+    "title": "Whos Next",
+    "imageUrl": "",
+    "artist": "The Who",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1971",
+    "description": "'Whos Next' by The Who is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 78,
+    "title": "The Sun Sessions",
+    "imageUrl": "",
+    "artist": "Elvis Presley",
+    "genre": "Country",
+    "format": "CD",
+    "releaseDate": "1976",
+    "description": "'The Sun Sessions' by Elvis Presley is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 79,
+    "title": "Blond",
+    "imageUrl": "",
+    "artist": "Frank Ocean",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2016",
+    "description": "'Blond' by Frank Ocean is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 80,
+    "title": "Never Mind the Bollocks Here\u2019s the Sex Pistols",
+    "imageUrl": "",
+    "artist": "The Sex Pistols",
+    "genre": "Punk",
+    "format": "LP",
+    "releaseDate": "1977",
+    "description": "'Never Mind the Bollocks Here\u2019s the Sex Pistols' by The Sex Pistols is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 81,
+    "title": "Beyonc\u00e9",
+    "imageUrl": "",
+    "artist": "Beyonc\u00e9",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "2013",
+    "description": "'Beyonc\u00e9' by Beyonc\u00e9 is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 82,
+    "title": "There\u2019s a Riot Goin\u2019 On",
+    "imageUrl": "",
+    "artist": "Sly and the Family Stone",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1971",
+    "description": "'There\u2019s a Riot Goin\u2019 On' by Sly and the Family Stone is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 83,
+    "title": "Dusty in Memphis",
+    "imageUrl": "",
+    "artist": "Dusty Springfield",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1969",
+    "description": "'Dusty in Memphis' by Dusty Springfield is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 84,
+    "title": "Back in Black",
+    "imageUrl": "",
+    "artist": "AC/DC",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1980",
+    "description": "'Back in Black' by AC/DC is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 85,
+    "title": "Plastic Ono Band",
+    "imageUrl": "",
+    "artist": "John Lennon",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1970",
+    "description": "'Plastic Ono Band' by John Lennon is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 86,
+    "title": "The Doors",
+    "imageUrl": "",
+    "artist": "The Doors",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1967",
+    "description": "'The Doors' by The Doors is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 87,
+    "title": "Bitches Brew",
+    "imageUrl": "",
+    "artist": "Miles Davis",
+    "genre": "Jazz",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'Bitches Brew' by Miles Davis is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 88,
+    "title": "Hunky Dory",
+    "imageUrl": "",
+    "artist": "David Bowie",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1971",
+    "description": "'Hunky Dory' by David Bowie is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 89,
+    "title": "Baduizm",
+    "imageUrl": "",
+    "artist": "Erykah Badu",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1997",
+    "description": "'Baduizm' by Erykah Badu is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 90,
+    "title": "After the Gold Rush",
+    "imageUrl": "",
+    "artist": "Neil Young",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1970",
+    "description": "'After the Gold Rush' by Neil Young is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 91,
+    "title": "Darkness on the Edge of Town",
+    "imageUrl": "",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "format": "CD",
+    "releaseDate": "1978",
+    "description": "'Darkness on the Edge of Town' by Bruce Springsteen is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 92,
+    "title": "Axis: Bold as Love",
+    "imageUrl": "",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1967",
+    "description": "'Axis: Bold as Love' by The Jimi Hendrix Experience is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 93,
+    "title": "Supa Dupa Fly",
+    "imageUrl": "",
+    "artist": "Missy \u201cMisdemeanor\u201d Elliott",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1997",
+    "description": "'Supa Dupa Fly' by Missy \u201cMisdemeanor\u201d Elliott is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 94,
+    "title": "Fun House",
+    "imageUrl": "",
+    "artist": "The Stooges",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'Fun House' by The Stooges is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 95,
+    "title": "Take Care",
+    "imageUrl": "",
+    "artist": "Drake",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2011",
+    "description": "'Take Care' by Drake is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 96,
+    "title": "Automatic for the People",
+    "imageUrl": "",
+    "artist": "R.E.M.",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1992",
+    "description": "'Automatic for the People' by R.E.M. is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 97,
+    "title": "Master of Puppets",
+    "imageUrl": "",
+    "artist": "Metallica",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1986",
+    "description": "'Master of Puppets' by Metallica is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 98,
+    "title": "Car Wheels on a Gravel Road",
+    "imageUrl": "",
+    "artist": "Lucinda Williams",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1998",
+    "description": "'Car Wheels on a Gravel Road' by Lucinda Williams is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 99,
+    "title": "Red",
+    "imageUrl": "",
+    "artist": "Taylor Swift",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2012",
+    "description": "'Red' by Taylor Swift is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 100,
+    "title": "Music From Big Pink",
+    "imageUrl": "",
+    "artist": "The Band",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1968",
+    "description": "'Music From Big Pink' by The Band is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 101,
+    "title": "Led Zeppelin",
+    "imageUrl": "",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "format": "LP",
+    "releaseDate": "1969",
+    "description": "'Led Zeppelin' by Led Zeppelin is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 102,
+    "title": "The Clash",
+    "imageUrl": "",
+    "artist": "The Clash",
+    "genre": "Punk",
+    "format": "DAT",
+    "releaseDate": "1977",
+    "description": "'The Clash' by The Clash is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 103,
+    "title": "Three Feet High And Rising",
+    "imageUrl": "",
+    "artist": "De La Soul",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1989",
+    "description": "'Three Feet High And Rising' by De La Soul is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 104,
+    "title": "Sticky Fingers",
+    "imageUrl": "",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1971",
+    "description": "'Sticky Fingers' by The Rolling Stones is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 105,
+    "title": "At Fillmore East",
+    "imageUrl": "",
+    "artist": "The Allman Brothers",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1971",
+    "description": "'At Fillmore East' by The Allman Brothers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 106,
+    "title": "Live Through This",
+    "imageUrl": "",
+    "artist": "Hole",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1994",
+    "description": "'Live Through This' by Hole is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 107,
+    "title": "Marquee Moon",
+    "imageUrl": "",
+    "artist": "Television",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1977",
+    "description": "'Marquee Moon' by Television is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 108,
+    "title": "When the Pawn ...",
+    "imageUrl": "",
+    "artist": "Fiona Apple",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1999",
+    "description": "'When the Pawn ...' by Fiona Apple is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 109,
+    "title": "Transformer",
+    "imageUrl": "",
+    "artist": "Lou Reed",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Transformer' by Lou Reed is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 110,
+    "title": "Court and Spark",
+    "imageUrl": "",
+    "artist": "Joni Mitchell",
+    "genre": "Folk",
+    "format": "Cassette",
+    "releaseDate": "1974",
+    "description": "'Court and Spark' by Joni Mitchell is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 111,
+    "title": "Control",
+    "imageUrl": "",
+    "artist": "Janet Jackson",
+    "genre": "R&B",
+    "format": "LP",
+    "releaseDate": "1986",
+    "description": "'Control' by Janet Jackson is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 112,
+    "title": "Goodbye Yellow Brick Road",
+    "imageUrl": "",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1973",
+    "description": "'Goodbye Yellow Brick Road' by Elton John is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 113,
+    "title": "The Queen Is Dead",
+    "imageUrl": "",
+    "artist": "The Smiths",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1986",
+    "description": "'The Queen Is Dead' by The Smiths is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 114,
+    "title": "Is This It",
+    "imageUrl": "",
+    "artist": "The Strokes",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2001",
+    "description": "'Is This It' by The Strokes is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 115,
+    "title": "good kid",
+    "imageUrl": "",
+    "artist": "Kendrick Lamar",
+    "genre": "Hip-Hop",
+    "format": "CD",
+    "releaseDate": "2012",
+    "description": "'good kid' by Kendrick Lamar is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 116,
+    "title": "Disintegration",
+    "imageUrl": "",
+    "artist": "The Cure",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1989",
+    "description": "'Disintegration' by The Cure is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 117,
+    "title": "Late Registration",
+    "imageUrl": "",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "format": "Cassette",
+    "releaseDate": "2005",
+    "description": "'Late Registration' by Kanye West is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 118,
+    "title": "Hotel California",
+    "imageUrl": "",
+    "artist": "The Eagles",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1976",
+    "description": "'Hotel California' by The Eagles is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 119,
+    "title": "Stand!",
+    "imageUrl": "",
+    "artist": "Sly and the Family Stone",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1969",
+    "description": "'Stand!' by Sly and the Family Stone is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 120,
+    "title": "Moondance",
+    "imageUrl": "",
+    "artist": "Van Morrison",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'Moondance' by Van Morrison is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 121,
+    "title": "This Year\u2019s Model",
+    "imageUrl": "",
+    "artist": "Elvis Costello",
+    "genre": "Country",
+    "format": "LP",
+    "releaseDate": "1978",
+    "description": "'This Year\u2019s Model' by Elvis Costello is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 122,
+    "title": "The Downward Spiral",
+    "imageUrl": "",
+    "artist": "Nine Inch Nails",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1994",
+    "description": "'The Downward Spiral' by Nine Inch Nails is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 123,
+    "title": "Led Zeppelin II",
+    "imageUrl": "",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "format": "LP",
+    "releaseDate": "1969",
+    "description": "'Led Zeppelin II' by Led Zeppelin is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 124,
+    "title": "Achtung Baby",
+    "imageUrl": "",
+    "artist": "U2",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1991",
+    "description": "'Achtung Baby' by U2 is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 125,
+    "title": "Pauls Boutique",
+    "imageUrl": "",
+    "artist": "Beastie Boys",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1989",
+    "description": "'Pauls Boutique' by Beastie Boys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 126,
+    "title": "My Life",
+    "imageUrl": "",
+    "artist": "Mary J. Blige",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1994",
+    "description": "'My Life' by Mary J. Blige is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 127,
+    "title": "Modern Sounds in Country and Western Music",
+    "imageUrl": "",
+    "artist": "Ray Charles",
+    "genre": "Country",
+    "format": "DAT",
+    "releaseDate": "1962",
+    "description": "'Modern Sounds in Country and Western Music' by Ray Charles is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 128,
+    "title": "A Night at the Opera",
+    "imageUrl": "",
+    "artist": "Queen",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1975",
+    "description": "'A Night at the Opera' by Queen is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 129,
+    "title": "The Wall",
+    "imageUrl": "",
+    "artist": "Pink Floyd",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1979",
+    "description": "'The Wall' by Pink Floyd is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 130,
+    "title": "1999",
+    "imageUrl": "",
+    "artist": "Prince",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1982",
+    "description": "'1999' by Prince is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 131,
+    "title": "Dummy",
+    "imageUrl": "",
+    "artist": "Portishead",
+    "genre": "Electronic",
+    "format": "CD",
+    "releaseDate": "1994",
+    "description": "'Dummy' by Portishead is a defining work in electronic music, praised for its lasting impact."
+  },
+  {
+    "id": 132,
+    "title": "40 Greatest Hits",
+    "imageUrl": "",
+    "artist": "Hank Williams",
+    "genre": "Country",
+    "format": "CD",
+    "releaseDate": "1978",
+    "description": "'40 Greatest Hits' by Hank Williams is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 133,
+    "title": "Hejira",
+    "imageUrl": "",
+    "artist": "Joni Mitchell",
+    "genre": "Folk",
+    "format": "DAT",
+    "releaseDate": "1976",
+    "description": "'Hejira' by Joni Mitchell is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 134,
+    "title": "The Score",
+    "imageUrl": "",
+    "artist": "Fugees",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1996",
+    "description": "'The Score' by Fugees is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 135,
+    "title": "The Joshua Tree",
+    "imageUrl": "",
+    "artist": "U2",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1987",
+    "description": "'The Joshua Tree' by U2 is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 136,
+    "title": "Maggot Brain",
+    "imageUrl": "",
+    "artist": "Funkadelic",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1971",
+    "description": "'Maggot Brain' by Funkadelic is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 137,
+    "title": "21",
+    "imageUrl": "",
+    "artist": "Adele",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2011",
+    "description": "'21' by Adele is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 138,
+    "title": "The Immaculate Collection",
+    "imageUrl": "",
+    "artist": "Madonna",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1990",
+    "description": "'The Immaculate Collection' by Madonna is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 139,
+    "title": "Paranoid",
+    "imageUrl": "",
+    "artist": "Black Sabbath",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1970",
+    "description": "'Paranoid' by Black Sabbath is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 140,
+    "title": "Catch a Fire",
+    "imageUrl": "",
+    "artist": "Bob Marley and the Wailers",
+    "genre": "Reggae",
+    "format": "DAT",
+    "releaseDate": "1973",
+    "description": "'Catch a Fire' by Bob Marley and the Wailers is a defining work in reggae music, praised for its lasting impact."
+  },
+  {
+    "id": 141,
+    "title": "Doolittle",
+    "imageUrl": "",
+    "artist": "Pixies",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1989",
+    "description": "'Doolittle' by Pixies is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 142,
+    "title": "Born in the U.S.A.",
+    "imageUrl": "",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "format": "LP",
+    "releaseDate": "1984",
+    "description": "'Born in the U.S.A.' by Bruce Springsteen is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 143,
+    "title": "The Velvet Underground",
+    "imageUrl": "",
+    "artist": "The Velvet Underground",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1969",
+    "description": "'The Velvet Underground' by The Velvet Underground is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 144,
+    "title": "Physical Graffiti",
+    "imageUrl": "",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "format": "DAT",
+    "releaseDate": "1975",
+    "description": "'Physical Graffiti' by Led Zeppelin is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 145,
+    "title": "The Marshall Mathers LP",
+    "imageUrl": "",
+    "artist": "Eminem",
+    "genre": "Hip-Hop",
+    "format": "DAT",
+    "releaseDate": "2000",
+    "description": "'The Marshall Mathers LP' by Eminem is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 146,
+    "title": "Parallel Lines",
+    "imageUrl": "",
+    "artist": "Blondie",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1978",
+    "description": "'Parallel Lines' by Blondie is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 147,
+    "title": "Grace",
+    "imageUrl": "",
+    "artist": "Jeff Buckley",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1994",
+    "description": "'Grace' by Jeff Buckley is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 148,
+    "title": "Channel Orange",
+    "imageUrl": "",
+    "artist": "Frank Ocean",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2012",
+    "description": "'Channel Orange' by Frank Ocean is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 149,
+    "title": "John Prine",
+    "imageUrl": "",
+    "artist": "John Prine",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1971",
+    "description": "'John Prine' by John Prine is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 150,
+    "title": "Nebraska",
+    "imageUrl": "",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "format": "DAT",
+    "releaseDate": "1982",
+    "description": "'Nebraska' by Bruce Springsteen is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 151,
+    "title": "Faith",
+    "imageUrl": "",
+    "artist": "George Michael",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1987",
+    "description": "'Faith' by George Michael is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 152,
+    "title": "Pretenders",
+    "imageUrl": "",
+    "artist": "The Pretenders",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1980",
+    "description": "'Pretenders' by The Pretenders is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 153,
+    "title": "Rid of Me",
+    "imageUrl": "",
+    "artist": "PJ Harvey",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1993",
+    "description": "'Rid of Me' by PJ Harvey is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 154,
+    "title": "Amazing Grace",
+    "imageUrl": "",
+    "artist": "Aretha Franklin",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1972",
+    "description": "'Amazing Grace' by Aretha Franklin is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 155,
+    "title": "The Black Album",
+    "imageUrl": "",
+    "artist": "Jay-Z",
+    "genre": "Hip-Hop",
+    "format": "DAT",
+    "releaseDate": "2003",
+    "description": "'The Black Album' by Jay-Z is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 156,
+    "title": "Let It Be",
+    "imageUrl": "",
+    "artist": "The Replacements",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1984",
+    "description": "'Let It Be' by The Replacements is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 157,
+    "title": "(Whats the Story) Morning Glory?",
+    "imageUrl": "",
+    "artist": "Oasis",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1995",
+    "description": "'(Whats the Story) Morning Glory?' by Oasis is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 158,
+    "title": "Mamas Gun",
+    "imageUrl": "",
+    "artist": "Erykah Badu",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2000",
+    "description": "'Mamas Gun' by Erykah Badu is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 159,
+    "title": "Synchronicity",
+    "imageUrl": "",
+    "artist": "The Police",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1983",
+    "description": "'Synchronicity' by The Police is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 160,
+    "title": "Ten",
+    "imageUrl": "",
+    "artist": "Pearl Jam",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1991",
+    "description": "'Ten' by Pearl Jam is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 161,
+    "title": "Stills &amp; Nash",
+    "imageUrl": "",
+    "artist": "Crosby",
+    "genre": "Hip-Hop",
+    "format": "Cassette",
+    "releaseDate": "1969",
+    "description": "'Stills &amp; Nash' by Crosby is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 162,
+    "title": "Different Class",
+    "imageUrl": "",
+    "artist": "Pulp",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1995",
+    "description": "'Different Class' by Pulp is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 163,
+    "title": "Saturday Night Fever",
+    "imageUrl": "",
+    "artist": "Various Artists",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1977",
+    "description": "'Saturday Night Fever' by Various Artists is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 164,
+    "title": "At Folsom Prison",
+    "imageUrl": "",
+    "artist": "Johnny Cash",
+    "genre": "Country",
+    "format": "CD",
+    "releaseDate": "1968",
+    "description": "'At Folsom Prison' by Johnny Cash is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 165,
+    "title": "Murmur",
+    "imageUrl": "",
+    "artist": "R.E.M.",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1983",
+    "description": "'Murmur' by R.E.M. is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 166,
+    "title": "20 Golden Greats",
+    "imageUrl": "",
+    "artist": "Buddy Holly",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1978",
+    "description": "'20 Golden Greats' by Buddy Holly is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 167,
+    "title": "Violator",
+    "imageUrl": "",
+    "artist": "Depeche Mode",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1990",
+    "description": "'Violator' by Depeche Mode is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 168,
+    "title": "Can\u2019t Buy a Thrill",
+    "imageUrl": "",
+    "artist": "Steely Dan",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1972",
+    "description": "'Can\u2019t Buy a Thrill' by Steely Dan is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 169,
+    "title": "The Stranger",
+    "imageUrl": "",
+    "artist": "Billy Joel",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1977",
+    "description": "'The Stranger' by Billy Joel is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 170,
+    "title": "Disraeli Gears",
+    "imageUrl": "",
+    "artist": "Cream",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1967",
+    "description": "'Disraeli Gears' by Cream is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 171,
+    "title": "Daydream Nation",
+    "imageUrl": "",
+    "artist": "Sonic Youth",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1988",
+    "description": "'Daydream Nation' by Sonic Youth is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 172,
+    "title": "Bridge Over Troubled Water",
+    "imageUrl": "",
+    "artist": "Simon and Garfunkel",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1970",
+    "description": "'Bridge Over Troubled Water' by Simon and Garfunkel is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 173,
+    "title": "In Utero",
+    "imageUrl": "",
+    "artist": "Nirvana",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1993",
+    "description": "'In Utero' by Nirvana is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 174,
+    "title": "The Harder They Come: Original Soundtrack",
+    "imageUrl": "",
+    "artist": "Jimmy Cliff and Various Artists",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1972",
+    "description": "'The Harder They Come: Original Soundtrack' by Jimmy Cliff and Various Artists is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 175,
+    "title": "DAMN.",
+    "imageUrl": "",
+    "artist": "Kendrick Lamar",
+    "genre": "Hip-Hop",
+    "format": "LP",
+    "releaseDate": "2017",
+    "description": "'DAMN.' by Kendrick Lamar is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 176,
+    "title": "Fear of a Black Planet",
+    "imageUrl": "",
+    "artist": "Public Enemy",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1990",
+    "description": "'Fear of a Black Planet' by Public Enemy is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 177,
+    "title": "Every Picture Tells a Story",
+    "imageUrl": "",
+    "artist": "Rod Stewart",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1971",
+    "description": "'Every Picture Tells a Story' by Rod Stewart is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 178,
+    "title": "Otis Blue",
+    "imageUrl": "",
+    "artist": "Otis Redding",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1965",
+    "description": "'Otis Blue' by Otis Redding is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 179,
+    "title": "Life After Death",
+    "imageUrl": "",
+    "artist": "Notorious B.I.G.",
+    "genre": "Hip-Hop",
+    "format": "Cassette",
+    "releaseDate": "1997",
+    "description": "'Life After Death' by Notorious B.I.G. is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 180,
+    "title": "Forever Changes",
+    "imageUrl": "",
+    "artist": "Love",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1967",
+    "description": "'Forever Changes' by Love is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 181,
+    "title": "Bringing It All Back Home",
+    "imageUrl": "",
+    "artist": "Bob Dylan",
+    "genre": "Folk",
+    "format": "Cassette",
+    "releaseDate": "1965",
+    "description": "'Bringing It All Back Home' by Bob Dylan is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 182,
+    "title": "Sweet Baby James",
+    "imageUrl": "",
+    "artist": "James Taylor",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1970",
+    "description": "'Sweet Baby James' by James Taylor is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 183,
+    "title": "Brown Sugar",
+    "imageUrl": "",
+    "artist": "D'Angelo",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1995",
+    "description": "'Brown Sugar' by D'Angelo is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 184,
+    "title": "She\u2019s So Unusual",
+    "imageUrl": "",
+    "artist": "Cyndi Lauper",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1983",
+    "description": "'She\u2019s So Unusual' by Cyndi Lauper is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 185,
+    "title": "Beggars Banquet",
+    "imageUrl": "",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "format": "LP",
+    "releaseDate": "1968",
+    "description": "'Beggars Banquet' by The Rolling Stones is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 186,
+    "title": "Blood Sugar Sex Magik",
+    "imageUrl": "",
+    "artist": "Red Hot Chili Peppers",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1991",
+    "description": "'Blood Sugar Sex Magik' by Red Hot Chili Peppers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 187,
+    "title": "AmeriKKKa\u2019s Most Wanted",
+    "imageUrl": "",
+    "artist": "Ice Cube",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1990",
+    "description": "'AmeriKKKa\u2019s Most Wanted' by Ice Cube is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 188,
+    "title": "Electric Warrior",
+    "imageUrl": "",
+    "artist": "T. Rex",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1971",
+    "description": "'Electric Warrior' by T. Rex is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 189,
+    "title": "Dig Me Out",
+    "imageUrl": "",
+    "artist": "Sleater-Kinney",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1997",
+    "description": "'Dig Me Out' by Sleater-Kinney is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 190,
+    "title": "Tommy",
+    "imageUrl": "",
+    "artist": "The Who",
+    "genre": "Rock",
+    "format": "DAT",
+    "releaseDate": "1969",
+    "description": "'Tommy' by The Who is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 191,
+    "title": "At Last!",
+    "imageUrl": "",
+    "artist": "Etta James",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1961",
+    "description": "'At Last!' by Etta James is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 192,
+    "title": "Licensed to Ill",
+    "imageUrl": "",
+    "artist": "Beastie Boys",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1986",
+    "description": "'Licensed to Ill' by Beastie Boys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 193,
+    "title": "Willy and the Poor Boys",
+    "imageUrl": "",
+    "artist": "Creedence Clearwater Revival",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1969",
+    "description": "'Willy and the Poor Boys' by Creedence Clearwater Revival is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 194,
+    "title": "Bad",
+    "imageUrl": "",
+    "artist": "Michael Jackson",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1987",
+    "description": "'Bad' by Michael Jackson is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 195,
+    "title": "Songs of Leonard Cohen",
+    "imageUrl": "",
+    "artist": "Leonard Cohen",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1967",
+    "description": "'Songs of Leonard Cohen' by Leonard Cohen is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 196,
+    "title": "Body Talk",
+    "imageUrl": "",
+    "artist": "Robyn",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2010",
+    "description": "'Body Talk' by Robyn is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 197,
+    "title": "Meet the Beatles!",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "DAT",
+    "releaseDate": "1964",
+    "description": "'Meet the Beatles!' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 198,
+    "title": "The B-52s",
+    "imageUrl": "",
+    "artist": "The B-52's",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1979",
+    "description": "'The B-52s' by The B-52's is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 199,
+    "title": "Slanted and Enchanted",
+    "imageUrl": "",
+    "artist": "Pavement",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1993",
+    "description": "'Slanted and Enchanted' by Pavement is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 200,
+    "title": "Diamond Life",
+    "imageUrl": "",
+    "artist": "Sade",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1984",
+    "description": "'Diamond Life' by Sade is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 201,
+    "title": "Midnight Marauders",
+    "imageUrl": "",
+    "artist": "A Tribe Called Quest",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1993",
+    "description": "'Midnight Marauders' by A Tribe Called Quest is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 202,
+    "title": "Homogenic",
+    "imageUrl": "",
+    "artist": "Bj\u00f6rk",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1997",
+    "description": "'Homogenic' by Bj\u00f6rk is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 203,
+    "title": "Pink Moon",
+    "imageUrl": "",
+    "artist": "Nick Drake",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1979",
+    "description": "'Pink Moon' by Nick Drake is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 204,
+    "title": "Graduation",
+    "imageUrl": "",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "format": "CD",
+    "releaseDate": "2007",
+    "description": "'Graduation' by Kanye West is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 205,
+    "title": "Tea for the Tillerman",
+    "imageUrl": "",
+    "artist": "Cat Stevens",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1970",
+    "description": "'Tea for the Tillerman' by Cat Stevens is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 206,
+    "title": "Low",
+    "imageUrl": "",
+    "artist": "David Bowie",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1977",
+    "description": "'Low' by David Bowie is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 207,
+    "title": "Eagles",
+    "imageUrl": "",
+    "artist": "Eagles",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Eagles' by Eagles is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 208,
+    "title": "Tha Carter III",
+    "imageUrl": "",
+    "artist": "Lil Wayne",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2008",
+    "description": "'Tha Carter III' by Lil Wayne is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 209,
+    "title": "Raising Hell",
+    "imageUrl": "",
+    "artist": "Run-DMC",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1986",
+    "description": "'Raising Hell' by Run-DMC is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 210,
+    "title": "The Birth of Soul",
+    "imageUrl": "",
+    "artist": "Ray Charles",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1991",
+    "description": "'The Birth of Soul' by Ray Charles is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 211,
+    "title": "Unknown Pleasures",
+    "imageUrl": "",
+    "artist": "Joy Divison",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1980",
+    "description": "'Unknown Pleasures' by Joy Divison is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 212,
+    "title": "Wild Is the Wind",
+    "imageUrl": "",
+    "artist": "Nina Simone",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1966",
+    "description": "'Wild Is the Wind' by Nina Simone is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 213,
+    "title": "The Idler Wheel",
+    "imageUrl": "",
+    "artist": "Fiona Apple",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2012",
+    "description": "'The Idler Wheel' by Fiona Apple is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 214,
+    "title": "Wildflowers",
+    "imageUrl": "",
+    "artist": "Tom Petty",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1994",
+    "description": "'Wildflowers' by Tom Petty is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 215,
+    "title": "American Beauty",
+    "imageUrl": "",
+    "artist": "Grateful Dead",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'American Beauty' by Grateful Dead is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 216,
+    "title": "Either/Or",
+    "imageUrl": "",
+    "artist": "Elliott Smith",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1997",
+    "description": "'Either/Or' by Elliott Smith is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 217,
+    "title": "Definitely Maybe",
+    "imageUrl": "",
+    "artist": "Oasis",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1994",
+    "description": "'Definitely Maybe' by Oasis is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 218,
+    "title": "CrazySexyCool",
+    "imageUrl": "",
+    "artist": "TLC",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1994",
+    "description": "'CrazySexyCool' by TLC is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 219,
+    "title": "Only Built 4 Cuban Linx",
+    "imageUrl": "",
+    "artist": "Raekwon",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1995",
+    "description": "'Only Built 4 Cuban Linx' by Raekwon is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 220,
+    "title": "Stills",
+    "imageUrl": "",
+    "artist": "Crosby",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1970",
+    "description": "'Stills' by Crosby is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 221,
+    "title": "Rage Against the Machine",
+    "imageUrl": "",
+    "artist": "Rage Against the Machine",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1992",
+    "description": "'Rage Against the Machine' by Rage Against the Machine is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 222,
+    "title": "Ray of Light",
+    "imageUrl": "",
+    "artist": "Madonna",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1998",
+    "description": "'Ray of Light' by Madonna is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 223,
+    "title": "Imagine",
+    "imageUrl": "",
+    "artist": "John Lennon",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1971",
+    "description": "'Imagine' by John Lennon is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 224,
+    "title": "Fly",
+    "imageUrl": "",
+    "artist": "Dixie Chicks",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1999",
+    "description": "'Fly' by Dixie Chicks is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 225,
+    "title": "Yankee Hotel Foxtrot",
+    "imageUrl": "",
+    "artist": "Wilco",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2001",
+    "description": "'Yankee Hotel Foxtrot' by Wilco is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 226,
+    "title": "Layla and Other Assorted Love Songs",
+    "imageUrl": "",
+    "artist": "Derek and the Dominos",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1970",
+    "description": "'Layla and Other Assorted Love Songs' by Derek and the Dominos is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 227,
+    "title": "Here\u2019s Little Richard",
+    "imageUrl": "",
+    "artist": "Little Richard",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1957",
+    "description": "'Here\u2019s Little Richard' by Little Richard is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 228,
+    "title": "De La Soul Is Dead",
+    "imageUrl": "",
+    "artist": "De La Soul",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1991",
+    "description": "'De La Soul Is Dead' by De La Soul is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 229,
+    "title": "The Ultimate Collection",
+    "imageUrl": "",
+    "artist": "Patsy Cline",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2000",
+    "description": "'The Ultimate Collection' by Patsy Cline is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 230,
+    "title": "Anti",
+    "imageUrl": "",
+    "artist": "Rihanna",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2016",
+    "description": "'Anti' by Rihanna is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 231,
+    "title": "Damn the Torpedoes",
+    "imageUrl": "",
+    "artist": "Tom Petty and the Heartbreakers",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1979",
+    "description": "'Damn the Torpedoes' by Tom Petty and the Heartbreakers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 232,
+    "title": "Giant Steps",
+    "imageUrl": "",
+    "artist": "John Coltrane",
+    "genre": "Jazz",
+    "format": "Cassette",
+    "releaseDate": "1960",
+    "description": "'Giant Steps' by John Coltrane is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 233,
+    "title": "Little Earthquakes",
+    "imageUrl": "",
+    "artist": "Tori Amos",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1992",
+    "description": "'Little Earthquakes' by Tori Amos is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 234,
+    "title": "Master of Reality",
+    "imageUrl": "",
+    "artist": "Black Sabbath",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1971",
+    "description": "'Master of Reality' by Black Sabbath is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 235,
+    "title": "Metallica (The Black Album)",
+    "imageUrl": "",
+    "artist": "Metallica",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1991",
+    "description": "'Metallica (The Black Album)' by Metallica is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 236,
+    "title": "Discovery",
+    "imageUrl": "",
+    "artist": "Daft Punk",
+    "genre": "Punk",
+    "format": "CD",
+    "releaseDate": "2001",
+    "description": "'Discovery' by Daft Punk is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 237,
+    "title": "Red Headed Stranger",
+    "imageUrl": "",
+    "artist": "Willie Nelson",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1975",
+    "description": "'Red Headed Stranger' by Willie Nelson is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 238,
+    "title": "Trans Europe Express",
+    "imageUrl": "",
+    "artist": "Kraftwerk",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1977",
+    "description": "'Trans Europe Express' by Kraftwerk is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 239,
+    "title": "Criminal Minded",
+    "imageUrl": "",
+    "artist": "Boogie Down Productions",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1987",
+    "description": "'Criminal Minded' by Boogie Down Productions is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 240,
+    "title": "Live at the Harlem Square Club",
+    "imageUrl": "",
+    "artist": "Sam Cooke",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1985",
+    "description": "'Live at the Harlem Square Club' by Sam Cooke is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 241,
+    "title": "Blue Lines",
+    "imageUrl": "",
+    "artist": "Massive Attack",
+    "genre": "Electronic",
+    "format": "DAT",
+    "releaseDate": "1991",
+    "description": "'Blue Lines' by Massive Attack is a defining work in electronic music, praised for its lasting impact."
+  },
+  {
+    "id": 242,
+    "title": "Loaded",
+    "imageUrl": "",
+    "artist": "The Velvet Underground",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1970",
+    "description": "'Loaded' by The Velvet Underground is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 243,
+    "title": "Odessey and Oracle",
+    "imageUrl": "",
+    "artist": "The Zombies",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1968",
+    "description": "'Odessey and Oracle' by The Zombies is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 244,
+    "title": "808s &amp; Heartbreak",
+    "imageUrl": "",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "format": "CD",
+    "releaseDate": "2008",
+    "description": "'808s &amp; Heartbreak' by Kanye West is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 245,
+    "title": "Heaven or Las Vegas",
+    "imageUrl": "",
+    "artist": "Cocteau Twins",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1990",
+    "description": "'Heaven or Las Vegas' by Cocteau Twins is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 246,
+    "title": "Mama Said Knock You Out",
+    "imageUrl": "",
+    "artist": "LL Cool J",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1991",
+    "description": "'Mama Said Knock You Out' by LL Cool J is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 247,
+    "title": "Love Deluxe",
+    "imageUrl": "",
+    "artist": "Sade",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1992",
+    "description": "'Love Deluxe' by Sade is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 248,
+    "title": "American Idiot",
+    "imageUrl": "",
+    "artist": "Green Day",
+    "genre": "Punk",
+    "format": "CD",
+    "releaseDate": "2004",
+    "description": "'American Idiot' by Green Day is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 249,
+    "title": "Whitney Houston",
+    "imageUrl": "",
+    "artist": "Whitney Houston",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1985",
+    "description": "'Whitney Houston' by Whitney Houston is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 250,
+    "title": "Singles Going Steady",
+    "imageUrl": "",
+    "artist": "Buzzcocks",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1979",
+    "description": "'Singles Going Steady' by Buzzcocks is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 251,
+    "title": "Honky Ch\u00e2teau",
+    "imageUrl": "",
+    "artist": "Elton John",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Honky Ch\u00e2teau' by Elton John is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 252,
+    "title": "Q: Are We Not Men? A: We Are Devo!",
+    "imageUrl": "",
+    "artist": "Devo",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1978",
+    "description": "'Q: Are We Not Men? A: We Are Devo!' by Devo is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 253,
+    "title": "The Piper at the Gates of Dawn",
+    "imageUrl": "",
+    "artist": "Pink Floyd",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1967",
+    "description": "'The Piper at the Gates of Dawn' by Pink Floyd is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 254,
+    "title": "Head Hunters",
+    "imageUrl": "",
+    "artist": "Herbie Hancock",
+    "genre": "Jazz",
+    "format": "Cassette",
+    "releaseDate": "1973",
+    "description": "'Head Hunters' by Herbie Hancock is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 255,
+    "title": "The Freewheelin Bob Dylan",
+    "imageUrl": "",
+    "artist": "Bob Dylan",
+    "genre": "Folk",
+    "format": "CD",
+    "releaseDate": "1963",
+    "description": "'The Freewheelin Bob Dylan' by Bob Dylan is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 256,
+    "title": "Tracy Chapman",
+    "imageUrl": "",
+    "artist": "Tracy Chapman",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1988",
+    "description": "'Tracy Chapman' by Tracy Chapman is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 257,
+    "title": "Coat of Many Colors",
+    "imageUrl": "",
+    "artist": "Dolly Parton",
+    "genre": "Country",
+    "format": "DAT",
+    "releaseDate": "1971",
+    "description": "'Coat of Many Colors' by Dolly Parton is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 258,
+    "title": "The Hissing of Summer Lawns",
+    "imageUrl": "",
+    "artist": "Joni Mitchell",
+    "genre": "Folk",
+    "format": "DAT",
+    "releaseDate": "1975",
+    "description": "'The Hissing of Summer Lawns' by Joni Mitchell is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 259,
+    "title": "Pearl",
+    "imageUrl": "",
+    "artist": "Janis Joplin",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1971",
+    "description": "'Pearl' by Janis Joplin is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 260,
+    "title": "Cut",
+    "imageUrl": "",
+    "artist": "The Slits",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1979",
+    "description": "'Cut' by The Slits is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 261,
+    "title": "Check Your Head",
+    "imageUrl": "",
+    "artist": "Beastie Boys",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1992",
+    "description": "'Check Your Head' by Beastie Boys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 262,
+    "title": "Power",
+    "imageUrl": "",
+    "artist": "New Order",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1983",
+    "description": "'Power' by New Order is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 263,
+    "title": "Hard Days Night",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1964",
+    "description": "'Hard Days Night' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 264,
+    "title": "Wish You Were Here",
+    "imageUrl": "",
+    "artist": "Pink Floyd",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1975",
+    "description": "'Wish You Were Here' by Pink Floyd is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 265,
+    "title": "Wowee Zowee",
+    "imageUrl": "",
+    "artist": "Pavement",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1995",
+    "description": "'Wowee Zowee' by Pavement is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 266,
+    "title": "Help!",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1965",
+    "description": "'Help!' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 267,
+    "title": "Double Nickels on the Dime",
+    "imageUrl": "",
+    "artist": "Minutemen",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1984",
+    "description": "'Double Nickels on the Dime' by Minutemen is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 268,
+    "title": "Sail Away",
+    "imageUrl": "",
+    "artist": "Randy Newman",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1972",
+    "description": "'Sail Away' by Randy Newman is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 269,
+    "title": "Yeezus",
+    "imageUrl": "",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "format": "CD",
+    "releaseDate": "2013",
+    "description": "'Yeezus' by Kanye West is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 270,
+    "title": "Golden Hour",
+    "imageUrl": "",
+    "artist": "Kacey Musgraves",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2018",
+    "description": "'Golden Hour' by Kacey Musgraves is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 271,
+    "title": "What\u2019s the 411?",
+    "imageUrl": "",
+    "artist": "Mary J. Blige",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1992",
+    "description": "'What\u2019s the 411?' by Mary J. Blige is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 272,
+    "title": "White Light/White Heat",
+    "imageUrl": "",
+    "artist": "The Velvet Underground",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1968",
+    "description": "'White Light/White Heat' by The Velvet Underground is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 273,
+    "title": "Entertainment!",
+    "imageUrl": "",
+    "artist": "Gang of Four",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1979",
+    "description": "'Entertainment!' by Gang of Four is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 274,
+    "title": "Sweetheart of the Rodeo",
+    "imageUrl": "",
+    "artist": "The Byrds",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1968",
+    "description": "'Sweetheart of the Rodeo' by The Byrds is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 275,
+    "title": "Curtis",
+    "imageUrl": "",
+    "artist": "Curtis Mayfield",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1970",
+    "description": "'Curtis' by Curtis Mayfield is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 276,
+    "title": "The Bends",
+    "imageUrl": "",
+    "artist": "Radiohead",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1995",
+    "description": "'The Bends' by Radiohead is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 277,
+    "title": "The Diary of Alicia Keys",
+    "imageUrl": "",
+    "artist": "Alicia Keys",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2003",
+    "description": "'The Diary of Alicia Keys' by Alicia Keys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 278,
+    "title": "Houses of the Holy",
+    "imageUrl": "",
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1973",
+    "description": "'Houses of the Holy' by Led Zeppelin is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 279,
+    "title": "MTV Unplugged in New York",
+    "imageUrl": "",
+    "artist": "Nirvana",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1994",
+    "description": "'MTV Unplugged in New York' by Nirvana is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 280,
+    "title": "Get Rich or Die Tryin",
+    "imageUrl": "",
+    "artist": "50 Cent",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2002",
+    "description": "'Get Rich or Die Tryin' by 50 Cent is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 281,
+    "title": "Nilsson Schmilsson",
+    "imageUrl": "",
+    "artist": "Harry Nilsson",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1971",
+    "description": "'Nilsson Schmilsson' by Harry Nilsson is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 282,
+    "title": "In the Wee Small Hours",
+    "imageUrl": "",
+    "artist": "Frank Sinatra",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1955",
+    "description": "'In the Wee Small Hours' by Frank Sinatra is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 283,
+    "title": "Bad Girls",
+    "imageUrl": "",
+    "artist": "Donna Summer",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1975",
+    "description": "'Bad Girls' by Donna Summer is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 284,
+    "title": "Down Every Road 1962-1994",
+    "imageUrl": "",
+    "artist": "Merle Haggard",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1996",
+    "description": "'Down Every Road 1962-1994' by Merle Haggard is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 285,
+    "title": "Third/Sister Lovers",
+    "imageUrl": "",
+    "artist": "Big Star",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1978",
+    "description": "'Third/Sister Lovers' by Big Star is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 286,
+    "title": "Californication",
+    "imageUrl": "",
+    "artist": "Red Hot Chili Peppers",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1999",
+    "description": "'Californication' by Red Hot Chili Peppers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 287,
+    "title": "Mr. Tambourine Man",
+    "imageUrl": "",
+    "artist": "The Byrds",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1965",
+    "description": "'Mr. Tambourine Man' by The Byrds is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 288,
+    "title": "The Modern Lovers",
+    "imageUrl": "",
+    "artist": "The Modern Lovers",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1976",
+    "description": "'The Modern Lovers' by The Modern Lovers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 289,
+    "title": "Post",
+    "imageUrl": "",
+    "artist": "Bjo\u0308rk",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1995",
+    "description": "'Post' by Bjo\u0308rk is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 290,
+    "title": "Speakerboxxx/The Love Below",
+    "imageUrl": "",
+    "artist": "OutKast",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2003",
+    "description": "'Speakerboxxx/The Love Below' by OutKast is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 291,
+    "title": "The Writing\u2019s on the Wall",
+    "imageUrl": "",
+    "artist": "Destiny's Child",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1999",
+    "description": "'The Writing\u2019s on the Wall' by Destiny's Child is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 292,
+    "title": "Van Halen",
+    "imageUrl": "",
+    "artist": "Van Halen",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1978",
+    "description": "'Van Halen' by Van Halen is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 293,
+    "title": "Last Splash",
+    "imageUrl": "",
+    "artist": "The Breeders",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1993",
+    "description": "'Last Splash' by The Breeders is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 294,
+    "title": "Weezer (The Blue Album)",
+    "imageUrl": "",
+    "artist": "Weezer",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1994",
+    "description": "'Weezer (The Blue Album)' by Weezer is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 295,
+    "title": "Random Access Memories",
+    "imageUrl": "",
+    "artist": "Daft Punk",
+    "genre": "Punk",
+    "format": "CD",
+    "releaseDate": "2013",
+    "description": "'Random Access Memories' by Daft Punk is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 296,
+    "title": "Rust Never Sleeps",
+    "imageUrl": "",
+    "artist": "Neil Young",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1979",
+    "description": "'Rust Never Sleeps' by Neil Young is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 297,
+    "title": "So",
+    "imageUrl": "",
+    "artist": "Peter Gabriel",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1986",
+    "description": "'So' by Peter Gabriel is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 298,
+    "title": "Full Moon Fever",
+    "imageUrl": "",
+    "artist": "Tom Petty",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1989",
+    "description": "'Full Moon Fever' by Tom Petty is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 299,
+    "title": "Live at the Regal",
+    "imageUrl": "",
+    "artist": "B.B. King",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1965",
+    "description": "'Live at the Regal' by B.B. King is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 300,
+    "title": "Come on Over",
+    "imageUrl": "",
+    "artist": "Shania Twain",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1997",
+    "description": "'Come on Over' by Shania Twain is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 301,
+    "title": "New York Dolls",
+    "imageUrl": "",
+    "artist": "New York Dolls",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1973",
+    "description": "'New York Dolls' by New York Dolls is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 302,
+    "title": "Tonights the Night",
+    "imageUrl": "",
+    "artist": "Neil Young",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1975",
+    "description": "'Tonights the Night' by Neil Young is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 303,
+    "title": "The Definitive Collection",
+    "imageUrl": "",
+    "artist": "ABBA",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2001",
+    "description": "'The Definitive Collection' by ABBA is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 304,
+    "title": "Just As I Am",
+    "imageUrl": "",
+    "artist": "Bill Withers",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1971",
+    "description": "'Just As I Am' by Bill Withers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 305,
+    "title": "Alive!",
+    "imageUrl": "",
+    "artist": "Kiss",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1975",
+    "description": "'Alive!' by Kiss is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 306,
+    "title": "Im Still in Love With You",
+    "imageUrl": "",
+    "artist": "Al Green",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Im Still in Love With You' by Al Green is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 307,
+    "title": "Portrait of a Legend",
+    "imageUrl": "",
+    "artist": "Sam Cooke",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2003",
+    "description": "'Portrait of a Legend' by Sam Cooke is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 308,
+    "title": "Here Come the Warm Jets",
+    "imageUrl": "",
+    "artist": "Brian Eno",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1974",
+    "description": "'Here Come the Warm Jets' by Brian Eno is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 309,
+    "title": "Closer",
+    "imageUrl": "",
+    "artist": "Joy Divison",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1980",
+    "description": "'Closer' by Joy Divison is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 310,
+    "title": "Pink Flag",
+    "imageUrl": "",
+    "artist": "Wire",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1977",
+    "description": "'Pink Flag' by Wire is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 311,
+    "title": "On the Beach",
+    "imageUrl": "",
+    "artist": "Neil Young",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1974",
+    "description": "'On the Beach' by Neil Young is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 312,
+    "title": "A Seat at the Table",
+    "imageUrl": "",
+    "artist": "Solange",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2016",
+    "description": "'A Seat at the Table' by Solange is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 313,
+    "title": "Stories From the City",
+    "imageUrl": "",
+    "artist": "PJ Harvey",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2000",
+    "description": "'Stories From the City' by PJ Harvey is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 314,
+    "title": "One in a Million",
+    "imageUrl": "",
+    "artist": "Aaliyah",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1996",
+    "description": "'One in a Million' by Aaliyah is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 315,
+    "title": "El Mal Querer",
+    "imageUrl": "",
+    "artist": "Rosali\u0301a",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2018",
+    "description": "'El Mal Querer' by Rosali\u0301a is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 316,
+    "title": "The Who Sell Out",
+    "imageUrl": "",
+    "artist": "The Who",
+    "genre": "Rock",
+    "format": "LP",
+    "releaseDate": "1967",
+    "description": "'The Who Sell Out' by The Who is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 317,
+    "title": "Lady in Satin",
+    "imageUrl": "",
+    "artist": "Billie Holiday",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1958",
+    "description": "'Lady in Satin' by Billie Holiday is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 318,
+    "title": "The Velvet Rope",
+    "imageUrl": "",
+    "artist": "Janet Jackson",
+    "genre": "R&B",
+    "format": "DAT",
+    "releaseDate": "1997",
+    "description": "'The Velvet Rope' by Janet Jackson is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 319,
+    "title": "The Stone Roses",
+    "imageUrl": "",
+    "artist": "The Stone Roses",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1989",
+    "description": "'The Stone Roses' by The Stone Roses is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 320,
+    "title": "Los Angeles",
+    "imageUrl": "",
+    "artist": "X",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1980",
+    "description": "'Los Angeles' by X is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 321,
+    "title": "Norman Fucking Rockwell!",
+    "imageUrl": "",
+    "artist": "Lana Del Rey",
+    "genre": "Rock",
+    "format": "DAT",
+    "releaseDate": "2019",
+    "description": "'Norman Fucking Rockwell!' by Lana Del Rey is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 322,
+    "title": "From Elvis in Memphis",
+    "imageUrl": "",
+    "artist": "Elvis Presley",
+    "genre": "Country",
+    "format": "CD",
+    "releaseDate": "1969",
+    "description": "'From Elvis in Memphis' by Elvis Presley is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 323,
+    "title": "Sandinista!",
+    "imageUrl": "",
+    "artist": "The Clash",
+    "genre": "Punk",
+    "format": "CD",
+    "releaseDate": "1980",
+    "description": "'Sandinista!' by The Clash is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 324,
+    "title": "A Rush of Blood to the Head",
+    "imageUrl": "",
+    "artist": "Coldplay",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2002",
+    "description": "'A Rush of Blood to the Head' by Coldplay is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 325,
+    "title": "All Killer No Filler!",
+    "imageUrl": "",
+    "artist": "Jerry Lee Lewis",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1993",
+    "description": "'All Killer No Filler!' by Jerry Lee Lewis is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 326,
+    "title": "Dirty Mind",
+    "imageUrl": "",
+    "artist": "Prince",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1980",
+    "description": "'Dirty Mind' by Prince is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 327,
+    "title": "Live at Leeds",
+    "imageUrl": "",
+    "artist": "The Who",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1970",
+    "description": "'Live at Leeds' by The Who is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 328,
+    "title": "Modern Vampires of the City",
+    "imageUrl": "",
+    "artist": "Vampire Weekend",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2013",
+    "description": "'Modern Vampires of the City' by Vampire Weekend is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 329,
+    "title": "Endtroducing.....",
+    "imageUrl": "",
+    "artist": "DJ Shadow",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1996",
+    "description": "'Endtroducing.....' by DJ Shadow is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 330,
+    "title": "Aftermath",
+    "imageUrl": "",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1966",
+    "description": "'Aftermath' by The Rolling Stones is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 331,
+    "title": "Like a Prayer",
+    "imageUrl": "",
+    "artist": "Madonna",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1989",
+    "description": "'Like a Prayer' by Madonna is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 332,
+    "title": "Elvis Presley",
+    "imageUrl": "",
+    "artist": "Elvis Presley",
+    "genre": "Country",
+    "format": "Cassette",
+    "releaseDate": "1956",
+    "description": "'Elvis Presley' by Elvis Presley is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 333,
+    "title": "Still Bill",
+    "imageUrl": "",
+    "artist": "Bill Withers",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1972",
+    "description": "'Still Bill' by Bill Withers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 334,
+    "title": "Abraxas",
+    "imageUrl": "",
+    "artist": "Santana",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1970",
+    "description": "'Abraxas' by Santana is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 335,
+    "title": "The Basement Tapes",
+    "imageUrl": "",
+    "artist": "Bob Dylan and the Band",
+    "genre": "Folk",
+    "format": "DAT",
+    "releaseDate": "1975",
+    "description": "'The Basement Tapes' by Bob Dylan and the Band is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 336,
+    "title": "Avalon",
+    "imageUrl": "",
+    "artist": "Roxy Music",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1982",
+    "description": "'Avalon' by Roxy Music is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 337,
+    "title": "John Wesley Harding",
+    "imageUrl": "",
+    "artist": "Bob Dylan",
+    "genre": "Folk",
+    "format": "LP",
+    "releaseDate": "1967",
+    "description": "'John Wesley Harding' by Bob Dylan is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 338,
+    "title": "Another Green World",
+    "imageUrl": "",
+    "artist": "Brian Eno",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "19755",
+    "description": "'Another Green World' by Brian Eno is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 339,
+    "title": "Rhythm Nation 1814",
+    "imageUrl": "",
+    "artist": "Janet Jackson",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1989",
+    "description": "'Rhythm Nation 1814' by Janet Jackson is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 340,
+    "title": "Doggystyle",
+    "imageUrl": "",
+    "artist": "Snoop Doggy Dogg",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1993",
+    "description": "'Doggystyle' by Snoop Doggy Dogg is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 341,
+    "title": "Siamese Dream",
+    "imageUrl": "",
+    "artist": "The Smashing Pumpkins",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1993",
+    "description": "'Siamese Dream' by The Smashing Pumpkins is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 342,
+    "title": "Let It Be",
+    "imageUrl": "",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "format": "CD",
+    "releaseDate": "1970",
+    "description": "'Let It Be' by The Beatles is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 343,
+    "title": "Greatest Hits",
+    "imageUrl": "",
+    "artist": "Sly and the Family Stone",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1970",
+    "description": "'Greatest Hits' by Sly and the Family Stone is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 344,
+    "title": "Funky Kingston",
+    "imageUrl": "",
+    "artist": "Toots and the Maytals",
+    "genre": "Reggae",
+    "format": "DAT",
+    "releaseDate": "1973",
+    "description": "'Funky Kingston' by Toots and the Maytals is a defining work in reggae music, praised for its lasting impact."
+  },
+  {
+    "id": 345,
+    "title": "The Wild",
+    "imageUrl": "",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1973",
+    "description": "'The Wild' by Bruce Springsteen is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 346,
+    "title": "AM",
+    "imageUrl": "",
+    "artist": "Arctic Monkeys",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2013",
+    "description": "'AM' by Arctic Monkeys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 347,
+    "title": "Liquid Swords",
+    "imageUrl": "",
+    "artist": "GZA",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1995",
+    "description": "'Liquid Swords' by GZA is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 348,
+    "title": "Time (The Revelator)",
+    "imageUrl": "",
+    "artist": "Gillian Welch",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2001",
+    "description": "'Time (The Revelator)' by Gillian Welch is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 349,
+    "title": "Kick Out the Jams",
+    "imageUrl": "",
+    "artist": "MC5",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1969",
+    "description": "'Kick Out the Jams' by MC5 is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 350,
+    "title": "Music of My Mind",
+    "imageUrl": "",
+    "artist": "Stevie Wonder",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1972",
+    "description": "'Music of My Mind' by Stevie Wonder is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 351,
+    "title": "For Your Pleasure",
+    "imageUrl": "",
+    "artist": "Roxy Music",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1973",
+    "description": "'For Your Pleasure' by Roxy Music is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 352,
+    "title": "The Slim Shady LP",
+    "imageUrl": "",
+    "artist": "Eminem",
+    "genre": "Hip-Hop",
+    "format": "Cassette",
+    "releaseDate": "1999",
+    "description": "'The Slim Shady LP' by Eminem is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 353,
+    "title": "The Cars",
+    "imageUrl": "",
+    "artist": "The Cars",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1978",
+    "description": "'The Cars' by The Cars is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 354,
+    "title": "Germfree Adolescents",
+    "imageUrl": "",
+    "artist": "X-Ray Spex",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1978",
+    "description": "'Germfree Adolescents' by X-Ray Spex is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 355,
+    "title": "Black Sabbath",
+    "imageUrl": "",
+    "artist": "Black Sabbath",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'Black Sabbath' by Black Sabbath is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 356,
+    "title": "Gris-Gris",
+    "imageUrl": "",
+    "artist": "Dr. John",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1968",
+    "description": "'Gris-Gris' by Dr. John is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 357,
+    "title": "Rain Dogs",
+    "imageUrl": "",
+    "artist": "Tom Waits",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1985",
+    "description": "'Rain Dogs' by Tom Waits is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 358,
+    "title": "Goo",
+    "imageUrl": "",
+    "artist": "Sonic Youth",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1990",
+    "description": "'Goo' by Sonic Youth is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 359,
+    "title": "Radio City",
+    "imageUrl": "",
+    "artist": "Big Star",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1974",
+    "description": "'Radio City' by Big Star is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 360,
+    "title": "One Nation Under a Groove",
+    "imageUrl": "",
+    "artist": "Funkadelic",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1978",
+    "description": "'One Nation Under a Groove' by Funkadelic is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 361,
+    "title": "The Black Parade",
+    "imageUrl": "",
+    "artist": "My Chemical Romance",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2006",
+    "description": "'The Black Parade' by My Chemical Romance is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 362,
+    "title": "Never Too Much",
+    "imageUrl": "",
+    "artist": "Luther Vandross",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1981",
+    "description": "'Never Too Much' by Luther Vandross is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 363,
+    "title": "The Mothership Connection",
+    "imageUrl": "",
+    "artist": "Parliament",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1975",
+    "description": "'The Mothership Connection' by Parliament is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 364,
+    "title": "More Songs About Buildings and Food",
+    "imageUrl": "",
+    "artist": "Talking Heads",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1978",
+    "description": "'More Songs About Buildings and Food' by Talking Heads is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 365,
+    "title": "Madvillainy",
+    "imageUrl": "",
+    "artist": "Madvillain",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2004",
+    "description": "'Madvillainy' by Madvillain is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 366,
+    "title": "Rocks",
+    "imageUrl": "",
+    "artist": "Aerosmith",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1976",
+    "description": "'Rocks' by Aerosmith is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 367,
+    "title": "If Youre Reading This Its Too Late",
+    "imageUrl": "",
+    "artist": "Drake",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2015",
+    "description": "'If Youre Reading This Its Too Late' by Drake is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 368,
+    "title": "All Things Must Pass",
+    "imageUrl": "",
+    "artist": "George Harrison",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'All Things Must Pass' by George Harrison is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 369,
+    "title": "The Infamous",
+    "imageUrl": "",
+    "artist": "Mobb Deep",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1995",
+    "description": "'The Infamous' by Mobb Deep is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 370,
+    "title": "Tha Carter II",
+    "imageUrl": "",
+    "artist": "Lil Wayne",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2005",
+    "description": "'Tha Carter II' by Lil Wayne is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 371,
+    "title": "Anthology",
+    "imageUrl": "",
+    "artist": "The Temptations",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1973",
+    "description": "'Anthology' by The Temptations is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 372,
+    "title": "Cheap Thrills",
+    "imageUrl": "",
+    "artist": "Big Brother and the Holding Company",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1968",
+    "description": "'Cheap Thrills' by Big Brother and the Holding Company is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 373,
+    "title": "Hot Buttered Soul",
+    "imageUrl": "",
+    "artist": "Isaac Hayes",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1969",
+    "description": "'Hot Buttered Soul' by Isaac Hayes is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 374,
+    "title": "King of the Delta Blues Singers",
+    "imageUrl": "",
+    "artist": "Robert Johnson",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1961",
+    "description": "'King of the Delta Blues Singers' by Robert Johnson is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 375,
+    "title": "Dookie",
+    "imageUrl": "",
+    "artist": "Green Day",
+    "genre": "Punk",
+    "format": "LP",
+    "releaseDate": "1994",
+    "description": "'Dookie' by Green Day is a defining work in punk music, praised for its lasting impact."
+  },
+  {
+    "id": 376,
+    "title": "In the Aeroplane Over the Sea",
+    "imageUrl": "",
+    "artist": "Neutral Milk Hotel",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1998",
+    "description": "'In the Aeroplane Over the Sea' by Neutral Milk Hotel is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 377,
+    "title": "Fever to Tell",
+    "imageUrl": "",
+    "artist": "Yeah Yeah Yeahs",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2003",
+    "description": "'Fever to Tell' by Yeah Yeah Yeahs is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 378,
+    "title": "Run-D.M.C.",
+    "imageUrl": "",
+    "artist": "Run-DMC",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1983",
+    "description": "'Run-D.M.C.' by Run-DMC is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 379,
+    "title": "Moving Pictures",
+    "imageUrl": "",
+    "artist": "Rush",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1981",
+    "description": "'Moving Pictures' by Rush is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 380,
+    "title": "Mingus Ah Um",
+    "imageUrl": "",
+    "artist": "Charles Mingus",
+    "genre": "Jazz",
+    "format": "DAT",
+    "releaseDate": "1959",
+    "description": "'Mingus Ah Um' by Charles Mingus is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 381,
+    "title": "(Pronounced L\u0115h-n\u00e9rd Skin-n\u00e9rd)",
+    "imageUrl": "",
+    "artist": "Lynyrd Skynyrd",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1973",
+    "description": "'(Pronounced L\u0115h-n\u00e9rd Skin-n\u00e9rd)' by Lynyrd Skynyrd is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 382,
+    "title": "Currents",
+    "imageUrl": "",
+    "artist": "Tame Impala",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2015",
+    "description": "'Currents' by Tame Impala is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 383,
+    "title": "Mezzanine",
+    "imageUrl": "",
+    "artist": "Massive Attack",
+    "genre": "Electronic",
+    "format": "DAT",
+    "releaseDate": "1998",
+    "description": "'Mezzanine' by Massive Attack is a defining work in electronic music, praised for its lasting impact."
+  },
+  {
+    "id": 384,
+    "title": "The Kinks Are the Village Green Preservation Society",
+    "imageUrl": "",
+    "artist": "The Kinks",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1969",
+    "description": "'The Kinks Are the Village Green Preservation Society' by The Kinks is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 385,
+    "title": "Rocket to Russia",
+    "imageUrl": "",
+    "artist": "Ramones",
+    "genre": "Rock",
+    "format": "LP",
+    "releaseDate": "1977",
+    "description": "'Rocket to Russia' by Ramones is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 386,
+    "title": "Donuts",
+    "imageUrl": "",
+    "artist": "J Dilla",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2006",
+    "description": "'Donuts' by J Dilla is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 387,
+    "title": "In Rainbows",
+    "imageUrl": "",
+    "artist": "Radiohead",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2007",
+    "description": "'In Rainbows' by Radiohead is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 388,
+    "title": "Young",
+    "imageUrl": "",
+    "artist": "Aretha Franklin",
+    "genre": "R&B",
+    "format": "Cassette",
+    "releaseDate": "1972",
+    "description": "'Young' by Aretha Franklin is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 389,
+    "title": "The Emancipation of Mimi",
+    "imageUrl": "",
+    "artist": "Mariah Carey",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2005",
+    "description": "'The Emancipation of Mimi' by Mariah Carey is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 390,
+    "title": "Surfer Rosa",
+    "imageUrl": "",
+    "artist": "Pixies",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1988",
+    "description": "'Surfer Rosa' by Pixies is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 391,
+    "title": "Kaleidoscope",
+    "imageUrl": "",
+    "artist": "Kelis",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1999",
+    "description": "'Kaleidoscope' by Kelis is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 392,
+    "title": "Proud Mary: The Best of Ike and Tina Turner",
+    "imageUrl": "",
+    "artist": "Ike and Tina Turner",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1991",
+    "description": "'Proud Mary: The Best of Ike and Tina Turner' by Ike and Tina Turner is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 393,
+    "title": "1989",
+    "imageUrl": "",
+    "artist": "Taylor Swift",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2014",
+    "description": "'1989' by Taylor Swift is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 394,
+    "title": "Diana",
+    "imageUrl": "",
+    "artist": "Diana Ross",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1980",
+    "description": "'Diana' by Diana Ross is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 395,
+    "title": "Black Messiah",
+    "imageUrl": "",
+    "artist": "D\u2019Angelo and the Vanguard",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2014",
+    "description": "'Black Messiah' by D\u2019Angelo and the Vanguard is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 396,
+    "title": "Something/Anything?",
+    "imageUrl": "",
+    "artist": "Todd Rundgren",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1972",
+    "description": "'Something/Anything?' by Todd Rundgren is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 397,
+    "title": "When We All Fall Asleep",
+    "imageUrl": "",
+    "artist": "Billie Eilish",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2019",
+    "description": "'When We All Fall Asleep' by Billie Eilish is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 398,
+    "title": "The Raincoats",
+    "imageUrl": "",
+    "artist": "The Raincoats",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1979",
+    "description": "'The Raincoats' by The Raincoats is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 399,
+    "title": "Smile",
+    "imageUrl": "",
+    "artist": "Brian Wilson",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2004",
+    "description": "'Smile' by Brian Wilson is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 400,
+    "title": "Beauty and the Beat",
+    "imageUrl": "",
+    "artist": "The Go-Go\u2019s",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1981",
+    "description": "'Beauty and the Beat' by The Go-Go\u2019s is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 401,
+    "title": "Blondie",
+    "imageUrl": "",
+    "artist": "Blondie",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1977",
+    "description": "'Blondie' by Blondie is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 402,
+    "title": "Expensive Shit",
+    "imageUrl": "",
+    "artist": "Fela Kuti and Africa 70",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1975",
+    "description": "'Expensive Shit' by Fela Kuti and Africa 70 is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 403,
+    "title": "Supreme Clientele",
+    "imageUrl": "",
+    "artist": "Ghostface Killah",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2000",
+    "description": "'Supreme Clientele' by Ghostface Killah is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 404,
+    "title": "Rapture",
+    "imageUrl": "",
+    "artist": "Anita Baker",
+    "genre": "Hip-Hop",
+    "format": "Cassette",
+    "releaseDate": "1986",
+    "description": "'Rapture' by Anita Baker is a defining work in hip-hop music, praised for its lasting impact."
+  },
+  {
+    "id": 405,
+    "title": "Nuggets: Original Artyfacts from the First Psychedelic Era",
+    "imageUrl": "",
+    "artist": "Various",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1972",
+    "description": "'Nuggets: Original Artyfacts from the First Psychedelic Era' by Various is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 406,
+    "title": "69 Love Songs",
+    "imageUrl": "",
+    "artist": "Magnetic Fields",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1999",
+    "description": "'69 Love Songs' by Magnetic Fields is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 407,
+    "title": "Everybody Knows This Is Nowhere",
+    "imageUrl": "",
+    "artist": "Neil Young",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1969",
+    "description": "'Everybody Knows This Is Nowhere' by Neil Young is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 408,
+    "title": "Ace of Spades",
+    "imageUrl": "",
+    "artist": "Mot\u00f6rhead",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1980",
+    "description": "'Ace of Spades' by Mot\u00f6rhead is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 409,
+    "title": "Workingman\u2019s Dead",
+    "imageUrl": "",
+    "artist": "Grateful Dead",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1970",
+    "description": "'Workingman\u2019s Dead' by Grateful Dead is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 410,
+    "title": "Wild Honey",
+    "imageUrl": "",
+    "artist": "The Beach Boys",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1967",
+    "description": "'Wild Honey' by The Beach Boys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 411,
+    "title": "Love and Theft",
+    "imageUrl": "",
+    "artist": "Bob Dylan",
+    "genre": "Folk",
+    "format": "DAT",
+    "releaseDate": "2001",
+    "description": "'Love and Theft' by Bob Dylan is a defining work in folk music, praised for its lasting impact."
+  },
+  {
+    "id": 412,
+    "title": "Going to a Go Go",
+    "imageUrl": "",
+    "artist": "Smokey Robinson and the Miracles",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1965",
+    "description": "'Going to a Go Go' by Smokey Robinson and the Miracles is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 413,
+    "title": "Cosmos Factory",
+    "imageUrl": "",
+    "artist": "Creedence Clearwater Revival",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'Cosmos Factory' by Creedence Clearwater Revival is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 414,
+    "title": "Risqu\u00e9",
+    "imageUrl": "",
+    "artist": "Chic",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1979",
+    "description": "'Risqu\u00e9' by Chic is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 415,
+    "title": "Looka Py Py",
+    "imageUrl": "",
+    "artist": "The Meters",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1969",
+    "description": "'Looka Py Py' by The Meters is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 416,
+    "title": "Things Fall Apart",
+    "imageUrl": "",
+    "artist": "The Roots",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1999",
+    "description": "'Things Fall Apart' by The Roots is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 417,
+    "title": "The Shape of Jazz to Come",
+    "imageUrl": "",
+    "artist": "Ornette Coleman",
+    "genre": "Jazz",
+    "format": "CD",
+    "releaseDate": "1959",
+    "description": "'The Shape of Jazz to Come' by Ornette Coleman is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 418,
+    "title": "Brothers in Arms",
+    "imageUrl": "",
+    "artist": "Dire Straits",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1985",
+    "description": "'Brothers in Arms' by Dire Straits is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 419,
+    "title": "Chief",
+    "imageUrl": "",
+    "artist": "Eric Church",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2011",
+    "description": "'Chief' by Eric Church is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 420,
+    "title": "Wind and Fire",
+    "imageUrl": "",
+    "artist": "Earth",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1975",
+    "description": "'Wind and Fire' by Earth is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 421,
+    "title": "Arular",
+    "imageUrl": "",
+    "artist": "M.I.A.",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2005",
+    "description": "'Arular' by M.I.A. is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 422,
+    "title": "Lets Get It On",
+    "imageUrl": "",
+    "artist": "Marvin Gaye",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1973",
+    "description": "'Lets Get It On' by Marvin Gaye is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 423,
+    "title": "I Can Hear the Heart Beating As One",
+    "imageUrl": "",
+    "artist": "Yo La Tengo",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1997",
+    "description": "'I Can Hear the Heart Beating As One' by Yo La Tengo is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 424,
+    "title": "Odelay",
+    "imageUrl": "",
+    "artist": "Beck",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1996",
+    "description": "'Odelay' by Beck is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 425,
+    "title": "Paul Simon",
+    "imageUrl": "",
+    "artist": "Paul Simon",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1972",
+    "description": "'Paul Simon' by Paul Simon is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 426,
+    "title": "Lucinda Williams",
+    "imageUrl": "",
+    "artist": "Lucinda Williams",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1988",
+    "description": "'Lucinda Williams' by Lucinda Williams is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 427,
+    "title": "Call Me",
+    "imageUrl": "",
+    "artist": "Al Green",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1973",
+    "description": "'Call Me' by Al Green is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 428,
+    "title": "New Day Rising",
+    "imageUrl": "",
+    "artist": "H\u00fcsker D\u00fc",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1985",
+    "description": "'New Day Rising' by H\u00fcsker D\u00fc is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 429,
+    "title": "Reach Out",
+    "imageUrl": "",
+    "artist": "The Four Tops",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1967",
+    "description": "'Reach Out' by The Four Tops is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 430,
+    "title": "My Aim Is True",
+    "imageUrl": "",
+    "artist": "Elvis Costello",
+    "genre": "Country",
+    "format": "Cassette",
+    "releaseDate": "1977",
+    "description": "'My Aim Is True' by Elvis Costello is a defining work in country music, praised for its lasting impact."
+  },
+  {
+    "id": 431,
+    "title": "How Will the Wolf Survive?",
+    "imageUrl": "",
+    "artist": "Los Lobos",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1984",
+    "description": "'How Will the Wolf Survive?' by Los Lobos is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 432,
+    "title": "Confessions",
+    "imageUrl": "",
+    "artist": "Usher",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2004",
+    "description": "'Confessions' by Usher is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 433,
+    "title": "Sound of Silver",
+    "imageUrl": "",
+    "artist": "LCD Soundsystem",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2007",
+    "description": "'Sound of Silver' by LCD Soundsystem is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 434,
+    "title": "Crooked Rain",
+    "imageUrl": "",
+    "artist": "Pavement",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1994",
+    "description": "'Crooked Rain' by Pavement is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 435,
+    "title": "Actually",
+    "imageUrl": "",
+    "artist": "Pet Shop Boys",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1987",
+    "description": "'Actually' by Pet Shop Boys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 436,
+    "title": "All Eyez on Me",
+    "imageUrl": "",
+    "artist": "2Pac",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1996",
+    "description": "'All Eyez on Me' by 2Pac is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 437,
+    "title": "Screamadelica",
+    "imageUrl": "",
+    "artist": "Primal Scream",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1991",
+    "description": "'Screamadelica' by Primal Scream is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 438,
+    "title": "Parklife",
+    "imageUrl": "",
+    "artist": "Blur",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1994",
+    "description": "'Parklife' by Blur is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 439,
+    "title": "Sex Machine",
+    "imageUrl": "",
+    "artist": "James Brown",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1970",
+    "description": "'Sex Machine' by James Brown is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 440,
+    "title": "Coal Miners Daughter",
+    "imageUrl": "",
+    "artist": "Loretta Lynn",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1971",
+    "description": "'Coal Miners Daughter' by Loretta Lynn is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 441,
+    "title": "Blackout",
+    "imageUrl": "",
+    "artist": "Britney Spears",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2007",
+    "description": "'Blackout' by Britney Spears is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 442,
+    "title": "Beauty Behind the Madness",
+    "imageUrl": "",
+    "artist": "The Weeknd",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2015",
+    "description": "'Beauty Behind the Madness' by The Weeknd is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 443,
+    "title": "Scary Monsters",
+    "imageUrl": "",
+    "artist": "David Bowie",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1980",
+    "description": "'Scary Monsters' by David Bowie is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 444,
+    "title": "Extraordinary Machine",
+    "imageUrl": "",
+    "artist": "Fiona Apple",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2005",
+    "description": "'Extraordinary Machine' by Fiona Apple is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 445,
+    "title": "Close to the Edge",
+    "imageUrl": "",
+    "artist": "Yes",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1972",
+    "description": "'Close to the Edge' by Yes is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 446,
+    "title": "Journey in Satchidanada",
+    "imageUrl": "",
+    "artist": "Alice Coltrane",
+    "genre": "Jazz",
+    "format": "CD",
+    "releaseDate": "1971",
+    "description": "'Journey in Satchidanada' by Alice Coltrane is a defining work in jazz music, praised for its lasting impact."
+  },
+  {
+    "id": 447,
+    "title": "X 100pre",
+    "imageUrl": "",
+    "artist": "Bad Bunny",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2018",
+    "description": "'X 100pre' by Bad Bunny is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 448,
+    "title": "Dictionary of Soul",
+    "imageUrl": "",
+    "artist": "Otis Redding",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1966",
+    "description": "'Dictionary of Soul' by Otis Redding is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 449,
+    "title": "Elephant",
+    "imageUrl": "",
+    "artist": "The White Stripes",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2003",
+    "description": "'Elephant' by The White Stripes is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 450,
+    "title": "Ram",
+    "imageUrl": "",
+    "artist": "Paul and Linda McCartney",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1971",
+    "description": "'Ram' by Paul and Linda McCartney is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 451,
+    "title": "First Take",
+    "imageUrl": "",
+    "artist": "Roberta Flack",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1969",
+    "description": "'First Take' by Roberta Flack is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 452,
+    "title": "Anthology",
+    "imageUrl": "",
+    "artist": "Diana Ross and the Supremes",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1974",
+    "description": "'Anthology' by Diana Ross and the Supremes is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 453,
+    "title": "Pretty Hate Machine",
+    "imageUrl": "",
+    "artist": "Nine Inch Nails",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1989",
+    "description": "'Pretty Hate Machine' by Nine Inch Nails is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 454,
+    "title": "Ege Bamyasi",
+    "imageUrl": "",
+    "artist": "Can",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1972",
+    "description": "'Ege Bamyasi' by Can is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 455,
+    "title": "Bo Diddley/Go Bo Diddley",
+    "imageUrl": "",
+    "artist": "Bo Diddley",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1958",
+    "description": "'Bo Diddley/Go Bo Diddley' by Bo Diddley is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 456,
+    "title": "Greatest Hits",
+    "imageUrl": "",
+    "artist": "Al Green",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1975",
+    "description": "'Greatest Hits' by Al Green is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 457,
+    "title": "I Do Not Want What I Haven\u2019t Got",
+    "imageUrl": "",
+    "artist": "Sin\u00e9ad O\u2019Connor",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1990",
+    "description": "'I Do Not Want What I Haven\u2019t Got' by Sin\u00e9ad O\u2019Connor is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 458,
+    "title": "Southeastern",
+    "imageUrl": "",
+    "artist": "Jason Isbell",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2013",
+    "description": "'Southeastern' by Jason Isbell is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 459,
+    "title": "Man on the Moon: The End of the Day",
+    "imageUrl": "",
+    "artist": "Kid Cudi",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2009",
+    "description": "'Man on the Moon: The End of the Day' by Kid Cudi is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 460,
+    "title": "Melodrama",
+    "imageUrl": "",
+    "artist": "Lorde",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2017",
+    "description": "'Melodrama' by Lorde is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 461,
+    "title": "For Emma",
+    "imageUrl": "",
+    "artist": "Bon Iver",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2008",
+    "description": "'For Emma' by Bon Iver is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 462,
+    "title": "The Gilded Palace of Sin",
+    "imageUrl": "",
+    "artist": "The Flying Burrito Brothers",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1969",
+    "description": "'The Gilded Palace of Sin' by The Flying Burrito Brothers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 463,
+    "title": "Eli &amp; the 13th Confession",
+    "imageUrl": "",
+    "artist": "Laura Nyro",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1968",
+    "description": "'Eli &amp; the 13th Confession' by Laura Nyro is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 464,
+    "title": "3 + 3",
+    "imageUrl": "",
+    "artist": "The Isley Brothers",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1973",
+    "description": "'3 + 3' by The Isley Brothers is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 465,
+    "title": "The Best of the Classic Years",
+    "imageUrl": "",
+    "artist": "King Sunny Ad\u00e9",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2003",
+    "description": "'The Best of the Classic Years' by King Sunny Ad\u00e9 is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 466,
+    "title": "The Beach  Boys Today!",
+    "imageUrl": "",
+    "artist": "The Beach Boys",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1965",
+    "description": "'The Beach  Boys Today!' by The Beach Boys is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 467,
+    "title": "BLACKsummers\u2019night",
+    "imageUrl": "",
+    "artist": "Maxwell",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2009",
+    "description": "'BLACKsummers\u2019night' by Maxwell is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 468,
+    "title": "Some Girls",
+    "imageUrl": "",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "format": "Cassette",
+    "releaseDate": "1978",
+    "description": "'Some Girls' by The Rolling Stones is a defining work in rock music, praised for its lasting impact."
+  },
+  {
+    "id": 469,
+    "title": "Clandestino",
+    "imageUrl": "",
+    "artist": "Manu Chao",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1998",
+    "description": "'Clandestino' by Manu Chao is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 470,
+    "title": "400 Degreez",
+    "imageUrl": "",
+    "artist": "Juvenile",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1998",
+    "description": "'400 Degreez' by Juvenile is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 471,
+    "title": "Surrealistic Pillow",
+    "imageUrl": "",
+    "artist": "Jefferson Airplane",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1967",
+    "description": "'Surrealistic Pillow' by Jefferson Airplane is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 472,
+    "title": "Ctrl",
+    "imageUrl": "",
+    "artist": "SZA",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "2017",
+    "description": "'Ctrl' by SZA is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 473,
+    "title": "Barrio Fino",
+    "imageUrl": "",
+    "artist": "Daddy Yankee",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2004",
+    "description": "'Barrio Fino' by Daddy Yankee is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 474,
+    "title": "#1 Record",
+    "imageUrl": "",
+    "artist": "Big Star",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1972",
+    "description": "'#1 Record' by Big Star is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 475,
+    "title": "Sheryl Crow",
+    "imageUrl": "",
+    "artist": "Sheryl Crow",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1996",
+    "description": "'Sheryl Crow' by Sheryl Crow is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 476,
+    "title": "Kimono My House",
+    "imageUrl": "",
+    "artist": "Sparks",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1974",
+    "description": "'Kimono My House' by Sparks is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 477,
+    "title": "Moanin in the Moonlight",
+    "imageUrl": "",
+    "artist": "Howlin\u2019 Wolf",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1959",
+    "description": "'Moanin in the Moonlight' by Howlin\u2019 Wolf is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 478,
+    "title": "Something Else by the Kinks",
+    "imageUrl": "",
+    "artist": "The Kinks",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1968",
+    "description": "'Something Else by the Kinks' by The Kinks is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 479,
+    "title": "Amor Prohibido",
+    "imageUrl": "",
+    "artist": "Selena",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1994",
+    "description": "'Amor Prohibido' by Selena is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 480,
+    "title": "The Weight of These Wings",
+    "imageUrl": "",
+    "artist": "Miranda Lambert",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "2016",
+    "description": "'The Weight of These Wings' by Miranda Lambert is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 481,
+    "title": "If You\u2019re Feeling Sinister",
+    "imageUrl": "",
+    "artist": "Belle and Sebastian",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1996",
+    "description": "'If You\u2019re Feeling Sinister' by Belle and Sebastian is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 482,
+    "title": "Bizarre Ride II the Pharcyde",
+    "imageUrl": "",
+    "artist": "The Pharcyde",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1992",
+    "description": "'Bizarre Ride II the Pharcyde' by The Pharcyde is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 483,
+    "title": "The Anthology",
+    "imageUrl": "",
+    "artist": "Muddy Waters",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2001",
+    "description": "'The Anthology' by Muddy Waters is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 484,
+    "title": "Born This Way",
+    "imageUrl": "",
+    "artist": "Lady Gaga",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "2011",
+    "description": "'Born This Way' by Lady Gaga is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 485,
+    "title": "I Want to See the Bright Lights Tonight",
+    "imageUrl": "",
+    "artist": "Richard and Linda Thompson",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1974",
+    "description": "'I Want to See the Bright Lights Tonight' by Richard and Linda Thompson is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 486,
+    "title": "Continuum",
+    "imageUrl": "",
+    "artist": "John Mayer",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2006",
+    "description": "'Continuum' by John Mayer is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 487,
+    "title": "Damaged",
+    "imageUrl": "",
+    "artist": "Black Flag",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1981",
+    "description": "'Damaged' by Black Flag is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 488,
+    "title": "The Stooges",
+    "imageUrl": "",
+    "artist": "The Stooges",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1969",
+    "description": "'The Stooges' by The Stooges is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 489,
+    "title": "Back to Mono (1958-1969)",
+    "imageUrl": "",
+    "artist": "Phil Spector and Various Artists",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1991",
+    "description": "'Back to Mono (1958-1969)' by Phil Spector and Various Artists is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 490,
+    "title": "Heart Like a Wheel",
+    "imageUrl": "",
+    "artist": "Linda Ronstadt",
+    "genre": "Pop",
+    "format": "CD",
+    "releaseDate": "1975",
+    "description": "'Heart Like a Wheel' by Linda Ronstadt is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 491,
+    "title": "Fine Line",
+    "imageUrl": "",
+    "artist": "Harry Styles",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2019",
+    "description": "'Fine Line' by Harry Styles is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 492,
+    "title": "Nick of Time",
+    "imageUrl": "",
+    "artist": "Bonnie Raitt",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1989",
+    "description": "'Nick of Time' by Bonnie Raitt is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 493,
+    "title": "Here",
+    "imageUrl": "",
+    "artist": "Marvin Gaye",
+    "genre": "R&B",
+    "format": "CD",
+    "releaseDate": "1978",
+    "description": "'Here' by Marvin Gaye is a defining work in r&b music, praised for its lasting impact."
+  },
+  {
+    "id": 494,
+    "title": "Presenting the Fabulous Ronettes",
+    "imageUrl": "",
+    "artist": "The Ronettes",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1964",
+    "description": "'Presenting the Fabulous Ronettes' by The Ronettes is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 495,
+    "title": "II",
+    "imageUrl": "",
+    "artist": "Boyz II Men",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1991",
+    "description": "'II' by Boyz II Men is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 496,
+    "title": "D\u00f3nde Est\u00e1n los Ladrones",
+    "imageUrl": "",
+    "artist": "Shakira",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1998",
+    "description": "'D\u00f3nde Est\u00e1n los Ladrones' by Shakira is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 497,
+    "title": "The Indestructible Beat of Soweto",
+    "imageUrl": "",
+    "artist": "Various Artists",
+    "genre": "Pop",
+    "format": "DAT",
+    "releaseDate": "1985",
+    "description": "'The Indestructible Beat of Soweto' by Various Artists is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 498,
+    "title": "Suicide",
+    "imageUrl": "",
+    "artist": "Suicide",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "1977",
+    "description": "'Suicide' by Suicide is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 499,
+    "title": "Chaka Khan",
+    "imageUrl": "",
+    "artist": "Rufus",
+    "genre": "Pop",
+    "format": "LP",
+    "releaseDate": "1977",
+    "description": "'Chaka Khan' by Rufus is a defining work in pop music, praised for its lasting impact."
+  },
+  {
+    "id": 500,
+    "title": "Funeral",
+    "imageUrl": "",
+    "artist": "Arcade Fire",
+    "genre": "Pop",
+    "format": "Cassette",
+    "releaseDate": "2004",
+    "description": "'Funeral' by Arcade Fire is a defining work in pop music, praised for its lasting impact."
+  }
+]

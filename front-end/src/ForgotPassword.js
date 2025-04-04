@@ -1,28 +1,41 @@
 import React, { useState } from "react";
 import './ForgotPassword.css';
+import { useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email) {
-      setMessage("A password reset link has been sent to your email.");
-    } else {
-      setMessage("Please enter a valid email.");
-    }
-  };
+
+    try {
+        const response = await fetch('http://localhost:8080/resend-reset-link', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+  
+        const data = await response.json();
+        setMessage(data.message);
+  
+        if (response.ok) {
+          setTimeout(() => {
+            navigate('/login');
+          }, 2000);
+        }
+      } catch (error) {
+        console.error('Error sending reset link:', error);
+        setMessage('Something went wrong. Please try again later.');
+      }
+    };
 
   return (
     <div className="forgot-password-container">
-      {/* Header */}
-
-      {/* Forgot Password Label */}
       <h2 className="forgot-password-title">Forgot Password</h2>
 
       <form className="forgot-password-box" onSubmit={handleSubmit}>
-        {/* Email */}
         <label className="input-label">Email</label>
         <input
           type="email"
@@ -33,12 +46,10 @@ const ForgotPassword = () => {
           required
         />
 
-        {/* Send email button */}
         <button type="submit" className="send-email-button">
           Send Reset Link
         </button>
 
-        {/* Display message */}
         {message && <p className="success-message">{message}</p>}
       </form>
     </div>
