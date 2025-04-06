@@ -22,6 +22,9 @@ const Collection = () => {
   return (
     <div className="collection-container">
       <h2>Album Collection</h2>
+      <Link to="/AddCollection" className="add-collection-button">
+        Add Contact
+      </Link>
       <div className="album-grid">
         {albums.length > 0 ? (
           albums.map((album) => (
@@ -35,7 +38,9 @@ const Collection = () => {
               </Link>
               <div className="album-info">
                 <p className="album-title">{album.title}</p>
-                <p className="artist-name">{album.artist || "Unknown Artist"}</p>
+                <p className="artist-name">
+                  {album.artist || "Unknown Artist"}
+                </p>
               </div>
             </div>
           ))
