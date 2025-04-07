@@ -25,6 +25,9 @@ const Collection = () => {
       <Link to="/AddCollection" className="add-collection-button">
         Add Collection Item
       </Link>
+      <Link to="/AddBulkCollection" className="add-collection-button">
+        Add Bulk Collection
+      </Link>
       <div className="album-grid">
         {albums.length > 0 ? (
           albums.map((album) => (
