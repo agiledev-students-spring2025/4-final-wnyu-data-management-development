@@ -91,6 +91,29 @@ app.post('/resend-reset-link', (req, res) => {
     return res.status(200).json({ message: 'Password Reset Email is sent' });
 });
 
+// Contacts Route
+app.get('/contacts', (req, res) => {
+
+  let users = loadUsers();
+  res.json(users)
+})
+
+// Contact Route
+app.get('/contacts/:id', (req, res) => {
+
+  const { id } = req.params;
+  const users = loadUsers();
+  const contact = users.find(user => String(user.id) === id);
+
+  if (contact) {
+
+    res.json(contact);
+  } else {
+
+    res.status(404).json({ message: "Contact not found" });
+  }
+})
+
 // Server Start
 console.log("Starting server...");
 app.listen(process.env.PORT ?? 8080, () => {
