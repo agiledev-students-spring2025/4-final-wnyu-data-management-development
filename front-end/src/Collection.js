@@ -23,7 +23,7 @@ const Collection = () => {
     <div className="collection-container">
       <h2>Album Collection</h2>
       <Link to="/AddCollection" className="add-collection-button">
-        Add Contact
+        Add Collection Item
       </Link>
       <div className="album-grid">
         {albums.length > 0 ? (
