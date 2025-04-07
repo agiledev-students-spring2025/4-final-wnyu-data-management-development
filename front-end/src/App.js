@@ -46,14 +46,13 @@ const App = () => {
               path="/album/:id"
               element={<AlbumPage album={expandedAlbum} />}
             />
-            <Route path="/Collection" element={<Collection />} />
+            <Route
+              path="/Collection"
+              element={<Collection onAlbumClick={handleAlbumClick} />}
+            />
             <Route
               path="/Contacts"
-              element={
-                <Contacts
-                  onContactClick={handleContactClick}
-                />
-              }
+              element={<Contacts onContactClick={handleContactClick} />}
             />
             <Route
               path="/contact/:id"
