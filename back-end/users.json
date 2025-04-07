@@ -28,5 +28,11 @@
     "password": "staff123",
     "email": "janek@wnyu.com",
     "role": "Staff"
+  },
+  {
+    "username": "testuser123",
+    "password": "testpass",
+    "email": "testuser@example.com",
+    "role": "staff"
   }
 ]
