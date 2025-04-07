@@ -14,6 +14,7 @@ import Contacts from "./Contacts";
 import Contact from "./Contact";
 import AddContact from "./AddContact";
 import Footer from "./components/Footer";
+import AddBulkCollection from "./AddBulkCollection";
 
 const staffContacts = [
   {
@@ -198,6 +199,7 @@ const App = () => {
               element={<Contact contact={selectedContact} />}
             />
             <Route path="/AddCollection" element={<AddCollection />} />
+            <Route path="/AddBulkCollection" element={<AddBulkCollection />} />
             <Route path="/AddContact" element={<AddContact />} />
           </Routes>
         </div>
