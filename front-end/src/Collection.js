@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Collection.css";
 
-const Collection = () => {
+const Collection = ({ onAlbumClick }) => {
   const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
@@ -30,22 +30,45 @@ const Collection = () => {
       </Link>
       <div className="album-grid">
         {albums.length > 0 ? (
-          albums.map((album) => (
-            <div key={album.id} className="album-item">
-              <Link to={`/album/${album.id}`}>
+          albums.map((album, index) => (
+            <Link
+              to={`/album/${album.id}`}
+              key={index}
+              onClick={() => onAlbumClick(album)}
+            >
+              <div className="album-item">
+                {/* Format box and ID */}
+                <div className="album-meta">
+                  <span
+                    className={`album-format-box ${
+                      album.format === "Vinyl"
+                        ? "album-format-vinyl"
+                        : "album-format-cd"
+                    }`}
+                  >
+                    {album.format}
+                  </span>
+                  <span className="album-id">{album.id}</span>
+                </div>
+
+                {/* Separator Line */}
+                <div className="separator"></div>
+
+                {/* Album Image */}
                 <img
                   src={album.imageUrl}
                   alt={album.title}
                   className="album-image"
                 />
-              </Link>
-              <div className="album-info">
-                <p className="album-title">{album.title}</p>
-                <p className="artist-name">
-                  {album.artist || "Unknown Artist"}
-                </p>
+
+                {/* Album Details */}
+                <div className="album-details">
+                  <h3 className="album-title">{album.title}</h3>
+                  <p className="album-artist">{album.artist}</p>
+                  <p className="album-genre">{album.genre}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))
         ) : (
           <p>No albums available</p>

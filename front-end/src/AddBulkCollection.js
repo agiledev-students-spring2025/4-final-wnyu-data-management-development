@@ -30,7 +30,7 @@ const AddBulkCollection = () => {
 
       const result = await res.json();
       if (res.ok) {
-        setMessage(`Uploaded ${result.count} albums`);
+        setMessage(`Uploaded ${result.count} albums. Redirecting...`);
         setTimeout(() => navigate("/collection"), 1500);
       } else {
         setMessage(`Error: ${result.error}`);
@@ -45,7 +45,7 @@ const AddBulkCollection = () => {
       <form className="add-collection-form" onSubmit={handleUpload}>
         <h3>Bulk Upload Albums (CSV)</h3>
 
-        <label className="add-collection-input">Upload CSV File</label>
+        <label className="add-collection-input">Upload a CSV File</label>
         <input
           type="file"
           accept=".csv"
