@@ -2,9 +2,15 @@ import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
 import albumRoutes from './routes/albums.js';
+import dotenv from 'dotenv';
+import connectDB from './db.js';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+dotenv.config();
+
+connectDB();
 
 app.use(cors());
 
