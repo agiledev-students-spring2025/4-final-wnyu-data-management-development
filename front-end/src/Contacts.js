@@ -11,7 +11,7 @@ const Contacts = ({ onContactClick }) => {
         const fetchContacts = async() => {
 
             try {
-                const response = await fetch("http://localhost:3000/contacts");
+                const response = await fetch("http://localhost:8080/contacts");
                 const data = await response.json();
                 setContacts(data);
             } catch (error) {
@@ -34,7 +34,7 @@ const Contacts = ({ onContactClick }) => {
                 {contacts.map((contact) => (
                     <div key={contact.id} className="contact-card">
                         <Link to={`/contact/${contact.id}`} onClick={() => onContactClick(contact)}>
-                            <img src={contact.photoURL} alt={contact.name} className="contact-photo" />
+                            <img src={"/profile.png"} alt={contact.name} className="contact-photo" />
                         </Link>
                         <div className="contact-info">
                             <h3>{contact.name}</h3>

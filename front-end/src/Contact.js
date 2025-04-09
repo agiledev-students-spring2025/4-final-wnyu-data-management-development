@@ -13,7 +13,7 @@ const Contact = () => {
 
       try {
 
-        const response = await fetch(`http://localhost:3000/contacts`);
+        const response = await fetch(`http://localhost:8080/contacts`);
         const data = await response.json();
         const foundContact = data.find(c => String(c.id) === id);
         setContact(foundContact);
@@ -26,10 +26,15 @@ const Contact = () => {
     fetchContact();
   }, [id]);
 
+  // prevents runtime error while attaining contact info
+  if (!contact) {
+    return <div className="contact-page">Loading contact...</div>;
+  }
+
   return (
     <div className="contact-page">
       <img
-        src={contact.photoURL}
+        src={"/profile.png"}
         alt={contact.name}
         className="contact-page-photo"
       />
