@@ -25,6 +25,17 @@ const loadUsers = () => {
     }
 };
 
+// Load fake users from the JSON file
+const loadContacts = () => {
+  try {
+    const data = fs.readFileSync('./contacts.json', 'utf-8');
+    return data.trim() ? JSON.parse(data) : [];
+  } catch (error) {
+    console.error("Error reading users.json:", error);
+    return [];
+  }
+};
+
 // Save users to the JSON file
 const saveUsers = (users) => {
     try {
@@ -94,15 +105,15 @@ app.post('/resend-reset-link', (req, res) => {
 // Contacts Route
 app.get('/contacts', (req, res) => {
 
-  let users = loadUsers();
+  let users = loadContacts();
   res.json(users)
-})
+});
 
 // Contact Route
-app.get('/contacts/:id', (req, res) => {
+app.get('/contact/:id', (req, res) => {
 
   const { id } = req.params;
-  const users = loadUsers();
+  const users = loadContacts();
   const contact = users.find(user => String(user.id) === id);
 
   if (contact) {
