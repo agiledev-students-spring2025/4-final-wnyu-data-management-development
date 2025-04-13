@@ -5,13 +5,17 @@ import albumRoutes from './routes/albums.js';
 import dotenv from 'dotenv';
 import connectDB from './db.js';
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
-const app = express();
-const PORT = process.env.PORT || 8080;
+import './config.js';
+import './db.js';
+
+import { User } from './db.js';
 
 dotenv.config();
 
-connectDB();
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 
@@ -73,7 +77,34 @@ app.post('/login', (req, res) => {
   }
 });
 
-// Signup Route
+// Sign Up Route
+app.post('/signup', async (req, res) => {
+    try{
+        const { username, password, email, role } = req.body;
+        const existingUser = await User.findOne({ username });
+        if (existingUser) {
+            return res.status(409).json({ message: 'Username is already taken.' });
+        }
+            const salt = 10;
+            const hashedPassword = await bcrypt.hash(password, salt);
+
+            const newUser = new User({
+                username,
+                hash: hashedPassword,
+                email,
+                role
+            });
+
+            await newUser.save();
+
+            res.status(201).json({ message: 'User saved successfully.' });
+    }catch(error){
+        res.status(500).json({ message: 'Error registering user' });
+    }
+});
+
+
+/* JSON Sign Up Route
 app.post('/signup', (req, res) => {
     const { username, password, email, role } = req.body;
     let users = loadUsers();
@@ -95,6 +126,7 @@ app.post('/signup', (req, res) => {
         user: { username, email, role }
     });
 });
+*/ 
 
 app.post('/resend-reset-link', (req, res) => {
     const { email } = req.body;
