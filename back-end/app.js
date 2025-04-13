@@ -82,6 +82,7 @@ app.post('/login', async (req, res) => {
 app.post('/signup', async (req, res) => {
     try{
         const { username, password, email, role } = req.body;
+        
         const existingUser = await User.findOne({ username });
         if (existingUser) {
             return res.status(409).json({ message: 'Username is already taken.' });
@@ -98,14 +99,7 @@ app.post('/signup', async (req, res) => {
 
             await newUser.save();
 
-            res.status(200).json({
-                message: 'Login successful.',
-                user: {
-                    username: User.username,
-                    email: User.email,
-                    role: User.role
-                }
-            });
+            res.status(201).json({ message: 'User registered successfully.' });
     }catch(error){
         res.status(500).json({ message: 'Error registering user' });
     }
