@@ -3,7 +3,6 @@ import cors from 'cors';
 import fs from 'fs';
 import albumRoutes from './routes/albums.js';
 import dotenv from 'dotenv';
-import connectDB from './db.js';
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
@@ -99,7 +98,14 @@ app.post('/signup', async (req, res) => {
 
             await newUser.save();
 
-            res.status(201).json({ message: 'User saved successfully.' });
+            res.status(200).json({
+                message: 'Login successful.',
+                user: {
+                    username: User.username,
+                    email: User.email,
+                    role: User.role
+                }
+            });
     }catch(error){
         res.status(500).json({ message: 'Error registering user' });
     }
