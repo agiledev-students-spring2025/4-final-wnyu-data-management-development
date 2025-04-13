@@ -19,6 +19,10 @@ const Login = () => {
             const data = await response.json();
     
             if (response.ok) {
+                // Store the access token in localStorage
+                localStorage.setItem('accessToken', data.accessToken);
+
+                // Store user info (username, role, etc.)
                 localStorage.setItem('user', JSON.stringify(data.user));
                 navigate('/'); 
             } else {
