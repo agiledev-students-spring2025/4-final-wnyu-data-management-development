@@ -73,12 +73,14 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ message: 'Invalid credentials. '});
         }
 
+        const payload = { id: user._id, role: user.role };
+
         // Determine the right secret key based on role
         let accessToken;
         if (user.role === 'Staff') {
-            accessToken = process.env.STAFF_ACCESS_TOKEN;
+            accessToken = jwt.sign(payload, process.env.STAFF_ACCESS_TOKEN);
         } else if (user.role === 'Admin') {
-            accessToken = process.env.ADMIN_ACCESS_TOKEN;
+            accessToken = accessToken = jwt.sign(payload, process.env.ADMIN_ACCESS_TOKEN);
         } else {
         return res.status(403).json({ message: 'Unauthorized role.' });
         }
@@ -118,12 +120,13 @@ app.post('/signup', async (req, res) => {
 
             await newUser.save();
 
-            let accessToken = '';
+            const payload = { id: newUser._id, role: newUser.role };
 
+            let accessToken;
             if(newUser.role == "Staff"){
-                accessToken = jwt.sign({ id: newUser._id }, process.env.STAFF_ACCESS_TOKEN);
+                accessToken = jwt.sign(payload, process.env.STAFF_ACCESS_TOKEN);
             }else{
-                accessToken = jwt.sign({ id: newUser._id }, process.env.ADMIN_ACCESS_TOKEN);
+                accessToken = jwt.sign(payload, process.env.ADMIN_ACCESS_TOKEN)
             }
 
             res.status(201).json({ accessToken: accessToken, message: 'User registered successfully.' });
@@ -141,14 +144,29 @@ function authenticateToken(req, res, next){
         return res.status(401).json({ message: 'Access token required.' });
     }
 
+    // Decode the token without verifying first to get the role
+    const decoded = jwt.decode(token);
+    if (!decoded || !decoded.role) {
+        return res.status(400).json({ message: 'Invalid token payload.' });
+    }
 
-    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-        if(err){
+    let secret;
+    if (decoded.role === 'Staff') {
+        secret = process.env.STAFF_ACCESS_TOKEN;
+    } else if (decoded.role === 'Admin') {
+        secret = process.env.ADMIN_ACCESS_TOKEN;
+    } else {
+        return res.status(403).json({ message: 'Invalid user role.' });
+    }
+
+    // Verify the token with the correct secret
+    jwt.verify(token, secret, (err, user) => {
+        if (err) {
             return res.status(403).json({ message: 'Invalid token.' });
         }
 
         req.user = user;
-        next(); 
+        next();
     });
 };
 
