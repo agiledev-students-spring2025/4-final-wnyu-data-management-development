@@ -21,6 +21,12 @@ const Signup = () => {
             const data = await response.json();
             
             if (response.ok) {
+                // Store the access token locally
+                localStorage.setItem('accessToken', data.accessToken);
+
+                // Store the user's role or info
+                localStorage.setItem('userRole', role);
+                
                 navigate('/login'); // Redirect to login page after successful signup
             } else {
                 setError(data.message); // Display error if the signup fails
