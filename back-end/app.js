@@ -73,8 +73,19 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ message: 'Invalid credentials. '});
         }
 
+        // Determine the right secret key based on role
+        let accessToken;
+        if (user.role === 'Staff') {
+            accessToken = process.env.STAFF_ACCESS_TOKEN;
+        } else if (user.role === 'Admin') {
+            accessToken = process.env.ADMIN_ACCESS_TOKEN;
+        } else {
+        return res.status(403).json({ message: 'Unauthorized role.' });
+        }
+
         res.status(200).json({
             message: 'Login successful.',
+            accessToken,
             user: {
               username: user.username,
               email: user.email,
@@ -107,11 +118,39 @@ app.post('/signup', async (req, res) => {
 
             await newUser.save();
 
-            res.status(201).json({ message: 'User registered successfully.' });
+            let accessToken = '';
+
+            if(newUser.role == "Staff"){
+                accessToken = jwt.sign({ id: newUser._id }, process.env.STAFF_ACCESS_TOKEN);
+            }else{
+                accessToken = jwt.sign({ id: newUser._id }, process.env.ADMIN_ACCESS_TOKEN);
+            }
+
+            res.status(201).json({ accessToken: accessToken, message: 'User registered successfully.' });
     }catch(error){
         res.status(500).json({ message: 'Error registering user' });
     }
 });
+
+// middleware for authenticating tokens
+function authenticateToken(req, res, next){
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if(!token){
+        return res.status(401).json({ message: 'Access token required.' });
+    }
+
+
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        if(err){
+            return res.status(403).json({ message: 'Invalid token.' });
+        }
+
+        req.user = user;
+        next(); 
+    });
+};
 
 app.post('/resend-reset-link', (req, res) => {
     const { email } = req.body;
