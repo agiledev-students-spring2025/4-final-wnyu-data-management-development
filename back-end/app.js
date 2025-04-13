@@ -4,6 +4,7 @@ import fs from 'fs';
 import albumRoutes from './routes/albums.js';
 import dotenv from 'dotenv';
 import connectDB from './db.js';
+import mongoose from 'mongoose';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
