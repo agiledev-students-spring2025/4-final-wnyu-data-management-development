@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 // Connect to MongoDb
-mongoose.connect(process.env.URL);
+mongoose.connect(process.env.URI);
 
 // User Schema
 const userSchema = new mongoose.Schema({
