@@ -72,7 +72,15 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ message: 'Invalid credentials. '});
         }
 
-        res.status(200).json({ message: 'Login successful.' });
+        res.status(200).json({
+            message: 'Login successful.',
+            user: {
+              username: user.username,
+              email: user.email,
+              role: user.role,
+            }
+        });
+      
     }catch(error){
         res.status(500).json({ message: 'Error logging in user. '});
     }
@@ -82,7 +90,6 @@ app.post('/login', async (req, res) => {
 app.post('/signup', async (req, res) => {
     try{
         const { username, password, email, role } = req.body;
-        
         const existingUser = await User.findOne({ username });
         if (existingUser) {
             return res.status(409).json({ message: 'Username is already taken.' });
