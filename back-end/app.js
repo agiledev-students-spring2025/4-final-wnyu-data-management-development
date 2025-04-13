@@ -57,24 +57,26 @@ const saveUsers = (users) => {
 };
 
 // Login Route
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  const users = loadUsers();
+app.post('/login', async (req, res) => {
+    try{
+        const { username, password } = req.body;
 
-  const user = users.find(u => u.username === username && u.password === password);
+        // check if user exists
+        const user = await User.findOne({ username });
+        if (!user){
+            return res.status(404).json({ message: 'User not found. ' });
+        }
 
-  if (user) {
-    res.status(200).json({
-      message: 'Login successful',
-      user: {
-        username: user.username,
-        role: user.role,
-        email: user.email
-      }
-    });
-  } else {
-    res.status(401).json({ message: 'Invalid username or password' });
-  }
+        // Compare the provided password with the hashed password
+        const isPasswordValid = await bcrypt.compare(password, user.hash);
+        if (!isPasswordValid){
+            return res.status(401).json({ message: 'Invalid credentials. '});
+        }
+
+        res.status(200).json({ message: 'Login successful.' });
+    }catch(error){
+        res.status(500).json({ message: 'Error logging in user. '});
+    }
 });
 
 // Sign Up Route
@@ -102,31 +104,6 @@ app.post('/signup', async (req, res) => {
         res.status(500).json({ message: 'Error registering user' });
     }
 });
-
-
-/* JSON Sign Up Route
-app.post('/signup', (req, res) => {
-    const { username, password, email, role } = req.body;
-    let users = loadUsers();
-
-    // Check if user already exists
-    if (users.some(user => user.username === username)) {
-        return res.status(400).json({ message: 'Username already taken' });
-    }
-
-    // Create new user object
-    const newUser = { username, password, email, role };
-    
-    // Append user to array and save
-    users.push(newUser);
-    saveUsers(users);
-
-    res.status(201).json({
-        message: 'User registered successfully',
-        user: { username, email, role }
-    });
-});
-*/ 
 
 app.post('/resend-reset-link', (req, res) => {
     const { email } = req.body;
@@ -175,3 +152,49 @@ app.get('/', (req, res) => {
 });
 
 export default app;
+
+/* JSON Sign Up Route
+app.post('/signup', (req, res) => {
+    const { username, password, email, role } = req.body;
+    let users = loadUsers();
+
+    // Check if user already exists
+    if (users.some(user => user.username === username)) {
+        return res.status(400).json({ message: 'Username already taken' });
+    }
+
+    // Create new user object
+    const newUser = { username, password, email, role };
+    
+    // Append user to array and save
+    users.push(newUser);
+    saveUsers(users);
+
+    res.status(201).json({
+        message: 'User registered successfully',
+        user: { username, email, role }
+    });
+});
+*/ 
+
+/* JSON Login Route
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  const users = loadUsers();
+
+  const user = users.find(u => u.username === username && u.password === password);
+
+  if (user) {
+    res.status(200).json({
+      message: 'Login successful',
+      user: {
+        username: user.username,
+        role: user.role,
+        email: user.email
+      }
+    });
+  } else {
+    res.status(401).json({ message: 'Invalid username or password' });
+  }
+});
+*/
