@@ -2,6 +2,7 @@ import express from "express";
 import multer from "multer";
 import csv from "csv-parser";
 import fs from "fs";
+import { Album } from "../db.js";
 
 const router = express.Router();
 const upload = multer({ dest: "uploads/" }); // temp file storage
@@ -148,16 +149,27 @@ router.get("/staff-favorites", (req, res) => {
   res.json(staffFavorites);
 });
 
-// Add a single album endpoint to get album by ID
-router.get("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const allAlbums = [...newlyAddedAlbums, ...staffFavorites];
-  const album = allAlbums.find((a) => a.id === id);
+router.post("/add", async (req, res) => {
+  try {
+    const { title, artist, genre, format, releaseDate, description, imageUrl } =
+      req.body;
 
-  if (album) {
-    res.json(album);
-  } else {
-    res.status(404).json({ message: "Album not found" });
+    const newAlbum = new Album({
+      title,
+      artist,
+      genre,
+      format,
+      releaseDate,
+      description,
+      imageUrl, // or leave blank if no image yet
+    });
+
+    await newAlbum.save();
+
+    res.status(201).json({ message: "Album added successfully." });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error adding album." });
   }
 });
 
@@ -197,6 +209,19 @@ router.post("/bulk", upload.single("file"), (req, res) => {
     .on("error", (err) => {
       res.status(500).json({ error: err.message });
     });
+});
+
+// Add a single album endpoint to get album by ID
+router.get("/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const allAlbums = [...newlyAddedAlbums, ...staffFavorites];
+  const album = allAlbums.find((a) => a.id === id);
+
+  if (album) {
+    res.json(album);
+  } else {
+    res.status(404).json({ message: "Album not found" });
+  }
 });
 
 export default router;

@@ -4,6 +4,7 @@ import "./Collection.css";
 
 const Collection = ({ onAlbumClick }) => {
   const [albums, setAlbums] = useState([]);
+  const [userRole, setUserRole] = useState(null);
 
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -17,17 +18,26 @@ const Collection = ({ onAlbumClick }) => {
     };
 
     fetchAlbums();
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser && storedUser.role) {
+      setUserRole(storedUser.role);
+    }
   }, []);
 
   return (
     <div className="collection-container">
       <h2>Album Collection</h2>
-      <Link to="/AddCollection" className="add-collection-button">
-        Add Collection Item
-      </Link>
-      <Link to="/AddBulkCollection" className="add-collection-button">
-        Add Bulk Collection
-      </Link>
+      {userRole === "Staff" || userRole === "Admin" ? (
+        <>
+          <Link to="/AddCollection" className="add-collection-button">
+            Add Collection Item
+          </Link>
+          <Link to="/AddBulkCollection" className="add-collection-button">
+            Add Bulk Collection
+          </Link>
+        </>
+      ) : null}
       <div className="album-grid">
         {albums.length > 0 ? (
           albums.map((album, index) => (
