@@ -9,7 +9,7 @@ const Collection = ({ onAlbumClick }) => {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/albums/new"); // Fetching from backend
+        const response = await fetch("http://localhost:8080/api/albums");
         const data = await response.json();
         setAlbums(data); // Store the data in state
       } catch (error) {
@@ -66,7 +66,7 @@ const Collection = ({ onAlbumClick }) => {
 
                 {/* Album Image */}
                 <img
-                  src={album.imageUrl}
+                  src={album.imageUrl || "/default-album-cover.png"}
                   alt={album.title}
                   className="album-image"
                 />
