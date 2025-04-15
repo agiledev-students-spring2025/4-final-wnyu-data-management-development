@@ -1,0 +1,45 @@
+.search-results-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+  
+.search-results-page h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
+  
+.search-results-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+  
+.search-results-list li {
+  width: 200px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+  
+.search-results-list img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+  

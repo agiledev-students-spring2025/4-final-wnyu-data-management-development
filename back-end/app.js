@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
 import albumRoutes from './routes/albums.js';
+import searchRoutes from './routes/search.js';
 import dotenv from 'dotenv';
 import connectDB from './db.js';
 
@@ -15,6 +16,7 @@ connectDB();
 app.use(cors());
 
 app.use('/api/albums', albumRoutes);
+app.use("/api/search", searchRoutes);
 
 // Middleware
 app.use(express.json());

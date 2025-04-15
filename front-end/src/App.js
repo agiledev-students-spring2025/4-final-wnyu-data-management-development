@@ -13,6 +13,7 @@ import AlbumPage from "./AlbumPage";
 import Contacts from "./Contacts";
 import Contact from "./Contact";
 import AddContact from "./AddContact";
+import SearchResults from "./SearchResults";
 import Footer from "./components/Footer";
 import AddBulkCollection from "./AddBulkCollection";
 
@@ -61,8 +62,10 @@ const App = () => {
             <Route path="/AddCollection" element={<AddCollection />} />
             <Route path="/AddBulkCollection" element={<AddBulkCollection />} />
             <Route path="/AddContact" element={<AddContact />} />
+            <Route path="/search" element={<SearchResults />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );

@@ -3,7 +3,10 @@ import './Footer.css';
 
 const Footer = () => (
   <footer className="footer">
-    <div className="footer-content">
+    <div className="footer=content">
+      <h2 className="footer-section-title">Copyright WNYU</h2>
+    </div>
+    {/* <div className="footer-content">
       <div className="footer-section about">
         <h2 className="logo-text">WNYU Data Management</h2>
         <p>
@@ -44,7 +47,7 @@ const Footer = () => (
           </button>
         </form>
       </div>
-    </div>
+    </div> */}
   </footer>
 );
 
