@@ -173,19 +173,6 @@ router.post("/add", async (req, res) => {
   }
 });
 
-// Add a single album endpoint to get album by ID
-router.get("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const allAlbums = [...newlyAddedAlbums, ...staffFavorites];
-  const album = allAlbums.find((a) => a.id === id);
-
-  if (album) {
-    res.json(album);
-  } else {
-    res.status(404).json({ message: "Album not found" });
-  }
-});
-
 // Add albums search endpoint
 router.get("/search/:term", (req, res) => {
   const term = req.params.term.toLowerCase();
@@ -222,6 +209,19 @@ router.post("/bulk", upload.single("file"), (req, res) => {
     .on("error", (err) => {
       res.status(500).json({ error: err.message });
     });
+});
+
+// Add a single album endpoint to get album by ID
+router.get("/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const allAlbums = [...newlyAddedAlbums, ...staffFavorites];
+  const album = allAlbums.find((a) => a.id === id);
+
+  if (album) {
+    res.json(album);
+  } else {
+    res.status(404).json({ message: "Album not found" });
+  }
 });
 
 export default router;
