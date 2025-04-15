@@ -6,7 +6,7 @@ const Signup = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [role, setRole] = useState('Staff'); // Default role
+    const [role, setRole] = useState('Staff');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
@@ -21,6 +21,12 @@ const Signup = () => {
             const data = await response.json();
             
             if (response.ok) {
+                // Store the access token locally
+                localStorage.setItem('accessToken', data.accessToken);
+
+                // Store the user's role or info
+                localStorage.setItem('userRole', role);
+                
                 navigate('/login'); // Redirect to login page after successful signup
             } else {
                 setError(data.message); // Display error if the signup fails

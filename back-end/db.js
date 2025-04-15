@@ -1,19 +1,41 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 dotenv.config();
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
-    console.log('MongoDB connected successfully');
-  } catch (error) {
-    console.error('MongoDB connection failed:', error.message);
-    process.exit(1);
-  }
-};
+// Connect to MongoDb
+mongoose.connect(process.env.URI);
 
-export default connectDB;
+// User Schema
+const userSchema = new mongoose.Schema({
+  username: { type: String, required: true, unique: true },
+  hash: { type: String, required: true },
+  email: { type: String },
+  role: { type: String },
+});
+
+const User = mongoose.model("User", userSchema);
+
+const albumSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    imageUrl: { type: String },
+    artist: { type: String, required: true },
+    genre: { type: String },
+    format: { type: String },
+    releaseDate: { type: String },
+    description: { type: String },
+  },
+  {
+    timestamps: true, // auto adds createdAt & updatedAt
+    toJSON: { virtuals: true }, // allows us to export id
+    toObject: { virtuals: true },
+  }
+);
+
+albumSchema.virtual("id").get(function () {
+  return this._id.toHexString();
+});
+
+const Album = mongoose.model("Album", albumSchema);
+
+export { User, Album };
