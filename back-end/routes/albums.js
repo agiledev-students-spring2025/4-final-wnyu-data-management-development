@@ -2,6 +2,7 @@ import express from "express";
 import multer from "multer";
 import csv from "csv-parser";
 import fs from "fs";
+import { Album } from "../db.js";
 
 const router = express.Router();
 const upload = multer({ dest: "uploads/" }); // temp file storage
@@ -146,6 +147,30 @@ router.get("/new", (req, res) => {
 
 router.get("/staff-favorites", (req, res) => {
   res.json(staffFavorites);
+});
+
+router.post("/add", async (req, res) => {
+  try {
+    const { title, artist, genre, format, releaseDate, description, imageUrl } =
+      req.body;
+
+    const newAlbum = new Album({
+      title,
+      artist,
+      genre,
+      format,
+      releaseDate,
+      description,
+      imageUrl, // or leave blank if no image yet
+    });
+
+    await newAlbum.save();
+
+    res.status(201).json({ message: "Album added successfully." });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error adding album." });
+  }
 });
 
 // Add a single album endpoint to get album by ID
