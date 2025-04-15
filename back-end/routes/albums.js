@@ -141,6 +141,16 @@ const staffFavorites = [
   },
 ];
 
+router.get("/", async (req, res) => {
+  try {
+    const albums = await Album.find(); // fetch all albums from MongoDB
+    res.json(albums);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error fetching albums." });
+  }
+});
+
 router.get("/new", (req, res) => {
   res.json(newlyAddedAlbums);
 });
