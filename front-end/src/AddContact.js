@@ -5,14 +5,47 @@ import './Signup.css';
 
 const AddContact = () => {
   const [name, setName] = useState("");
-  const [title, setTitle] = useState("");
+  const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [photo, setPhoto] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const newContact = {
+      name,
+      role,
+      email,
+      phone
+    };
+
+    try {
+
+      const response = await fetch("http://localhost:8080/contacts/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newContact),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+
+        navigate("/contacts");
+
+      } else {
+
+        alert(data.message || "Contact added failure");
+      }
+    } catch (error) {
+
+      console.error("Error adding contact: ", error);
+      alert("Error");
+    }
   };
     
   return (
@@ -22,20 +55,21 @@ const AddContact = () => {
             <h3>Add Staff</h3>
 
             <label className="add-contact-input">Name</label>
-            <input type="text" className="add-input-field" placeholder=""/>
+            <input type="text" className="add-input-field" placeholder="" value={name} onChange={(e) => setName(e.target.value)} required/>
 
-            <label className="add-contact-input">Title</label>
-            <input type="email" className="add-input-field" placeholder=""/>
+            <label className="add-contact-input">Role</label>
+            <input type="text" className="add-input-field" placeholder="" value={role} onChange={(e) => setRole(e.target.value)} required/>
 
             <label className="add-contact-input">Email</label>
-            <input type="text" className="add-input-field" placeholder=""/>
+            <input type="text" className="add-input-field" placeholder="" value={email} onChange={(e) => setEmail(e.target.value)} required/>
 
             <label className="add-contact-input">Phone</label>
-            <input type="text" className="add-input-field" placeholder=""/>
+            <input type="text" className="add-input-field" placeholder="" value={phone} onChange={(e) => setPhone(e.target.value)} required/>
 
-            <button className="add-contact-button" onClick={() => navigate('/contacts')}>Add</button>
+            <button className="add-contact-button" type="submit">Add</button>
         </form>
     </div>
-  )
-}
+  );
+};
+
 export default AddContact;

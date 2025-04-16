@@ -11,7 +11,7 @@ import jwt from "jsonwebtoken";
 import "./config.js";
 import "./db.js";
 
-import { User } from "./db.js";
+import { User, Contact } from "./db.js";
 
 dotenv.config();
 
@@ -191,23 +191,66 @@ app.post("/resend-reset-link", (req, res) => {
 });
 
 // Contacts Route
-app.get("/contacts", (req, res) => {
-  let users = loadContacts();
-  res.json(users);
+app.get("/contacts", async (req, res) => {
+
+  try {
+
+    let contacts = await Contact.find();
+    res.status(200).json(contacts);
+
+  } catch (error) {
+
+    res.status(500).json({ message: "Error getting contacts" });
+  }
 });
 
 // Contact Route
-app.get("/contact/:id", (req, res) => {
-  const { id } = req.params;
-  const users = loadContacts();
-  const contact = users.find((user) => String(user.id) === id);
+app.get("/contact/:id", async (req, res) => {
 
-  if (contact) {
-    res.json(contact);
-  } else {
-    res.status(404).json({ message: "Contact not found" });
+  try {
+
+    const { id } = req.params;
+    const contact = await Contact.findById(id);
+
+    if (contact) {
+      res.json(contact);
+    } else {
+      res.status(404).json({ message: "Contact not found" });
+    }
+
+  } catch (error) {
+
+    res.status(500).json({ message: "Error getting contact." });
   }
 });
+
+// Add Contacts
+app.post("/contacts/add", async (req, res) => {
+
+  const { name, role, email, phone } = req.body;
+
+  if (!name || !role || !email || !phone) {
+
+    return res.status(400).json({ message: "All fields are required." });
+  }
+
+  // create new id for new contact
+  const last = await Contact.findOne().sort({ id: -1 }).limit(1);
+  const newId = last ? last.id + 1 : 1;
+
+  const newContact = new Contact({
+    id: newId,
+    name,
+    role,
+    email,
+    phone,
+  });
+
+  await newContact.save();
+  res.status(201).json({ message: "Contact added successfully.", contact: newContact});
+
+});
+
 
 // Server Start
 console.log("Starting server...");
