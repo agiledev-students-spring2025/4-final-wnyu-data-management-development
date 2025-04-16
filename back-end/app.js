@@ -11,7 +11,7 @@ import jwt from "jsonwebtoken";
 import "./config.js";
 import "./db.js";
 
-import { User } from "./db.js";
+import { User, Contact } from "./db.js";
 
 dotenv.config();
 
