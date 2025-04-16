@@ -143,7 +143,7 @@ const staffFavorites = [
 
 router.get("/", async (req, res) => {
   try {
-    const albums = await Album.find(); // fetch all albums from MongoDB
+    const albums = await Album.find().sort({ createdAt: -1 }); // fetch all albums from MongoDB
     res.json(albums);
   } catch (error) {
     console.error(error);

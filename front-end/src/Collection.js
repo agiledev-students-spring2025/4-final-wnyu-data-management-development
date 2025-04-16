@@ -12,6 +12,7 @@ const Collection = ({ onAlbumClick }) => {
         const response = await fetch("http://localhost:8080/api/albums");
         const data = await response.json();
         setAlbums(data); // Store the data in state
+        console.log("Fetched albums:", data);
       } catch (error) {
         console.error("Error fetching albums:", error);
       }

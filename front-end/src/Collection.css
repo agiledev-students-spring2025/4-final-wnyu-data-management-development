@@ -1,5 +1,6 @@
 .collection-container {
   padding: 20px;
+  padding-top: 100px;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -12,46 +13,40 @@
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
   padding: 10px;
   width: 100%;
-  max-width: 800px;
-  justify-content: center;
+  max-width: 1000px;
+  justify-items: center;
 }
 
 .album-item {
-  flex: 0 0 auto;
-  width: 200px;
-  height: 280px;
-  color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 160px;
+  height: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  font-family: "Inter", sans-serif;
 }
 
 .album-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .album-meta {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: white;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
   width: 100%;
-  padding: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
 }
 
 /* Format box styling */
@@ -74,6 +69,10 @@
   background: #3aea5d;
 }
 
+.album-details {
+  margin-top: 8px;
+}
+
 .add-collection-button {
   padding: 6px 10px;
   background-color: #d3d3d3;
@@ -90,7 +89,9 @@
   width: 100%;
   max-width: 130px;
   height: auto;
-  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 6px;
 }
 
 .album-info {
@@ -115,7 +116,12 @@
 /* Mobile: Default to 2 columns */
 @media (max-width: 600px) {
   .album-grid {
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .album-item {
+    max-width: 140px;
   }
 }
 

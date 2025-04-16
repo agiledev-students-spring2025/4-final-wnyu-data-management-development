@@ -1,9 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import fs from 'fs';
-import albumRoutes from './routes/albums.js';
-import searchRoutes from './routes/search.js';
-import dotenv from 'dotenv';
+import express from "express";
+import cors from "cors";
+import fs from "fs";
+import albumRoutes from "./routes/albums.js";
+import searchRoutes from "./routes/search.js";
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -18,14 +18,15 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use('/api/albums', albumRoutes);
+app.use(cors());
+
+app.use("/api/albums", albumRoutes);
 app.use("/api/search", searchRoutes);
 
 dotenv.config();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
 
 // Load fake users from the JSON file
 const loadUsers = () => {
@@ -192,23 +193,17 @@ app.post("/resend-reset-link", (req, res) => {
 
 // Contacts Route
 app.get("/contacts", async (req, res) => {
-
   try {
-
     let contacts = await Contact.find();
     res.status(200).json(contacts);
-
   } catch (error) {
-
     res.status(500).json({ message: "Error getting contacts" });
   }
 });
 
 // Contact Route
 app.get("/contact/:id", async (req, res) => {
-
   try {
-
     const { id } = req.params;
     const contact = await Contact.findById(id);
 
@@ -217,20 +212,16 @@ app.get("/contact/:id", async (req, res) => {
     } else {
       res.status(404).json({ message: "Contact not found" });
     }
-
   } catch (error) {
-
     res.status(500).json({ message: "Error getting contact." });
   }
 });
 
 // Add Contacts
 app.post("/contacts/add", async (req, res) => {
-
   const { name, role, email, phone } = req.body;
 
   if (!name || !role || !email || !phone) {
-
     return res.status(400).json({ message: "All fields are required." });
   }
 
@@ -247,10 +238,10 @@ app.post("/contacts/add", async (req, res) => {
   });
 
   await newContact.save();
-  res.status(201).json({ message: "Contact added successfully.", contact: newContact});
-
+  res
+    .status(201)
+    .json({ message: "Contact added successfully.", contact: newContact });
 });
-
 
 // Server Start
 console.log("Starting server...");
