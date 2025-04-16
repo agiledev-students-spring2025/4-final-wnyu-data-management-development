@@ -192,7 +192,6 @@ a {
   font-size: 14px;
   font-weight: bold;
   width: 100%;         
-  margin-left: 10px;
 }
 
 /* Format box styling */
@@ -204,6 +203,7 @@ a {
   font-family: "Inter", sans-serif;
   color: black;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .album-format-vinyl {
@@ -221,7 +221,6 @@ a {
   font-family: "Inter", sans-serif;
   color: black;
   margin-top: 10px;
-  margin-right: 20px;
 }
 
 /* Separator line */
@@ -401,6 +400,5 @@ a {
       font-size: 11px;
       margin-top: 12px;
       margin-right: 0;
-      padding-right: 2px;
     }
   }
