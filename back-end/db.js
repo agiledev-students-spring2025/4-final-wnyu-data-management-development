@@ -38,4 +38,14 @@ albumSchema.virtual("id").get(function () {
 
 const Album = mongoose.model("Album", albumSchema);
 
-export { User, Album };
+const contactSchema = new mongoose.Schema({ 
+  id: { type: Number, required: true, unqiue: true}, 
+  name: { type: String, required: true}, 
+  role: { type: String, required: true}, 
+  email: { type: String, required: true, unique: true}, 
+  phone: { type: String, required: true, unique: true} 
+})
+
+const Contact = mongoose.model("Contact", contactSchema);
+
+export { User, Album, Contact };
