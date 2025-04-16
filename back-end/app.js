@@ -1,8 +1,9 @@
-import express from "express";
-import cors from "cors";
-import fs from "fs";
-import albumRoutes from "./routes/albums.js";
-import dotenv from "dotenv";
+import express from 'express';
+import cors from 'cors';
+import fs from 'fs';
+import albumRoutes from './routes/albums.js';
+import searchRoutes from './routes/search.js';
+import dotenv from 'dotenv';
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -17,10 +18,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(cors());
+app.use('/api/albums', albumRoutes);
+app.use("/api/search", searchRoutes);
 
-app.use(express.json());
-app.use("/api/albums", albumRoutes);
+dotenv.config();
 
 // Middleware
 app.use(express.json());

@@ -4,11 +4,14 @@
 }
 
 body, html {
+  overscroll-behavior: none; 
+  -webkit-overflow-scrolling: auto; 
   margin: 0;
   padding: 0;
   height: 100%;
   scrollbar-width: none;
   overflow-y: scroll; 
+  overflow-x: hidden;
 }
 
 body {
@@ -51,7 +54,14 @@ body {
 .main-content {
   margin-top: var(--header-height);
   padding: 20px;
-  flex-grow: 1;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* App Logo Animation */
