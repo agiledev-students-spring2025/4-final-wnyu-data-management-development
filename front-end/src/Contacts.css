@@ -6,7 +6,6 @@
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    padding-top: 1160px;
 }
 
 .contacts-header {
@@ -75,6 +74,6 @@
     }
 
     .contacts-container {
-        padding-top: 3200px;
+        margin-top: 550px;
     }
 }
