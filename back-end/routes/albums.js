@@ -160,6 +160,7 @@ router.get("/staff-favorites", (req, res) => {
 });
 
 router.post("/add", async (req, res) => {
+  console.log("Incoming album data:", req.body);
   try {
     const { title, artist, genre, format, releaseDate, description, imageUrl } =
       req.body;
