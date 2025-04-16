@@ -11,22 +11,20 @@ import jwt from "jsonwebtoken";
 import "./config.js";
 import "./db.js";
 
-import { User, Contact } from "./db.js";
+import { User } from "./db.js";
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// middleware
 app.use(cors());
+app.use(express.json());
 
+// mount routes
 app.use("/api/albums", albumRoutes);
 app.use("/api/search", searchRoutes);
-
-dotenv.config();
-
-// Middleware
-app.use(express.json());
 
 // Load fake users from the JSON file
 const loadUsers = () => {
