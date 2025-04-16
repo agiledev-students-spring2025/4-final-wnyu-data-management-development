@@ -236,7 +236,6 @@ a {
   height: auto;
   width: auto;
   max-height: none;
-  margin-left: 35px;
   justify-content: center;
   object-fit: cover;
   border-radius: 0;
@@ -370,7 +369,6 @@ a {
       max-height: 180px;
       object-fit: cover;
       margin: 5px 0;
-      margin-left: 35px;
     }
   
     .album-meta {
@@ -401,5 +399,8 @@ a {
   
     .album-id {
       font-size: 11px;
+      margin-top: 12px;
+      margin-right: 0;
+      padding-right: 2px;
     }
   }
