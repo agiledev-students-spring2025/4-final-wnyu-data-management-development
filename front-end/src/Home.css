@@ -1,3 +1,8 @@
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 .home-container {
     padding: 20px;
     text-align: center;
@@ -16,7 +21,7 @@
   display: flex;
   justify-content: center;
   padding: 2rem 1rem 1rem;
-  margin-top: 35px;
+  margin-top: 75px;
   margin-bottom: -15px;
   background-color: white;
   width: 700px;
@@ -113,16 +118,17 @@
   display: none;
 }
   
-  /* Ensure enough horizontal space for all repeated album cards */
+/* Ensure enough horizontal space for all repeated album cards */
 .scroll-wrapper {
   display: flex;
   gap: 10px;
   flex-wrap: nowrap;
-  width: max-content;
   transition: transform 0.1s linear;
-  text-decoration: none;
   color: white;
+  justify-content: center;
+  align-items: center;
   width: max-content;
+  height: 300px
 }
 
 .scroll-wrapper .album-item {
@@ -154,7 +160,7 @@
 .album-item {
   flex: 0 0 auto;
   width: 175px;
-  height: max-content;
+  height: 500px;
   color: white;
   border: 1px solid black;
   border-radius: 10px;
@@ -169,6 +175,10 @@
   font-family: "Inter", sans-serif;
 }
 
+.album-item * {
+  text-decoration: none !important;
+}
+
 .album-item:hover {
   transform: scale(1.05);
 }
@@ -177,25 +187,23 @@
 .album-meta {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: white;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: bold;
   width: 100%;         
-  padding: 0;               
+  margin-left: 10px;
 }
 
 /* Format box styling */
 .album-format-box {
-  padding: 4px 10px;       
   border-radius: 4px;
   font-size: 11px;
   font-weight: bold;
   text-transform: uppercase;
   font-family: "Inter", sans-serif;
-  margin-left: 0;
   color: black;
+  margin-top: 10px;
 }
 
 .album-format-vinyl {
@@ -212,7 +220,8 @@
   font-weight: bold;
   font-family: "Inter", sans-serif;
   color: black;
-  margin-left: 5px;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 
 /* Separator line */
@@ -224,15 +233,20 @@
 
 /* Album image */
 .album-item img {
-  height: 150px;
-  width: 100%;
+  height: auto;
+  width: auto;
+  max-height: none;
+  margin-left: 35px;
+  justify-content: center;
   object-fit: cover;
   border-radius: 0;
+  margin-top: 5px;
 }
 
 /* Album details */
 .album-details {
   background: white;
+  margin-bottom: 15px;
 }
 
 .album-title {
@@ -242,6 +256,7 @@
   color: black;
   font-family: "Inter", sans-serif;
   text-decoration: none !important;
+  padding-bottom: 5px;
 }
 
 .album-artist,
@@ -250,6 +265,7 @@
   color: #555;
   margin: 1px 0;
   text-decoration: none !important;
+  padding-bottom: 5px;
 }
 
 /* Remove underline from all links */

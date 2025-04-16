@@ -1,10 +1,9 @@
-const express = require("express");
+import express from 'express';
+import { Album } from '../db.js';
+
 const router = express.Router();
 
-// Sample mock data or replace with your DB model query
-const albums = require("../data/albums"); // replace with DB query
-
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const { type, query } = req.query;
 
   if (!type || !query) {
@@ -13,11 +12,17 @@ router.get("/", (req, res) => {
 
   const searchField = type === "artist" ? "artist" : "title";
 
-  const filtered = albums.filter((album) =>
-    album[searchField]?.toLowerCase().includes(query.toLowerCase())
-  );
+  try {
+    // Case-insensitive regex search
+    const albums = await Album.find({
+      [searchField]: { $regex: query, $options: "i" }
+    });
 
-  res.json(filtered);
+    res.json(albums);
+  } catch (error) {
+    console.error("Error fetching albums:", error);
+    res.status(500).json({ error: "Server error" });
+  }
 });
 
-module.exports = router;
+export default router;

@@ -132,21 +132,19 @@ const Home = ({ onAlbumClick }) => {
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
-                <div className="album-item">
-                  <div className="album-meta">
-                    <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
-                      {album.format}
-                    </span>
-                    <span className="album-id">{album.id}</span>
-                  </div>
-                  <div className="separator"></div>
-                  <img src={album.imageUrl} alt={album.title} className="album-image" />
-                  <div className="album-details">
-                    <h3 className="album-title">{album.title}</h3>
-                    <p className="album-artist">{album.artist}</p>
-                    <p className="album-genre">{album.genre}</p>
-                  </div>
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)} className="album-item">
+                <div className="album-meta">
+                  <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
+                    {album.format}
+                  </span>
+                  <span className="album-id">{album.id}</span>
+                </div>
+                <div className="separator"></div>
+                <img src={album.imageUrl} alt={album.title} className="album-image" />
+                <div className="album-details">
+                  <h3 className="album-title">{album.title}</h3>
+                  <p className="album-artist">{album.artist}</p>
+                  <p className="album-genre">{album.genre}</p>
                 </div>
               </Link>
             ))}

@@ -4,8 +4,6 @@ import fs from 'fs';
 import albumRoutes from './routes/albums.js';
 import searchRoutes from './routes/search.js';
 import dotenv from 'dotenv';
-import connectDB from './db.js';
-import dotenv from "dotenv";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
