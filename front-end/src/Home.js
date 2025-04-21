@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
+import "./AlbumCard.css"; // Import the shared album card styles
 
 const Home = ({ onAlbumClick }) => {
   const [newlyAddedAlbums, setNewlyAddedAlbums] = useState([]);
@@ -77,6 +78,12 @@ const Home = ({ onAlbumClick }) => {
     }
   };
 
+  // Handle image error
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    e.target.src = "/default-album-cover.png";
+  };
+
   return (
     <div className="home-container">
       <div className="search-bar">
@@ -108,13 +115,18 @@ const Home = ({ onAlbumClick }) => {
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <div className="album-meta">
-                    <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
+                    <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : album.format === "CD" ? "album-format-cd" : album.format === "LP" ? "album-format-lp" : "album-format-dat"}`}>
                       {album.format}
                     </span>
                     <span className="album-id">{album.id}</span>
                   </div>
                   <div className="separator"></div>
-                  <img src={album.imageUrl} alt={album.title} className="album-image" />
+                  <img 
+                    src={album.imageUrl || "/default-album-cover.png"} 
+                    alt={album.title} 
+                    className="album-image" 
+                    onError={handleImageError}
+                  />
                   <div className="album-details">
                     <h3 className="album-title">{album.title}</h3>
                     <p className="album-artist">{album.artist}</p>
@@ -132,19 +144,26 @@ const Home = ({ onAlbumClick }) => {
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)} className="album-item">
-                <div className="album-meta">
-                  <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
-                    {album.format}
-                  </span>
-                  <span className="album-id">{album.id}</span>
-                </div>
-                <div className="separator"></div>
-                <img src={album.imageUrl} alt={album.title} className="album-image" />
-                <div className="album-details">
-                  <h3 className="album-title">{album.title}</h3>
-                  <p className="album-artist">{album.artist}</p>
-                  <p className="album-genre">{album.genre}</p>
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+                <div className="album-item">
+                  <div className="album-meta">
+                    <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : album.format === "CD" ? "album-format-cd" : album.format === "LP" ? "album-format-lp" : "album-format-dat"}`}>
+                      {album.format}
+                    </span>
+                    <span className="album-id">{album.id}</span>
+                  </div>
+                  <div className="separator"></div>
+                  <img 
+                    src={album.imageUrl || "/default-album-cover.png"} 
+                    alt={album.title} 
+                    className="album-image" 
+                    onError={handleImageError}
+                  />
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
+                    <p className="album-genre">{album.genre}</p>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -156,3 +175,5 @@ const Home = ({ onAlbumClick }) => {
 };
 
 export default Home;
+
+

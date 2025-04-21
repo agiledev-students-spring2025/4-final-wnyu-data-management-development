@@ -50,7 +50,6 @@ a {
   font-size: 1rem;
   padding: 0.5rem 0.05rem;
   outline: none;
-  font-family: "Inter", sans-serif;
 }
   
 .search-input::placeholder {
@@ -58,11 +57,12 @@ a {
 }
   
 .search-select {
-  background: white url("data:image/svg+xml,%3Csvg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+  background: white url("data:image/svg+xml,%3Csvg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat;
+  background-position: right 0.5rem center;
   background-size: 0.95rem;
   border: 1px solid black;
   color: black;
-  padding: 0 8px; /* right padding to make room for the arrow */
+  padding: 0 8px;
   font-size: 0.95rem;
   height: 100%;
   min-width: 125px;
@@ -111,6 +111,7 @@ a {
   align-items: center;
   color: white;
   width: 80%;
+  margin-bottom: 20px;
 }
 
 /* Scroll container */
@@ -128,12 +129,7 @@ a {
   justify-content: center;
   align-items: center;
   width: max-content;
-  height: 300px
-}
-
-.scroll-wrapper .album-item {
-  color: white;
-  background-color: white;
+  height: 250px; /* Set height to match album item height */
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -144,135 +140,16 @@ a {
   flex-shrink: 0;
   position: relative;
   width: 100%;
-  overflow-x: auto; /* allows horizontal scroll if needed */
+  overflow-x: auto;
   overflow-y: hidden;
   padding: 10px 0;
   user-select: none;
   border: 1px solid black;
   color: white;
-  min-height: 300px;
+  min-height: 250px; /* Set height to match album item height */
  
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-/* Album items */
-.album-item {
-  flex: 0 0 auto;
-  width: 175px;
-  height: 500px;
-  color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  font-family: "Inter", sans-serif;
-}
-
-.album-item * {
-  text-decoration: none !important;
-}
-
-.album-item:hover {
-  transform: scale(1.05);
-}
-
-/* Metadata container (format & ID) */
-.album-meta {
-  display: flex;
-  justify-content: space-between;
-  background: white;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  width: 100%;         
-}
-
-/* Format box styling */
-.album-format-box {
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.album-format-vinyl {
-  background: #fba93f;
-}
-
-.album-format-cd {
-  background: #3aea5d;
-}
-
-/* Album ID styling */
-.album-id {
-  font-size: 12px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-  color: black;
-  margin-top: 10px;
-}
-
-/* Separator line */
-.separator {
-  width: 100%;
-  height: 1px;
-  background-color: black;
-}
-
-/* Album image */
-.album-item img {
-  height: auto;
-  width: auto;
-  max-height: none;
-  justify-content: center;
-  object-fit: cover;
-  border-radius: 0;
-  margin-top: 5px;
-}
-
-/* Album details */
-.album-details {
-  background: white;
-  margin-bottom: 15px;
-}
-
-.album-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 4px 0;
-  color: black;
-  font-family: "Inter", sans-serif;
-  text-decoration: none !important;
-  padding-bottom: 5px;
-}
-
-.album-artist,
-.album-genre {
-  font-size: 14px;
-  color: #555;
-  margin: 1px 0;
-  text-decoration: none !important;
-  padding-bottom: 5px;
-}
-
-/* Remove underline from all links */
-.album-item a,
-.album-item a:visited,
-.album-item a:hover,
-.album-item a:active {
-  text-decoration: none !important;
-  color: inherit;
 }
 
 @media (max-width: 768px) {
@@ -320,7 +197,7 @@ a {
       padding: 0.4rem 0.5rem;
       min-width: 80px;
       flex-shrink: 0;
-      padding-right: 2rem; /* extra space for arrow */
+      padding-right: 2rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -346,59 +223,9 @@ a {
       overflow-x: auto;
       scroll-behavior: smooth;
       box-sizing: border-box;
-    }
-  
-    .album-item {
-      width: 135px;
-      height: auto;
-      flex: 0 0 auto;
-      border: 1px solid black;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      background-color: white;
-      padding-bottom: 10px;
-    }
-  
-    .album-item img {
-      width: 100%;
-      max-height: 180px;
-      object-fit: cover;
-      margin: 5px 0;
-    }
-  
-    .album-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 12px;
-      margin: 0 10px;
-      color: black;
-    }
-  
-    .album-title {
-      font-size: 14px;
-      margin: 6px 0 2px;
-      color: black;
-    }
-  
-    .album-artist,
-    .album-genre {
-      font-size: 12px;
-      margin: 0;
-      color: #555;
-    }
-  
-    .album-format-box {
-      font-size: 10px;
-      margin-top: 10px;
-    }
-  
-    .album-id {
-      font-size: 11px;
-      margin-top: 12px;
-      margin-right: 0;
+      height: 220px;
     }
   }
+
+
+  

@@ -97,7 +97,10 @@ const App = () => {
               path="/Collection"
               element={<Collection onAlbumClick={handleAlbumClick} />}
             />
-            <Route path="/albums" element={<Collection onAlbumClick={handleAlbumClick} />} />
+            <Route 
+              path="/albums" 
+              element={<Collection onAlbumClick={handleAlbumClick} />} 
+            />
             <Route
               path="/Contacts"
               element={<Contacts onContactClick={handleContactClick} />}
@@ -109,7 +112,7 @@ const App = () => {
             <Route path="/AddCollection" element={<AddCollection />} />
             <Route path="/AddBulkCollection" element={<AddBulkCollection />} />
             <Route path="/AddContact" element={<AddContact />} />
-            <Route path="/search" element={<SearchResults />} />
+            <Route path="/search" element={<SearchResults onAlbumClick={handleAlbumClick} />} />
           </Routes>
         </div>
         <Footer />

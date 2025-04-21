@@ -4,48 +4,8 @@ import "./AlbumPage.css";
 
 const AlbumPage = ({ album }) => {
   const navigate = useNavigate();
-  const [backPath, setBackPath] = useState('/Collection');
-  const [shouldRedirect, setShouldRedirect] = useState(!album);
 
-  // This useEffect will run on all renders, but only set up a redirect timer if shouldRedirect is true
-  useEffect(() => {
-    let timeout;
-    if (shouldRedirect) {
-      timeout = setTimeout(() => {
-        navigate('/Collection');
-      }, 2500);
-    }
-    
-    return () => {
-      if (timeout) clearTimeout(timeout);
-    };
-  }, [shouldRedirect, navigate]);
-
-  // Determine where the user came from to set the proper back link
-  useEffect(() => {
-    const referrer = document.referrer;
-    if (referrer && referrer.includes('Collection')) {
-      setBackPath('/Collection');
-    } else if (referrer && referrer.includes('search')) {
-      setBackPath('/search');
-    } else {
-      // Default to home if we can't determine
-      setBackPath('/');
-    }
-  }, []);
-
-  // Handle back button click
-  const handleBack = () => {
-    // Try to go back in history first
-    if (window.history.length > 1) {
-      navigate(-1);
-    } else {
-      // If no history, go to Collection as default
-      navigate('/Collection');
-    }
-  };
-
-  // If no album is passed as prop, show a message instead of returning early
+  // If no album is passed as prop, show a message
   if (!album) {
     return (
       <div className="album-page" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -64,6 +24,17 @@ const AlbumPage = ({ album }) => {
   const formattedCountry = album.country ? album.country : "Unknown";
   // Format year added if it exists
   const formattedYearAdded = album.yearAdded ? album.yearAdded : "Unknown";
+
+  // Handle back button click
+  const handleBack = () => {
+    // Try to go back in history first
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      // If no history, go to Collection as default
+      navigate('/Collection');
+    }
+  };
 
   return (
     <div className="album-page">
@@ -85,12 +56,12 @@ const AlbumPage = ({ album }) => {
       
       <div className="album-info">
         <h1 className="album-title">{album.title}</h1>
-        <h2 className="album-artist">{album.artist || "Miles Davis"}</h2>
+        <h2 className="album-artist">{album.artist || "Unknown Artist"}</h2>
         
         <div className="album-meta">
           <div className="meta-item">
             <span className="meta-label">Genre</span>
-            <div className="genre-badge">{album.genre || "Jazz"}</div>
+            <div className="genre-badge">{album.genre || "Unknown"}</div>
           </div>
           
           <div className="meta-item">
@@ -117,7 +88,7 @@ const AlbumPage = ({ album }) => {
         </div>
         
         <blockquote className="album-bio">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis justo eget nisl commodo euismod.
+          {album.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis justo eget nisl commodo euismod."}
         </blockquote>
         
         <div className="action-buttons">
@@ -137,3 +108,4 @@ const AlbumPage = ({ album }) => {
 };
 
 export default AlbumPage;
+

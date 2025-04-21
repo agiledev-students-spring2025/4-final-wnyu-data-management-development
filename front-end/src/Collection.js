@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Collection.css";
+import "./AlbumCard.css"; // Import shared album card styles
 
 const Collection = ({ onAlbumClick }) => {
   const [albums, setAlbums] = useState([]);
@@ -25,6 +26,12 @@ const Collection = ({ onAlbumClick }) => {
       setUserRole(storedUser.role);
     }
   }, []);
+
+  // Handle image error
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    e.target.src = "/default-album-cover.png";
+  };
 
   return (
     <div className="collection-container">
@@ -54,7 +61,11 @@ const Collection = ({ onAlbumClick }) => {
                     className={`album-format-box ${
                       album.format === "Vinyl"
                         ? "album-format-vinyl"
-                        : "album-format-cd"
+                        : album.format === "CD"
+                        ? "album-format-cd"
+                        : album.format === "LP"
+                        ? "album-format-lp"
+                        : "album-format-dat"
                     }`}
                   >
                     {album.format}
@@ -70,6 +81,7 @@ const Collection = ({ onAlbumClick }) => {
                   src={album.imageUrl || "/default-album-cover.png"}
                   alt={album.title}
                   className="album-image"
+                  onError={handleImageError}
                 />
 
                 {/* Album Details */}
@@ -90,3 +102,4 @@ const Collection = ({ onAlbumClick }) => {
 };
 
 export default Collection;
+

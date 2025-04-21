@@ -4,7 +4,7 @@
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -13,64 +13,12 @@
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 16px;
   padding: 10px;
   width: 100%;
   max-width: 1000px;
   justify-items: center;
-}
-
-.album-item {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 160px;
-  height: 300px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.album-item:hover {
-  transform: scale(1.03);
-}
-
-.album-meta {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 8px;
-  font-size: 12px;
-}
-
-/* Format box styling */
-.album-format-box {
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  margin-left: 0;
-  color: black;
-}
-
-.album-format-vinyl {
-  background: #fba93f;
-}
-
-.album-format-cd {
-  background: #3aea5d;
-}
-
-.album-details {
-  margin-top: 8px;
 }
 
 .add-collection-button {
@@ -79,34 +27,12 @@
   color: black;
   text-decoration: none;
   border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
 }
 
 .add-collection-button:hover {
   transform: scale(1.05);
-}
-
-.album-image {
-  width: 100%;
-  max-width: 130px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  border-radius: 6px;
-}
-
-.album-info {
-  margin-top: 8px;
-}
-
-.album-title {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.artist-name {
-  font-style: italic;
-  color: gray;
-  font-size: 12px;
 }
 
 .collection-container h2 {
@@ -118,10 +44,6 @@
   .album-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-  }
-
-  .album-item {
-    max-width: 140px;
   }
 }
 
@@ -142,6 +64,8 @@
 /* Extra Large Screens: 5+ columns */
 @media (min-width: 1201px) {
   .album-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+
