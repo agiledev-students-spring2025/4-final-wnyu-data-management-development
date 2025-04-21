@@ -7,21 +7,17 @@ const Contacts = ({ onContactClick }) => {
     const [contacts, setContacts] = useState([]);
 
     useEffect(() => {
-
         const fetchContacts = async() => {
-
             try {
                 const response = await fetch("http://localhost:8080/contacts");
                 const data = await response.json();
                 setContacts(data);
             } catch (error) {
-
                 console.error("Couldn't fetch contacts:", error);
             }
         };
 
         fetchContacts();
-
     }, []);
 
     return (
