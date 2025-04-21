@@ -1,8 +1,8 @@
 .album-page {
   width: 100%;
   max-width: 100%;
-  margin: 0;
-  padding: 20px 10px 30px;
+  margin: 0 auto; /* Add auto horizontal margins for centering */
+  padding: 20px 15px 30px; /* Increase side padding slightly and make it even */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -10,6 +10,7 @@
   animation: fadeIn 0.5s ease-in-out;
   position: relative;
   overflow-x: hidden;
+  box-sizing: border-box; /* Add box-sizing to include padding in width calculation */
 }
 
 @keyframes fadeIn {
@@ -50,7 +51,7 @@
 .album-info {
   display: flex;
   flex-direction: column;
-  padding: 0 8px;
+  padding: 0 15px; /* More even padding */
   width: 100%;
   box-sizing: border-box;
 }
@@ -195,6 +196,8 @@ body {
 
 .album-page {
   padding-top: 95px;
+  max-width: 500px; /* Add max-width to constrain on larger screens */
+  margin: 0 auto; /* Ensure centering */
 }
 
 html, body {
@@ -297,6 +300,19 @@ html, body {
 @media (max-width: 360px) {
   .album-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For iPhone and similar sized devices specifically */
+@media (max-width: 430px) {
+  .album-page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Position the back button properly accounting for padding */
+  .back-button {
+    left: 15px;
   }
 }
 
