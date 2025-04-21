@@ -1,11 +1,12 @@
 /* Sidebar Styling */
+
 .sidebar {
   position: fixed;
   top: 0;
   left: -250px; 
   width: 250px;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: rgba(126, 126, 126, 0.4); /* Adjusted transparency */
   color: white;
   padding-top: 60px;
   transition: left 0.3s ease-in-out;
@@ -25,18 +26,6 @@
   margin: 0;
 }
 
-.sidebar-nav a {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background 0.2s;
-}
-
-.sidebar-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
 
 /* Close button */
 .close-btn {
@@ -48,6 +37,22 @@
   border: none;
   color: white;
   cursor: pointer;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 9999px; 
+  transition: background 0.2s ease-in-out;
+  text-align: center;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(255, 255, 255, 0.2); /* adjusted hover effect */
 }
 
 /* Prevent scrolling when sidebar is open */
