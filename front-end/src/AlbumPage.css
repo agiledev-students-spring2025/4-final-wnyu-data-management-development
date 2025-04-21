@@ -1,23 +1,318 @@
 .album-page {
-    width: 100vw;
-    margin-top: 75px;
-    max-width: 100vw;
-    padding: 20px;
-    background-color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto; 
+  padding: 20px 15px 30px; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.album-image-container {
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+  width: 85%;
+  max-width: 300px;
+  margin: 5px auto 0;
+}
+
+.album-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.album-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px; /* More padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.album-title {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.album-artist {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.album-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 8px;
+  margin-bottom: 20px;
+  padding: 0 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.meta-item {
+  margin: 0;
+  width: 100%;
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.meta-value {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #eee;
+}
+
+.genre-badge {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.album-bio {
+  margin: 8px 0 20px;
+  line-height: 1.5;
+  color: #444;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 12px;
+  border-left: 3px solid #ddd;
+  max-width: 100%;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 4px 0 15px;
+  width: 100%;
+}
+
+.spotify-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1DB954;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(29, 185, 84, 0.3);
+  width: 70%;
+  max-width: 200px;
+}
+
+.spotify-button:hover {
+  background: #1ed760;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(29, 185, 84, 0.4);
+}
+
+.spotify-button:active {
+  transform: translateY(0);
+}
+
+.spotify-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.back-button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.album-page {
+  padding-top: 95px;
+  max-width: 500px; 
+  margin: 0 auto; /* Ensure centering */
 }
 
 html, body {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+
+.collection-container {
+  padding: 15px 10px;
+  padding-top: 80px;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 5px;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.album-item {
+  box-sizing: border-box;
+  width: 100%;
+  background: white;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  height: 225px;
+}
+
+.album-item:hover {
+  transform: scale(1.02);
+}
+
+.album-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.album-info {
+  margin-top: 6px;
+}
+
+.album-title {
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist-name {
+  font-size: 0.75rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Album format tag styling */
+.album-format-box {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.album-format-vinyl {
+  background: #fba93f;
+}
+
+.album-format-cd {
+  background: #3aea5d;
+}
+
+/* Ensure alignment*/
+.album-meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 360px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 430px) {
+  .album-page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .back-button {
+    left: 15px;
+  }
 }
 
 

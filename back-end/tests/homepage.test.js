@@ -16,4 +16,7 @@ describe("Homepage API Routes", () => {
     expect(res.body).to.be.an("array");
     expect(res.body[0]).to.have.keys(["id", "title", "artist", "genre", "format", "imageUrl"]);
   });
+  
+
+  
 });
