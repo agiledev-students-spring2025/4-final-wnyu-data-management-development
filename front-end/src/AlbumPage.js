@@ -1,30 +1,70 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import "./AlbumPage.css";
 
 const AlbumPage = ({ album }) => {
-  if(!album) return (
-    <div className="album-page" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-      <div style={{textAlign: "center"}}>
-        <h2>No album selected</h2>
-        <p>Please select an album from the catalog.</p>
-        <Link to="/albums">Go to Albums</Link>
-      </div>
-    </div>
-  );
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [backPath, setBackPath] = useState('/Collection');
+  const [shouldRedirect, setShouldRedirect] = useState(!album);
 
-  // Format year if it exists
+  useEffect(() => {
+    let timeout;
+    if (shouldRedirect) {
+      timeout = setTimeout(() => {
+        navigate('/Collection');
+      }, 2500);
+    }
+    
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [shouldRedirect, navigate]);
+
+  useEffect(() => {
+    const referrer = document.referrer;
+    if (referrer && referrer.includes('Collection')) {
+      setBackPath('/Collection');
+    } else if (referrer && referrer.includes('search')) {
+      setBackPath('/search');
+    } else {
+      // Default to home if we can't determine
+      setBackPath('/');
+    }
+  }, []);
+
+  // Handle back button click
+  const handleBack = () => {
+    // Try to go back in history first
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      // If no history go to Collection as default
+      navigate('/Collection');
+    }
+  };
+
+  if (!album) {
+    return (
+      <div className="album-page" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <div style={{textAlign: "center"}}>
+          <h2>No album selected</h2>
+          <p>Please select an album from the catalog.</p>
+          <Link to="/Collection">Go to Collection</Link>
+        </div>
+      </div>
+    );
+  }
+
   const formattedYear = album.year ? album.year : "Unknown";
-  // Format country if it exists
   const formattedCountry = album.country ? album.country : "Unknown";
-  // Format year added if it exists
   const formattedYearAdded = album.yearAdded ? album.yearAdded : "Unknown";
 
   return (
     <div className="album-page">
-      <Link to="/albums" className="back-button">
+      <button onClick={handleBack} className="back-button">
         ←
-      </Link>
+      </button>
       
       <div className="album-image-container">
         <img src={album.imageUrl} alt={album.title} className="album-photo" />
@@ -84,6 +124,5 @@ const AlbumPage = ({ album }) => {
 };
 
 export default AlbumPage;
-
 
 

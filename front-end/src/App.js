@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./Home";
 import "./App.css";
@@ -16,6 +16,52 @@ import AddContact from "./AddContact";
 import SearchResults from "./SearchResults";
 import Footer from "./components/Footer";
 import AddBulkCollection from "./AddBulkCollection";
+
+// Wrapper component to fetch album data when navigating directly to an album page
+function AlbumWrapper({ expandedAlbum, onAlbumClick }) {
+  const { id } = useParams();
+  const [fetchedAlbum, setFetchedAlbum] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // If we already have the album from a click, use that
+    if (expandedAlbum) {
+      setFetchedAlbum(expandedAlbum);
+      setLoading(false);
+      return;
+    }
+
+    // Otherwise fetch the album data based on the ID
+    const fetchAlbum = async () => {
+      try {
+        const response = await fetch(`http://localhost:8080/api/albums/${id}`);
+        if (response.ok) {
+          const data = await response.json();
+          setFetchedAlbum(data);
+          // Update the parent state via callback
+          if (onAlbumClick) onAlbumClick(data);
+        } else {
+          console.error('Failed to fetch album:', response.statusText);
+        }
+      } catch (err) {
+        console.error('Error fetching album:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    if (id) {
+      fetchAlbum();
+    }
+  }, [id, expandedAlbum, onAlbumClick]);
+
+  if (loading) {
+    return <div className="loading">Loading album details...</div>;
+  }
+
+  // Pass either the pre-loaded album or the fetched one
+  return <AlbumPage album={expandedAlbum || fetchedAlbum} />;
+}
 
 const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
@@ -45,12 +91,13 @@ const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route
               path="/album/:id"
-              element={<AlbumPage album={expandedAlbum} />}
+              element={<AlbumWrapper expandedAlbum={expandedAlbum} onAlbumClick={handleAlbumClick} />}
             />
             <Route
               path="/Collection"
               element={<Collection onAlbumClick={handleAlbumClick} />}
             />
+            <Route path="/albums" element={<Collection onAlbumClick={handleAlbumClick} />} />
             <Route
               path="/Contacts"
               element={<Contacts onContactClick={handleContactClick} />}
@@ -72,3 +119,4 @@ const App = () => {
 };
 
 export default App;
+
