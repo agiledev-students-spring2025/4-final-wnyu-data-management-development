@@ -2,9 +2,9 @@
     width: 90%;
     margin: 0 auto;
     text-align: center;
-    overflow-y: auto;
+    overflow-y: visible; 
     max-width: 1200px;
-    padding-top: 20px; /* Move everything closer to the top */
+    padding-top: 20px;
 }
 
 .contacts-header {
@@ -16,11 +16,9 @@
 }
 
 .contacts-header h2 {
-    margin-top: 0; /* Reduce space above the title */
+    margin-top: 0; 
     margin-bottom: 15px;
 }
-
-/* Keep the add-contact-button as is */
 
 .contacts-grid {
     display: grid;
@@ -29,7 +27,7 @@
     justify-items: center;
     padding: 20px 0;
     max-width: 800px;
-    margin: 0 auto; /* Center the grid */
+    margin: 0 auto; 
 }
 
 .contact-card {
@@ -38,16 +36,9 @@
     background: white;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
-                0 0 0 1px rgba(0, 0, 0, 0.1); /* Darker shadow + subtle border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 100%;
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.contact-card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 
-                0 0 0 1px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .contact-photo {
@@ -61,7 +52,7 @@
 .contact-info {
     text-align: left;
     flex: 1;
-    overflow: hidden; /* Prevent text overflow */
+    overflow: hidden; 
 }
 
 .contact-info h3 {
@@ -84,8 +75,11 @@
     white-space: nowrap;
 }
 
+
 @media (max-width: 768px) {
     .contacts-grid {
         grid-template-columns: 1fr;
     }
-}
+        .contacts-container {
+        margin-top: 0; 
+    }
