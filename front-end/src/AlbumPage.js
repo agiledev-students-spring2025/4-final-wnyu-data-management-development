@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./AlbumPage.css";
 
 const AlbumPage = ({ album }) => {
+  const navigate = useNavigate();
+
   if(!album) return (
     <div className="album-page" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
       <div style={{textAlign: "center"}}>
         <h2>No album selected</h2>
         <p>Please select an album from the catalog.</p>
-        <Link to="/albums">Go to Albums</Link>
+        <Link to="/collection">Go to Albums</Link>
       </div>
     </div>
   );
@@ -20,11 +22,15 @@ const AlbumPage = ({ album }) => {
   // Format year added if it exists
   const formattedYearAdded = album.yearAdded ? album.yearAdded : "Unknown";
 
+  const handleBack = () => {
+    navigate(-1); // This will navigate to the previous page in history
+  };
+
   return (
     <div className="album-page">
-      <Link to="/albums" className="back-button">
+      <button onClick={handleBack} className="back-button">
         ←
-      </Link>
+      </button>
       
       <div className="album-image-container">
         <img src={album.imageUrl} alt={album.title} className="album-photo" />
