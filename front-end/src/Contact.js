@@ -6,6 +6,7 @@ const Contact = () => {
 
   const { id } = useParams();
   const [contact, setContact] = useState(null);
+  const [userRole, setUserRole] = useState(null);
 
   useEffect(() => {
 
@@ -24,6 +25,11 @@ const Contact = () => {
     };
 
     fetchContact();
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser && storedUser.role) {
+      setUserRole(storedUser.role);
+    }
   }, [id]);
 
   // prevents runtime error while attaining contact info
