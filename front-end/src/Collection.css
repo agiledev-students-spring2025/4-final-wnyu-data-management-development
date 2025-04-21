@@ -1,6 +1,6 @@
 .collection-container {
-  padding: 20px;
-  padding-top: 100px;
+  padding: 20px max(20px, 5vw);
+  padding-top: min(100px, 12vh);
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -13,8 +13,8 @@
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
+  gap: clamp(8px, 2vw, 16px);
   padding: 10px;
   width: 100%;
   max-width: 1000px;
@@ -25,7 +25,9 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 160px;
-  height: 300px;
+  height: auto;
+  min-height: 280px;
+  max-height: 320px;
   background: white;
   border: 1px solid #ccc;
   border-radius: 12px;
@@ -39,6 +41,28 @@
 
 .album-item:hover {
   transform: scale(1.03);
+}
+
+/* Add loading state styles */
+.album-item.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.album-item.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: loading-shimmer 1.2s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .album-meta {
