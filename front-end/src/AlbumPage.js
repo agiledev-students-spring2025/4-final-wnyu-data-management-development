@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./AlbumPage.css";
 
 const AlbumPage = ({ album }) => {
   const navigate = useNavigate();
-  const location = useLocation();
   const [backPath, setBackPath] = useState('/Collection');
   const [shouldRedirect, setShouldRedirect] = useState(!album);
 
+  // This useEffect will run on all renders, but only set up a redirect timer if shouldRedirect is true
   useEffect(() => {
     let timeout;
     if (shouldRedirect) {
@@ -21,6 +21,7 @@ const AlbumPage = ({ album }) => {
     };
   }, [shouldRedirect, navigate]);
 
+  // Determine where the user came from to set the proper back link
   useEffect(() => {
     const referrer = document.referrer;
     if (referrer && referrer.includes('Collection')) {
@@ -39,11 +40,12 @@ const AlbumPage = ({ album }) => {
     if (window.history.length > 1) {
       navigate(-1);
     } else {
-      // If no history go to Collection as default
+      // If no history, go to Collection as default
       navigate('/Collection');
     }
   };
 
+  // If no album is passed as prop, show a message instead of returning early
   if (!album) {
     return (
       <div className="album-page" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -56,8 +58,11 @@ const AlbumPage = ({ album }) => {
     );
   }
 
+  // Format year if it exists
   const formattedYear = album.year ? album.year : "Unknown";
+  // Format country if it exists
   const formattedCountry = album.country ? album.country : "Unknown";
+  // Format year added if it exists
   const formattedYearAdded = album.yearAdded ? album.yearAdded : "Unknown";
 
   return (
@@ -67,7 +72,15 @@ const AlbumPage = ({ album }) => {
       </button>
       
       <div className="album-image-container">
-        <img src={album.imageUrl} alt={album.title} className="album-photo" />
+        <img 
+          src={album.imageUrl || "/default-album-cover.png"} 
+          alt={album.title} 
+          className="album-photo" 
+          onError={(e) => {
+            e.target.onerror = null; 
+            e.target.src = "/default-album-cover.png";
+          }}
+        />
       </div>
       
       <div className="album-info">
@@ -124,5 +137,3 @@ const AlbumPage = ({ album }) => {
 };
 
 export default AlbumPage;
-
-
