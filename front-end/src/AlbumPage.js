@@ -33,7 +33,12 @@ const AlbumPage = ({ album }) => {
       </button>
       
       <div className="album-image-container">
-        <img src={album.imageUrl} alt={album.title} className="album-photo" />
+        <img 
+          src={album.imageUrl || "/default-album-cover.png"} 
+          alt={album.title} 
+          className="album-photo" 
+          onError={(e) => {e.target.src = "/default-album-cover.png"}}
+        />
       </div>
       
       <div className="album-info">
