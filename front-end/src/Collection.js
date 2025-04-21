@@ -37,6 +37,11 @@ const Collection = ({ onAlbumClick }) => {
           <Link to="/AddBulkCollection" className="add-collection-button">
             Add Bulk Collection
           </Link>
+          {userRole === "Admin" && (
+            <Link to="/EditFeatured" className="add-collection-button">
+              Edit Featured
+            </Link>
+          )}
         </>
       ) : null}
       <div className="album-grid">
