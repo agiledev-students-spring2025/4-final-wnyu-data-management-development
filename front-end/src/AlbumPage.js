@@ -28,17 +28,16 @@ const AlbumPage = ({ album }) => {
       
       <div className="album-image-container">
         <img src={album.imageUrl} alt={album.title} className="album-photo" />
-        <div className="record-spin"></div>
       </div>
       
       <div className="album-info">
         <h1 className="album-title">{album.title}</h1>
-        <h2 className="album-artist">{album.artist || "Unknown Artist"}</h2>
+        <h2 className="album-artist">{album.artist || "Miles Davis"}</h2>
         
         <div className="album-meta">
           <div className="meta-item">
             <span className="meta-label">Genre</span>
-            <div className="genre-badge">{album.genre || "Unknown"}</div>
+            <div className="genre-badge">{album.genre || "Jazz"}</div>
           </div>
           
           <div className="meta-item">
@@ -52,7 +51,7 @@ const AlbumPage = ({ album }) => {
           </div>
           
           <div className="meta-item">
-            <span className="meta-label">Added to Collection</span>
+            <span className="meta-label">Added</span>
             <div className="meta-value">{formattedYearAdded}</div>
           </div>
 
@@ -65,7 +64,7 @@ const AlbumPage = ({ album }) => {
         </div>
         
         <blockquote className="album-bio">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis justo eget nisl commodo euismod. Donec egestas, magna a fringilla rutrum, dolor nisi fringilla ante, id commodo diam tellus quis felis.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis justo eget nisl commodo euismod.
         </blockquote>
         
         <div className="action-buttons">
@@ -85,3 +84,6 @@ const AlbumPage = ({ album }) => {
 };
 
 export default AlbumPage;
+
+
+
