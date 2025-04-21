@@ -9,7 +9,7 @@ import ForgotPassword from "./ForgotPassword";
 import Profile from "./Profile";
 import Collection from "./Collection";
 import AddCollection from "./AddCollection";
-import AlbumPage from "./AlbumPage";
+import AlbumPage from "./AlbumPage"; 
 import Contacts from "./Contacts";
 import Contact from "./Contact";
 import AddContact from "./AddContact";
