@@ -6,7 +6,6 @@
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
 }
 
 .contacts-header {
@@ -14,90 +13,67 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 30px; 
+    margin-bottom: 20px;
 }
 
 .add-contact-button {
-    padding: 10px 20px;
-    background-color: #3d3d3d;
-    color: white;
+    padding: 6px 10px;
+    background-color: #d3d3d3;
+    color: black;
     text-decoration: none;
-    border-radius: 15px; 
-    font-weight: 500;
-    transition: all 0.2s ease;
+    border-radius: 5px;
 }
 
 .add-contact-button:hover {
     transform: scale(1.05);
-    background-color: #555;
 }
 
 .contacts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
     justify-items: center;
     padding: 20px 0;
-    width: 100%;
-    max-width: 900px;
+    max-width: 800px;
 }
 
 .contact-card {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background: white;
-    padding: 25px;
-    border-radius: 16px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
 .contact-photo {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    margin-bottom: 15px;
-    object-fit: cover;
-    border: 3px solid #f5f5f5;
+    margin-right: 15px;
 }
 
 .contact-info {
-    text-align: center;
-    width: 100%;
-}
-
-.contact-info h3 {
-    font-size: 1.5rem;
-    margin: 5px 0;
-    color: #333;
+    text-align: left;
 }
 
 .contact-title {
-    font-weight: 600;
-    color: #666;
-    background-color: #f1f1f1;
-    padding: 5px 12px;
-    border-radius: 15px;
-    display: inline-block;
-    margin: 8px 0;
+    font-weight: bold;
+    color: #555;
 }
 
 .contact-email, .contact-phone {
-    font-size: 0.95em;
-    color: #555;
-    margin: 4px 0;
+    font-size: 0.9em;
+    color: #333;
 }
 
 @media (max-width: 768px) {
     .contacts-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contacts-container {
+        margin-top: 550px;
     }
 }
