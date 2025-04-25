@@ -241,6 +241,27 @@ app.post("/contacts/add", async (req, res) => {
     .json({ message: "Contact added successfully.", contact: newContact });
 });
 
+// Remove Contacts
+app.delete('/contacts/:id', async (req, res) => {
+
+  try {
+      const contactId = req.params.id;
+      const result = await Contact.findOneAndDelete({ id: contactId });
+
+      if (result) {
+          res.status(200).send({ message: "Contact deleted successfully" });
+      } else {
+
+          res.status(404).send({ message: "Contact not found" });
+      }
+
+  } catch (error) {
+
+      console.error("Error deleting contact:", error);
+      res.status(500).send({ message: "Error" });
+  }
+});
+
 // Server Start
 console.log("Starting server...");
 app.listen(process.env.PORT ?? 8080, () => {

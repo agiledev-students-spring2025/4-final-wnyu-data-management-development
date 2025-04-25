@@ -38,18 +38,23 @@ const Home = ({ onAlbumClick }) => {
       let scrollAmount = 0.5;
       let scrollInterval = null;
 
+      // Use requestAnimationFrame for smoother scrolling
       const startScrolling = () => {
-        if (scrollInterval) clearInterval(scrollInterval);
-        scrollInterval = setInterval(() => {
+        if (scrollInterval) cancelAnimationFrame(scrollInterval);
+        
+        const scroll = () => {
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
             scrollContainer.scrollLeft = 0;
           }
           scrollContainer.scrollLeft += scrollAmount;
-        }, 25);
+          scrollInterval = requestAnimationFrame(scroll);
+        };
+        
+        scrollInterval = requestAnimationFrame(scroll);
       };
 
       const stopScrolling = () => {
-        if (scrollInterval) clearInterval(scrollInterval);
+        if (scrollInterval) cancelAnimationFrame(scrollInterval);
       };
 
       startScrolling();
@@ -57,7 +62,7 @@ const Home = ({ onAlbumClick }) => {
       scrollContainer.addEventListener("mouseleave", startScrolling);
 
       return () => {
-        clearInterval(scrollInterval);
+        cancelAnimationFrame(scrollInterval);
         scrollContainer.removeEventListener("mouseenter", stopScrolling);
         scrollContainer.removeEventListener("mouseleave", startScrolling);
       };

@@ -4,15 +4,15 @@
     right: -250px; 
     width: 200px;
     height: 100vh;
-    background: #333;
+    background: rgba(51, 51, 51, 0.85); 
     color: white;
     transition: right 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    justify-content: flex-start; 
-    padding: 20px;
-    padding-top: 40px; 
+    align-items: center; 
+    justify-content: flex-start;
+    padding: 30px 20px;
+    z-index: 1100;
 }
 
 .profile-sidebar.open {
@@ -22,12 +22,16 @@
 .profile-sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0 0 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
 }
 
 .profile-sidebar li {
     width: 100%;
+    text-align: center; /* Center text */
 }
 
 .profile-sidebar a {
@@ -35,25 +39,67 @@
     text-decoration: none;
     font-size: 18px;
     display: block;
-    padding: 10px 0;
+    padding: 12px 0;
+    border-radius: 25px; /* Oval shape */
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
 }
 
 .profile-sidebar a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.03);
 }
 
 /* Logout Button */
 .logout-button {
-    background: none;
+    background-color: #d3d3d3;
     border: none;
-    color: white;
-    font-size: 18px;
-    text-align: left;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
     width: 100%;
-    padding: 10px 0;
+    padding: 12px 0;
+    border-radius: 25px;
     cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
 }
 
 .logout-button:hover {
-    text-decoration: underline;
+    background-color: #bbb;
+    transform: scale(1.03);
 }
+
+/* Add a close button */
+.profile-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Add profile title */
+.profile-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,6 +17,7 @@ import SearchResults from "./SearchResults";
 import Footer from "./components/Footer";
 import AddBulkCollection from "./AddBulkCollection";
 import StaffFavoritesPage from "./StaffFavoritesPage";
+import EditFeatured from "./EditFeatured";
 
 const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
@@ -61,6 +62,7 @@ const App = () => {
               element={<Contact contact={selectedContact} />}
             />
             <Route path="/AddCollection" element={<AddCollection />} />
+            <Route path="/EditFeatured" element={<EditFeatured />} />
             <Route path="/AddBulkCollection" element={<AddBulkCollection />} />
             <Route path="/AddContact" element={<AddContact />} />
             <Route path="/admin/staff-favorites" element={<StaffFavoritesPage />} />
