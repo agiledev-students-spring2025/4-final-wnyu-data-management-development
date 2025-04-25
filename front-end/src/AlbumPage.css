@@ -11,6 +11,53 @@
     justify-content: flex-start;
     overflow-x: hidden;
 }
+.album-photo {
+    margin-top: 25px;
+}
+
+.star-button {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+  
+.star-button.filled {
+  color: gold;
+}
+  
+.star-button:hover {
+  color: orange;
+}
+
+.admin-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+  
+.admin-link:hover {
+  background-color: black;
+  color: white !important;
+}
+  
+  
+.album-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 html, body {
     background-color: white;

@@ -1,0 +1,133 @@
+.staff-favorites-page {
+  padding: 40px 20px;
+  max-width: 1200px;       
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.staff-favorites-page h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: black;
+}
+
+/* Album grid layout */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  justify-content: center; 
+  justify-items: center;     
+  margin-top: 20px;
+}
+  
+
+/* Individual album cards */
+.album-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 12px;
+  background: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  width: 180px;                          
+  cursor: pointer;
+}
+
+.album-item:hover {
+  transform: scale(1.03);
+}
+
+/* Format badge */
+.album-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.album-format-box {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+}
+
+.album-format-vinyl {
+  background-color: #fba93f;
+  color: black;
+}
+
+.album-format-cd {
+  background-color: #3aea5d;
+  color: black;
+}
+
+.album-format-cassette {
+  background-color: #4ed14e;
+  color: black;
+}
+
+.album-format-dat {
+  background-color: #56d7f7;
+  color: black;
+}
+
+.album-format-lp {
+  background-color: #1ecf6f;
+  color: black;
+}
+
+.album-release-year {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  margin: 8px;
+}
+
+/* Separator line */
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin: 8px 0;
+}
+
+/* Album image */
+.album-image {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+
+/* Album text content */
+.album-details {
+  margin-top: 10px;
+}
+
+.album-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.album-artist,
+.album-genre {
+  font-size: 14px;
+  color: #555;
+  margin: 1px 0;
+}
+
+.album-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+}
+  

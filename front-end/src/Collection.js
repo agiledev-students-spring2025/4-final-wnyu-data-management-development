@@ -48,37 +48,27 @@ const Collection = ({ onAlbumClick }) => {
               onClick={() => onAlbumClick(album)}
             >
               <div className="album-item">
-                {/* Format box and ID */}
-                <div className="album-meta">
-                  <span
-                    className={`album-format-box ${
-                      album.format === "Vinyl"
-                        ? "album-format-vinyl"
-                        : "album-format-cd"
-                    }`}
-                  >
-                    {album.format}
-                  </span>
-                  <span className="album-id">{album.id}</span>
+                  <div className="album-meta">
+                    <div className="meta-row">
+                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                       {album.format}
+                      </span>
+                      <span className="album-release-year">
+                        {album.releaseDate?.slice(0, 4) || "—"}
+                      </span> 
+                    </div>
+                    <div className="separator"></div>
+                  </div> 
+                  <img
+                    src={album.imageUrl || "/default-album-cover.png"}
+                    alt={album.title}
+                    className="album-image"
+                  />
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
+                  </div>
                 </div>
-
-                {/* Separator Line */}
-                <div className="separator"></div>
-
-                {/* Album Image */}
-                <img
-                  src={album.imageUrl || "/default-album-cover.png"}
-                  alt={album.title}
-                  className="album-image"
-                />
-
-                {/* Album Details */}
-                <div className="album-details">
-                  <h3 className="album-title">{album.title}</h3>
-                  <p className="album-artist">{album.artist}</p>
-                  <p className="album-genre">{album.genre}</p>
-                </div>
-              </div>
             </Link>
           ))
         ) : (

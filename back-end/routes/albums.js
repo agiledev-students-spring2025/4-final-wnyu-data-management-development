@@ -7,140 +7,6 @@ import { Album } from "../db.js";
 const router = express.Router();
 const upload = multer({ dest: "uploads/" }); // temp file storage
 
-const newlyAddedAlbums = [
-  {
-    id: 1,
-    title: "Bitches Brew 1",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 2,
-    title: "Bitches Brew 2",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 3,
-    title: "Bitches Brew 3",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 4,
-    title: "Bitches Brew 4",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 5,
-    title: "Bitches Brew 5",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 6,
-    title: "Bitches Brew 6",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 7,
-    title: "Bitches Brew 7",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 8,
-    title: "Bitches Brew 8",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-];
-
-const staffFavorites = [
-  {
-    id: 13,
-    title: "Staff Favorite 1",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 14,
-    title: "Staff Favorite 2",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 15,
-    title: "Staff Favorite 3",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 16,
-    title: "Staff Favorite 4",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 17,
-    title: "Staff Favorite 5",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 18,
-    title: "Staff Favorite 6",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 19,
-    title: "Staff Favorite 7",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-  {
-    id: 20,
-    title: "Staff Favorite 8",
-    imageUrl: "/bitchesbrew.png",
-    artist: "Miles Davis",
-    genre: "Jazz",
-    format: "Vinyl",
-  },
-];
-
 router.get("/", async (req, res) => {
   try {
     const albums = await Album.find().sort({ createdAt: -1 }); // fetch all albums from MongoDB
@@ -151,12 +17,44 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/new", (req, res) => {
-  res.json(newlyAddedAlbums);
+router.get("/new", async (req, res) => {
+  try {
+    const recentAlbums = await Album.find()
+      .sort({ createdAt: -1 }) // sort newest first
+      .limit(20);              // get only the latest 20
+
+    res.json(recentAlbums);
+  } catch (error) {
+    console.error("Error fetching recent albums:", error);
+    res.status(500).json({ message: "Error fetching recent albums" });
+  }
 });
 
-router.get("/staff-favorites", (req, res) => {
-  res.json(staffFavorites);
+router.get("/staff-favorites", async (req, res) => {
+  try {
+    const favorites = await Album.find({ staffFavorite: true });
+    res.json(favorites);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error fetching staff favorites" });
+  }
+});
+
+router.put("/:id/staff-favorite", async (req, res) => {
+  const albumId = req.params.id;
+  const { isFavorite } = req.body;
+
+  try {
+    const updated = await Album.findByIdAndUpdate(
+      albumId,
+      { staffFavorite: isFavorite },
+      { new: true }
+    );
+    res.json(updated);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error updating staff favorite" });
+  }
 });
 
 router.post("/add", async (req, res) => {
@@ -223,15 +121,16 @@ router.post("/bulk", upload.single("file"), (req, res) => {
 });
 
 // Add a single album endpoint to get album by ID
-router.get("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const allAlbums = [...newlyAddedAlbums, ...staffFavorites];
-  const album = allAlbums.find((a) => a.id === id);
-
-  if (album) {
+router.get("/:id", async (req, res) => {
+  try {
+    const album = await Album.findById(req.params.id);
+    if (!album) {
+      return res.status(404).json({ message: "Album not found" });
+    }
     res.json(album);
-  } else {
-    res.status(404).json({ message: "Album not found" });
+  } catch (error) {
+    console.error("Error fetching album by ID:", error);
+    res.status(500).json({ message: "Error fetching album." });
   }
 });
 
