@@ -113,17 +113,24 @@ const Home = ({ onAlbumClick }) => {
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <div className="album-meta">
-                    <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
-                      {album.format}
-                    </span>
-                    <span className="album-id">{album.id}</span>
-                  </div>
-                  <div className="separator"></div>
-                  <img src={album.imageUrl} alt={album.title} className="album-image" />
+                    <div className="meta-row">
+                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                       {album.format}
+                      </span>
+                      <span className="album-release-year">
+                        {album.releaseDate?.slice(0, 4) || "—"}
+                      </span> 
+                    </div>
+                    <div className="separator"></div>
+                  </div> 
+                  <img
+                    src={album.imageUrl || "/default-album-cover.png"}
+                    alt={album.title}
+                    className="album-image"
+                  />
                   <div className="album-details">
                     <h3 className="album-title">{album.title}</h3>
                     <p className="album-artist">{album.artist}</p>
-                    <p className="album-genre">{album.genre}</p>
                   </div>
                 </div>
               </Link>
@@ -137,19 +144,28 @@ const Home = ({ onAlbumClick }) => {
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)} className="album-item">
-                <div className="album-meta">
-                  <span className={`album-format-box ${album.format === "Vinyl" ? "album-format-vinyl" : "album-format-cd"}`}>
-                    {album.format}
-                  </span>
-                  <span className="album-id">{album.id}</span>
-                </div>
-                <div className="separator"></div>
-                <img src={album.imageUrl} alt={album.title} className="album-image" />
-                <div className="album-details">
-                  <h3 className="album-title">{album.title}</h3>
-                  <p className="album-artist">{album.artist}</p>
-                  <p className="album-genre">{album.genre}</p>
+              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+                <div className="album-item">
+                  <div className="album-meta">
+                    <div className="meta-row">
+                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                       {album.format}
+                      </span>
+                      <span className="album-release-year">
+                        {album.releaseDate?.slice(0, 4) || "—"}
+                      </span> 
+                    </div>
+                    <div className="separator"></div>
+                  </div> 
+                  <img
+                    src={album.imageUrl || "/default-album-cover.png"}
+                    alt={album.title}
+                    className="album-image"
+                  />
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
+                  </div>
                 </div>
               </Link>
             ))}

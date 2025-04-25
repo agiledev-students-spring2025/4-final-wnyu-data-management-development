@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import './SearchResults.css';
 
 const SearchResults = () => {
   const location = useLocation();
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [newSearchType, setSearchType] = useState("artist");
+  const [newSearchQuery, setSearchQuery] = useState("");
+
+  const navigate = useNavigate();
 
   const queryParams = new URLSearchParams(location.search);
   const searchType = queryParams.get("type");
@@ -25,23 +29,80 @@ const SearchResults = () => {
       }
     };
 
+    setSearchQuery(searchQuery || "");
+    setSearchType(searchType || "artist");
+
     fetchResults();
-  }, [searchType, searchQuery]);
+  }, [searchQuery, searchType]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?type=${newSearchType}&query=${encodeURIComponent(newSearchQuery.trim())}`);
+    }
+  };
 
   return (
     <div className="search-results-page">
-      <h2>Search Results for “{searchQuery}”</h2>
+      <div className="search-header-block">
+        <div className="search-bar-results">
+          <form onSubmit={handleSearch} className="search-form">
+            <input
+              type="text"
+              className="search-input"
+              placeholder={`Search by ${newSearchType}`}
+              value={newSearchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <select
+              className="search-select"
+              value={newSearchType}
+              onChange={(e) => setSearchType(e.target.value)}
+            >
+              <option value="artist">Artist</option>
+              <option value="title">Album Title</option>
+            </select>
+            <button type="submit" className="search-button">Search</button>
+          </form>
+        </div>
+      </div>
+
       {loading ? (
         <p>Loading...</p>
       ) : results.length > 0 ? (
-        <ul className="search-results-list">
-          {results.map((album) => (
-            <li key={album.id}>
-              <img src={album.imageUrl} alt={album.title} style={{ height: 80 }} />
-              <div>{album.title} by {album.artist}</div>
-            </li>
-          ))}
-        </ul>
+        <div className="search-results-container">
+          <h2>Search Results for “{searchQuery}”</h2>
+          <div className="album-grid-wrapper">    
+            <div className="album-grid">
+              {results.map((album) => (
+                <Link to={`/album/${album._id}`} key={album._id} className="album-link-wrapper">
+                  <div className="album-item">
+                  <div className="album-meta">
+                    <div className="meta-row">
+                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                       {album.format}
+                      </span>
+                      <span className="album-release-year">
+                        {album.releaseDate?.slice(0, 4) || "—"}
+                      </span> 
+                    </div>
+                    <div className="separator"></div>
+                  </div> 
+                  <img
+                    src={album.imageUrl || "/default-album-cover.png"}
+                    alt={album.title}
+                    className="album-image"
+                  />
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
+                  </div>
+                </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       ) : (
         <p>No results found.</p>
       )}

@@ -24,6 +24,7 @@ const albumSchema = new mongoose.Schema(
     format: { type: String },
     releaseDate: { type: String },
     description: { type: String },
+    staffFavorite: {type: Boolean, default: false},
   },
   {
     timestamps: true, // auto adds createdAt & updatedAt

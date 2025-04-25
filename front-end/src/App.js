@@ -16,6 +16,7 @@ import AddContact from "./AddContact";
 import SearchResults from "./SearchResults";
 import Footer from "./components/Footer";
 import AddBulkCollection from "./AddBulkCollection";
+import StaffFavoritesPage from "./StaffFavoritesPage";
 import EditFeatured from "./EditFeatured";
 
 const App = () => {
@@ -46,7 +47,7 @@ const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route
               path="/album/:id"
-              element={<AlbumPage album={expandedAlbum} />}
+              element={<AlbumPage />}
             />
             <Route
               path="/Collection"
@@ -64,6 +65,7 @@ const App = () => {
             <Route path="/EditFeatured" element={<EditFeatured />} />
             <Route path="/AddBulkCollection" element={<AddBulkCollection />} />
             <Route path="/AddContact" element={<AddContact />} />
+            <Route path="/admin/staff-favorites" element={<StaffFavoritesPage />} />
             <Route path="/search" element={<SearchResults />} />
           </Routes>
         </div>
