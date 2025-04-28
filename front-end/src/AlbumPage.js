@@ -1,147 +1,245 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom"; 
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import "./AlbumPage.css";
 
 const AlbumPage = () => {
   const { id } = useParams();
-  const navigate = useNavigate(); // Initialize navigate
-  const [album, setAlbum] = useState(null);
-  const [isFavorite, setIsFavorite] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [userRole, setUserRole] = useState(null);
-  const [loadFailed, setLoadFailed] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [album, setAlbum] = useState(location.state?.album || null);
+  const [loading, setLoading] = useState(!location.state?.album);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [formData, setFormData] = useState({
+    title: "",
+    artist: "",
+    genre: "",
+    format: "",
+    releaseDate: "",
+    description: "",
+    imageUrl: "",
+  });
 
   useEffect(() => {
-    const fetchAlbum = async () => {
-      try {
-        const res = await fetch(`http://localhost:8080/api/albums/${id}`);
-        if (!res.ok) throw new Error("Album not found");
-        const data = await res.json();
-        setAlbum(data);
-        setIsFavorite(data.staffFavorite || false);
-      } catch (err) {
-        console.error("Failed to fetch album:", err);
-        setLoadFailed(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser && storedUser.role) {
-      setUserRole(storedUser.role);
+    if (!album && id) {
+      fetchAlbum();
+    } else if (album) {
+      populateForm(album);
     }
+  }, [album, id]);
 
-    fetchAlbum();
-  }, [id]);
-
-  const toggleFavorite = async () => {
+  const fetchAlbum = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8080/api/albums/${album._id}/staff-favorite`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ isFavorite: !isFavorite }),
-      });
-
-      if (res.ok) {
-        setIsFavorite((prev) => !prev);
-      } else {
-        console.error("Failed to toggle favorite");
-      }
-    } catch (err) {
-      console.error("Error:", err);
+      const res = await fetch(`http://localhost:8080/api/albums/${id}`);
+      if (!res.ok) throw new Error("Failed to fetch album");
+      const data = await res.json();
+      setAlbum(data);
+      populateForm(data);
+    } catch (error) {
+      console.error("Error fetching album:", error);
     } finally {
       setLoading(false);
     }
   };
-  
-  const handleBack = () => {
-    navigate(-1); // This will navigate to the previous page in history
+
+  const populateForm = (data) => {
+    setFormData({
+      title: data.title || "",
+      artist: data.artist || "",
+      genre: data.genre || "",
+      format: data.format || "",
+      releaseDate: data.releaseDate || "",
+      description: data.description || "",
+      imageUrl: data.imageUrl || "",
+    });
   };
 
-  if (loadFailed) return <p>Album not found.</p>;
-  if(!album) return (
-    <div className="album-page" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-      <div style={{textAlign: "center"}}>
-        <h2>No album selected</h2>
-        <p>Please select an album from the catalog.</p>
-        <Link to="/collection">Go to Albums</Link>
-      </div>
-    </div>
-  );
+  const handleBack = () => {
+    navigate("/collection");
+  };
 
-  // Format year if it exists
-  const formattedYear = album.year ? album.year : "Unknown";
-  // Format country if it exists
-  const formattedCountry = album.country ? album.country : "Unknown";
-  // Format year added if it exists
-  const formattedYearAdded = album.yearAdded ? album.yearAdded : "Unknown";
+  const handleDelete = async () => {
+    if (window.confirm("Are you sure you want to delete this album?")) {
+      try {
+        const res = await fetch(
+          `http://localhost:8080/api/albums/${album._id}`,
+          {
+            method: "DELETE",
+          }
+        );
+
+        if (res.ok) {
+          alert("Album deleted successfully!");
+          navigate("/collection");
+        } else {
+          const errorData = await res.json();
+          alert(`Failed to delete album: ${errorData.message}`);
+        }
+      } catch (error) {
+        console.error("Error deleting album:", error);
+        alert("Error deleting album.");
+      }
+    }
+  };
+
+  const handleFormChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`http://localhost:8080/api/albums/${album.id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("Album updated!");
+        setShowEditModal(false);
+        fetchAlbum();
+      } else {
+        const errorData = await res.json();
+        alert(`Failed to update album: ${errorData.message}`);
+      }
+    } catch (error) {
+      console.error("Error updating album:", error);
+      alert("Error updating album.");
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="album-page">
+        <p>Loading album...</p>
+      </div>
+    );
+  }
+
+  if (!album) {
+    return (
+      <div
+        className="album-page"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ textAlign: "center" }}>
+          <h2>No album found</h2>
+          <p>Please select an album from the catalog.</p>
+          <Link to="/collection">Go to Albums</Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="album-page">
       <button onClick={handleBack} className="back-button">
         ←
       </button>
-      
+
       <div className="album-image-container">
-        <img 
-          src={album.imageUrl || "/default-album-cover.png"} 
-          alt={album.title} 
-          className="album-photo" 
-          onError={(e) => {e.target.src = "/default-album-cover.png"}}
+        <img
+          src={album.imageUrl || "/default-album-cover.png"}
+          alt={album.title}
+          className="album-photo"
+          onError={(e) => (e.target.src = "/default-album-cover.png")}
         />
       </div>
-      
+
       <div className="album-info">
         <h1 className="album-title">{album.title}</h1>
-        <h2 className="album-artist">{album.artist || "Miles Davis"}</h2>
-        
+        <h2 className="album-artist">{album.artist}</h2>
+
         <div className="album-meta">
           <div className="meta-item">
             <span className="meta-label">Genre</span>
-            <div className="genre-badge">{album.genre || "Jazz"}</div>
-          </div>
-          
-          <div className="meta-item">
-            <span className="meta-label">Year</span>
-            <div className="meta-value">{formattedYear}</div>
-          </div>
-          
-          <div className="meta-item">
-            <span className="meta-label">Country</span>
-            <div className="meta-value">{formattedCountry}</div>
-          </div>
-          
-          <div className="meta-item">
-            <span className="meta-label">Added</span>
-            <div className="meta-value">{formattedYearAdded}</div>
+            <div className="genre-badge">{album.genre || "Unknown"}</div>
           </div>
 
-          {album.format && (
-            <div className="meta-item">
-              <span className="meta-label">Format</span>
-              <div className="meta-value">{album.format}</div>
+          <div className="meta-item">
+            <span className="meta-label">Format</span>
+            <div className="meta-value">{album.format || "Unknown"}</div>
+          </div>
+
+          <div className="meta-item">
+            <span className="meta-label">Release Date</span>
+            <div className="meta-value">{album.releaseDate || "Unknown"}</div>
+          </div>
+
+          <div className="meta-item">
+            <span className="meta-label">Description</span>
+            <div className="meta-value">
+              {album.description || "No description."}
             </div>
-          )}
+          </div>
         </div>
-        
-        <blockquote className="album-bio">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis justo eget nisl commodo euismod.
-        </blockquote>
-        
+
+        {/* Action Buttons */}
         <div className="action-buttons">
-          <button 
-            className="spotify-button" 
-            onClick={() => window.open('https://spotify.com', '_blank')}
+          <button
+            className="spotify-button"
+            onClick={() => setShowEditModal(true)}
           >
-            <svg className="spotify-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-            </svg>
-            Listen on Spotify
+            Edit Album
+          </button>
+          <button
+            className="spotify-button"
+            onClick={handleDelete}
+            style={{ marginLeft: "10px", backgroundColor: "red" }}
+          >
+            Delete Album
           </button>
         </div>
       </div>
+
+      {/* Edit Modal */}
+      {showEditModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>Edit Album</h2>
+            <form onSubmit={handleFormSubmit} className="edit-form">
+              {[
+                "title",
+                "artist",
+                "genre",
+                "format",
+                "releaseDate",
+                "description",
+                "imageUrl",
+              ].map((field) => (
+                <input
+                  key={field}
+                  type="text"
+                  name={field}
+                  value={formData[field]}
+                  onChange={handleFormChange}
+                  placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+                />
+              ))}
+
+              <div style={{ marginTop: "10px" }}>
+                <button type="submit" className="spotify-button">
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowEditModal(false)}
+                  className="spotify-button"
+                  style={{ marginLeft: "10px" }}
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

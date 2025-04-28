@@ -44,6 +44,7 @@ const Collection = ({ onAlbumClick }) => {
           albums.map((album, index) => (
             <Link
               to={`/album/${album.id}`}
+              state={{ album }}
               key={index}
               onClick={() => onAlbumClick(album)}
             >

@@ -162,4 +162,43 @@ router.get("/bulk/template", (req, res) => {
   res.download(templatePath, "album-template.csv");
 });
 
+// Edit an album
+router.put("/:id", async (req, res) => {
+  try {
+    const albumId = req.params.id;
+    const updatedData = req.body;
+
+    const updatedAlbum = await Album.findByIdAndUpdate(albumId, updatedData, {
+      new: true,
+    });
+
+    if (!updatedAlbum) {
+      return res.status(404).json({ message: "Album not found." });
+    }
+
+    res.status(200).json(updatedAlbum);
+  } catch (error) {
+    console.error("Error updating album:", error);
+    res.status(500).json({ message: "Error updating album." });
+  }
+});
+
+// Delete an album
+router.delete("/:id", async (req, res) => {
+  try {
+    const albumId = req.params.id;
+
+    const deletedAlbum = await Album.findByIdAndDelete(albumId);
+
+    if (!deletedAlbum) {
+      return res.status(404).json({ message: "Album not found." });
+    }
+
+    res.status(200).json({ message: "Album deleted successfully." });
+  } catch (error) {
+    console.error("Error deleting album:", error);
+    res.status(500).json({ message: "Error deleting album." });
+  }
+});
+
 export default router;
