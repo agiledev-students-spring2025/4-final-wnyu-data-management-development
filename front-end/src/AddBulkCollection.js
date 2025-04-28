@@ -6,8 +6,6 @@ import "./Signup.css";
 const AddBulkCollection = () => {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
-  const [uploading, setUploading] = useState(false);
-  const [results, setResults] = useState(null);
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
@@ -21,9 +19,6 @@ const AddBulkCollection = () => {
       return setMessage("Please select a CSV file.");
     }
 
-    setUploading(true);
-    setMessage("Uploading...");
-    
     const formData = new FormData();
     formData.append("file", file);
 
@@ -34,25 +29,33 @@ const AddBulkCollection = () => {
       });
 
       const result = await res.json();
-      setResults(result);
-      
       if (res.ok) {
-        setMessage(`Successfully uploaded ${result.count} albums.`);
-        setTimeout(() => navigate("/collection"), 2000);
+        setMessage(`Uploaded ${result.count} albums. Redirecting...`);
+        setTimeout(() => navigate("/collection"), 1500);
       } else {
         setMessage(`Error: ${result.error}`);
       }
     } catch (err) {
       setMessage(`Upload failed: ${err.message}`);
-    } finally {
-      setUploading(false);
     }
+  };
+
+  const handleDownloadTemplate = () => {
+    window.open("http://localhost:8080/api/albums/bulk/template", "_blank");
   };
 
   return (
     <div className="add-collection-container">
       <form className="add-collection-form" onSubmit={handleUpload}>
         <h3>Bulk Upload Albums (CSV)</h3>
+
+        <button
+          className="add-collection-button"
+          type="button"
+          onClick={handleDownloadTemplate}
+        >
+          Download Template
+        </button>
 
         <label className="add-collection-input">Upload a CSV File</label>
         <input
@@ -62,9 +65,11 @@ const AddBulkCollection = () => {
           className="add-input-field"
         />
 
-        <button className="add-collection-button" type="submit" disabled={uploading}>
-          {uploading ? "Uploading..." : "Upload"}
-        </button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button className="add-collection-button" type="submit">
+            Upload
+          </button>
+        </div>
 
         {message && <p style={{ marginTop: "1rem" }}>{message}</p>}
       </form>
