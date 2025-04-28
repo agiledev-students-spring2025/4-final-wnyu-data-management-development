@@ -4,6 +4,7 @@ import csv from "csv-parser";
 import fs from "fs";
 import { Album } from "../db.js";
 
+
 const router = express.Router();
 const upload = multer({ dest: "uploads/" }); // temp file storage
 
@@ -42,7 +43,7 @@ router.get("/staff-favorites", async (req, res) => {
 
 router.put("/:id/staff-favorite", async (req, res) => {
   const albumId = req.params.id;
-  const { isFavorite } = req.body;
+  const { isFavorite } = req.body; 
 
   try {
     const updated = await Album.findByIdAndUpdate(

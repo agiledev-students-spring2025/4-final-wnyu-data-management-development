@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom"; 
 import "./AlbumPage.css";
 
 const AlbumPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // Initialize navigate
   const [album, setAlbum] = useState(null);
   const [isFavorite, setIsFavorite] = useState(false);
   const [loading, setLoading] = useState(true);
   const [userRole, setUserRole] = useState(null);
-
   const [loadFailed, setLoadFailed] = useState(false);
 
   useEffect(() => {
