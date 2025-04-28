@@ -42,7 +42,7 @@ router.get("/staff-favorites", async (req, res) => {
 
 router.put("/:id/staff-favorite", async (req, res) => {
   const albumId = req.params.id;
-  const { isFavorite } = req.body;
+  const { isFavorite } = req.body; 
 
   try {
     const updated = await Album.findByIdAndUpdate(
