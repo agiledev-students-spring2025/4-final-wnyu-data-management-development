@@ -1,4 +1,4 @@
-.album-page {
+.album-page{
   width: 100%;
   max-width: 100%;
   margin: 0 auto; 
@@ -13,12 +13,12 @@
   box-sizing: border-box; 
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn{
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-.album-image-container {
+.album-image-container{
   position: relative;
   transition: transform 0.3s ease;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
@@ -129,7 +129,7 @@
   max-width: 100%;
 }
 
-.action-buttons {
+.action-buttons{
   display: flex;
   justify-content: center;
   margin-top: 8px;
@@ -203,7 +203,7 @@ body {
     margin-top: 25px;
 }
 
-.star-button {
+.star-button{
   font-size: 30px;
   background: none;
   border: none;
