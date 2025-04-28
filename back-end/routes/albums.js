@@ -2,11 +2,15 @@ import express from "express";
 import multer from "multer";
 import csv from "csv-parser";
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import { Album } from "../db.js";
-
 
 const router = express.Router();
 const upload = multer({ dest: "uploads/" }); // temp file storage
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 router.get("/", async (req, res) => {
   try {
@@ -22,7 +26,7 @@ router.get("/new", async (req, res) => {
   try {
     const recentAlbums = await Album.find()
       .sort({ createdAt: -1 }) // sort newest first
-      .limit(20);              // get only the latest 20
+      .limit(20); // get only the latest 20
 
     res.json(recentAlbums);
   } catch (error) {
@@ -43,7 +47,7 @@ router.get("/staff-favorites", async (req, res) => {
 
 router.put("/:id/staff-favorite", async (req, res) => {
   const albumId = req.params.id;
-  const { isFavorite } = req.body; 
+  const { isFavorite } = req.body;
 
   try {
     const updated = await Album.findByIdAndUpdate(
@@ -97,30 +101,6 @@ router.get("/search/:term", (req, res) => {
   res.json(results);
 });
 
-router.post("/bulk", upload.single("file"), (req, res) => {
-  const results = [];
-
-  if (!req.file) {
-    return res.status(400).json({ error: "No file uploaded." });
-  }
-
-  fs.createReadStream(req.file.path)
-    .pipe(csv())
-    .on("data", (data) => results.push(data))
-    .on("end", () => {
-      fs.unlinkSync(req.file.path); // cleanup
-      console.log("Parsed albums:", results);
-
-      // TODO: Save to database or memory here
-      res
-        .status(200)
-        .json({ message: "Albums uploaded", count: results.length });
-    })
-    .on("error", (err) => {
-      res.status(500).json({ error: err.message });
-    });
-});
-
 // Add a single album endpoint to get album by ID
 router.get("/:id", async (req, res) => {
   try {
@@ -133,6 +113,53 @@ router.get("/:id", async (req, res) => {
     console.error("Error fetching album by ID:", error);
     res.status(500).json({ message: "Error fetching album." });
   }
+});
+
+router.post("/bulk", upload.single("file"), async (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ error: "No file uploaded." });
+  }
+
+  const albums = [];
+
+  try {
+    await new Promise((resolve, reject) => {
+      fs.createReadStream(req.file.path)
+        .pipe(csv())
+        .on("data", (row) => {
+          albums.push({
+            title: row.title,
+            artist: row.artist,
+            genre: row.genre,
+            format: row.format,
+            releaseDate: row.releaseDate,
+            description: row.description,
+            imageUrl: row.imageUrl || "",
+          });
+        })
+        .on("end", resolve)
+        .on("error", reject);
+    });
+    await Album.insertMany(albums);
+
+    fs.unlinkSync(req.file.path);
+
+    res.status(200).json({ message: "Albums uploaded", count: albums.length });
+  } catch (error) {
+    console.error("Error during bulk upload:", error);
+    res.status(500).json({ error: "Failed to upload albums." });
+  }
+});
+
+router.get("/bulk/template", (req, res) => {
+  const templatePath = path.join(__dirname, "../templates/album-template.csv");
+
+  // Make sure the file exists
+  if (!fs.existsSync(templatePath)) {
+    return res.status(404).send("Template file not found.");
+  }
+
+  res.download(templatePath, "album-template.csv");
 });
 
 export default router;
