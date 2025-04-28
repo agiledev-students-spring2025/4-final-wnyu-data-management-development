@@ -3,7 +3,9 @@ import multer from "multer";
 import csv from "csv-parser";
 import fs from "fs";
 import { Album } from "../db.js";
+import { useNavigate } from 'react-router-dom';
 
+const navigate = useNavigate();
 const router = express.Router();
 const upload = multer({ dest: "uploads/" }); // temp file storage
 
