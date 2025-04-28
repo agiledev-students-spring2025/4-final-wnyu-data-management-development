@@ -6,6 +6,8 @@ import "./Signup.css";
 const AddBulkCollection = () => {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const [results, setResults] = useState(null);
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
@@ -19,6 +21,9 @@ const AddBulkCollection = () => {
       return setMessage("Please select a CSV file.");
     }
 
+    setUploading(true);
+    setMessage("Uploading...");
+    
     const formData = new FormData();
     formData.append("file", file);
 
@@ -29,14 +34,18 @@ const AddBulkCollection = () => {
       });
 
       const result = await res.json();
+      setResults(result);
+      
       if (res.ok) {
-        setMessage(`Uploaded ${result.count} albums. Redirecting...`);
-        setTimeout(() => navigate("/collection"), 1500);
+        setMessage(`Successfully uploaded ${result.count} albums.`);
+        setTimeout(() => navigate("/collection"), 2000);
       } else {
         setMessage(`Error: ${result.error}`);
       }
     } catch (err) {
       setMessage(`Upload failed: ${err.message}`);
+    } finally {
+      setUploading(false);
     }
   };
 
@@ -53,8 +62,8 @@ const AddBulkCollection = () => {
           className="add-input-field"
         />
 
-        <button className="add-collection-button" type="submit">
-          Upload
+        <button className="add-collection-button" type="submit" disabled={uploading}>
+          {uploading ? "Uploading..." : "Upload"}
         </button>
 
         {message && <p style={{ marginTop: "1rem" }}>{message}</p>}
