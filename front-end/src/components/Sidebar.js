@@ -10,12 +10,20 @@ const NAVIGATION_ITEMS = [
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const firstFocusableRef = useRef(null);
+    const lastFocusableRef = useRef(null);
+    const previousFocusRef = useRef(null);
     const location = useLocation();
     
-    // Focus management
+    // Store the element that had focus before opening
     useEffect(() => {
-      if (isOpen && firstFocusableRef.current) {
-        firstFocusableRef.current.focus();
+      if (isOpen) {
+        previousFocusRef.current = document.activeElement;
+        if (firstFocusableRef.current) {
+          firstFocusableRef.current.focus();
+        }
+      } else if (previousFocusRef.current) {
+        // Return focus when sidebar closes
+        previousFocusRef.current.focus();
       }
     }, [isOpen]);
     
@@ -59,12 +67,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           >×</button>
 
           <nav className="sidebar-nav" aria-label="Main navigation">
-            {NAVIGATION_ITEMS.map((item) => (
+            {NAVIGATION_ITEMS.map((item, index) => (
               <Link 
                 key={item.path}
                 to={item.path} 
                 className={`sidebar-link ${location.pathname === item.path ? 'active' : ''}`}
                 onClick={toggleSidebar}
+                ref={index === NAVIGATION_ITEMS.length - 1 ? lastFocusableRef : null}
               >
                 {item.label}
               </Link>
