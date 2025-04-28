@@ -1,30 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-    return (
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
-        <button className="close-btn" onClick={toggleSidebar}>×</button>
+    // Add keyboard event handler for ESC key
+    useEffect(() => {
+      const handleEsc = (event) => {
+        if (event.key === 'Escape' && isOpen) {
+          toggleSidebar();
+        }
+      };
+      
+      if (isOpen) {
+        document.addEventListener('keydown', handleEsc);
+      }
+      
+      return () => {
+        document.removeEventListener('keydown', handleEsc);
+      };
+    }, [isOpen, toggleSidebar]);
 
-        <nav className="sidebar-nav">
+    return (
+      <div 
+        className={`sidebar ${isOpen ? "open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+      >
+        <button 
+          className="close-btn" 
+          onClick={toggleSidebar}
+          aria-label="Close navigation menu"
+        >×</button>
+
+        <nav className="sidebar-nav" aria-label="Main navigation">
           <Link 
             to="/" 
-            className="rounded-full py-3 px-6 mb-4 text-white font-medium text-center block hover:bg-gray-800 transition-all duration-200"
+            className="sidebar-link"
             onClick={toggleSidebar}
           >
             Home
           </Link>
           <Link 
             to="/Collection" 
-            className="rounded-full py-3 px-6 mb-4 text-white font-medium text-center block hover:bg-gray-800 transition-all duration-200"
+            className="sidebar-link"
             onClick={toggleSidebar}
           >
             View our Collection
           </Link>
           <Link 
             to="/Contacts" 
-            className="rounded-full py-3 px-6 text-white font-medium text-center block hover:bg-gray-800 transition-all duration-200"
+            className="sidebar-link"
             onClick={toggleSidebar}
           >
             View Contacts
