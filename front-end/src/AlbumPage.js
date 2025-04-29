@@ -31,7 +31,8 @@ const AlbumPage = () => {
   const fetchAlbum = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8080/api/albums/${id}`);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}api/albums/${id}`);
+      //const res = await fetch(`http://localhost:8080/api/albums/${id}`);
       if (!res.ok) throw new Error("Failed to fetch album");
       const data = await res.json();
       setAlbum(data);
@@ -63,6 +64,7 @@ const AlbumPage = () => {
     if (window.confirm("Are you sure you want to delete this album?")) {
       try {
         const res = await fetch(
+          `${process.env.REACT_APP_API_URL}api/albums/${album._id}`,
           `http://localhost:8080/api/albums/${album._id}`,
           {
             method: "DELETE",
@@ -90,7 +92,8 @@ const AlbumPage = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:8080/api/albums/${album.id}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}api/albums/${album.id}`, {
+      //const res = await fetch(`http://localhost:8080/api/albums/${album.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
