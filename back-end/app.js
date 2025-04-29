@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import nodemailer from "nodemailer";
 
 import "./config.js";
 import "./db.js";
@@ -176,17 +177,38 @@ function authenticateToken(req, res, next) {
   });
 }
 
-app.post("/resend-reset-link", (req, res) => {
-  const { email } = req.body;
-
-  if (!email) {
-    return res.status(400).json({ message: "Email is required" });
-  }
-
-  // Simulate sending a reset link
-  console.log(`Password reset link sent to ${email}`);
-
-  return res.status(200).json({ message: "Password Reset Email is sent" });
+app.post('/resend-reset-link', async (req, res) => {
+    const { email } = req.body;
+    if (!email) return res.status(400).json({ message: 'Email is required.' });
+  
+    const user = await User.findOne({ email });
+    if (!user) return res.status(404).json({ message: 'User not found.' });
+  
+    const resetLink = `http://localhost:3000/reset-password/${encodeURIComponent(email)}`;
+  
+    // Set up transporter
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS 
+      }
+    });
+  
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: 'Password Reset',
+      html: `<p>Click <a href="${resetLink}">here</a> to reset your password.</p>`
+    };
+  
+    try {
+      await transporter.sendMail(mailOptions);
+      res.status(200).json({ message: 'Password Reset Email is sent' });
+    } catch (error) {
+      console.error('Error sending mail:', error);
+      res.status(500).json({ message: 'Failed to send reset email' });
+    }
 });
 
 // Contacts Route

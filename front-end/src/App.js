@@ -70,6 +70,7 @@ const App = () => {
                 element={<StaffFavoritesPage />}
               />
               <Route path="/search" element={<SearchResults />} />
+              <Route path="/reset-password/:email" element={<ResetPassword />} />
             </Routes>
           </div>
           <Footer />
