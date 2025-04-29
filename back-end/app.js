@@ -211,6 +211,25 @@ app.post('/resend-reset-link', async (req, res) => {
     }
 });
 
+// Reset Password Route
+app.post('/reset-password', async (req, res) => {
+  const { email, newPassword } = req.body;
+
+  if (!email || !newPassword) {
+    return res.status(400).json({ message: 'Email and new password are required.' });
+  }
+
+  const user = await User.findOne({ email });
+  if (!user) return res.status(404).json({ message: 'User not found.' });
+
+  const hashedPassword = await bcrypt.hash(newPassword, 10);
+  user.hash = hashedPassword;
+  await user.save();
+
+  res.status(200).json({ message: 'Password reset successful.' });
+});
+
+
 // Contacts Route
 app.get("/contacts", async (req, res) => {
   try {
