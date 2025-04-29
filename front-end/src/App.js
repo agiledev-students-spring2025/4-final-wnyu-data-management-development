@@ -17,6 +17,7 @@ import SearchResults from "./SearchResults";
 import Footer from "./components/Footer";
 import AddBulkCollection from "./AddBulkCollection";
 import StaffFavoritesPage from "./StaffFavoritesPage";
+import ResetPassword from "./ResetPassword";
 import { NotificationProvider } from "./context/NotificationContext";
 
 const App = () => {
