@@ -17,7 +17,7 @@ import SearchResults from "./SearchResults";
 import Footer from "./components/Footer";
 import AddBulkCollection from "./AddBulkCollection";
 import StaffFavoritesPage from "./StaffFavoritesPage";
-import EditFeatured from "./EditFeatured";
+import { NotificationProvider } from "./context/NotificationContext";
 
 const App = () => {
   const [expandedAlbum, setExpandedAlbum] = useState(null);
@@ -33,44 +33,48 @@ const App = () => {
 
   return (
     <Router>
-      <div className="app-container">
-        <Header />
-        <div className="main-content">
-          <Routes>
-            <Route
-              path="/"
-              element={<Home onAlbumClick={handleAlbumClick} />}
-            />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route
-              path="/album/:id"
-              element={<AlbumPage />}
-            />
-            <Route
-              path="/Collection"
-              element={<Collection onAlbumClick={handleAlbumClick} />}
-            />
-            <Route
-              path="/Contacts"
-              element={<Contacts onContactClick={handleContactClick} />}
-            />
-            <Route
-              path="/contact/:id"
-              element={<Contact contact={selectedContact} />}
-            />
-            <Route path="/AddCollection" element={<AddCollection />} />
-            <Route path="/EditFeatured" element={<EditFeatured />} />
-            <Route path="/AddBulkCollection" element={<AddBulkCollection />} />
-            <Route path="/AddContact" element={<AddContact />} />
-            <Route path="/admin/staff-favorites" element={<StaffFavoritesPage />} />
-            <Route path="/search" element={<SearchResults />} />
-          </Routes>
+      <NotificationProvider>
+        <div className="app-container">
+          <Header />
+          <div className="main-content">
+            <Routes>
+              <Route
+                path="/"
+                element={<Home onAlbumClick={handleAlbumClick} />}
+              />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/album/:id" element={<AlbumPage />} />
+              <Route
+                path="/Collection"
+                element={<Collection onAlbumClick={handleAlbumClick} />}
+              />
+              <Route
+                path="/Contacts"
+                element={<Contacts onContactClick={handleContactClick} />}
+              />
+              <Route
+                path="/contact/:id"
+                element={<Contact contact={selectedContact} />}
+              />
+              <Route path="/AddCollection" element={<AddCollection />} />
+              <Route
+                path="/AddBulkCollection"
+                element={<AddBulkCollection />}
+              />
+              <Route path="/AddContact" element={<AddContact />} />
+              <Route
+                path="/admin/staff-favorites"
+                element={<StaffFavoritesPage />}
+              />
+              <Route path="/search" element={<SearchResults />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </NotificationProvider>
     </Router>
   );
 };

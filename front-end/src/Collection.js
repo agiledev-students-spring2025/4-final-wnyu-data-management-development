@@ -37,11 +37,6 @@ const Collection = ({ onAlbumClick }) => {
           <Link to="/AddBulkCollection" className="add-collection-button">
             Add Bulk Collection
           </Link>
-          {userRole === "Admin" && (
-            <Link to="/EditFeatured" className="add-collection-button">
-              Edit Featured
-            </Link>
-          )}
         </>
       ) : null}
       <div className="album-grid">
@@ -49,6 +44,7 @@ const Collection = ({ onAlbumClick }) => {
           albums.map((album, index) => (
             <Link
               to={`/album/${album.id}`}
+              state={{ album }}
               key={index}
               onClick={() => onAlbumClick(album)}
             >

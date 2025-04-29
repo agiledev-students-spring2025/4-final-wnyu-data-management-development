@@ -1,8 +1,8 @@
 .album-page {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto; 
-  padding: 20px 15px 30px; 
+  margin: 0 auto;
+  padding: 20px 15px 30px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -10,12 +10,16 @@
   animation: fadeIn 0.5s ease-in-out;
   position: relative;
   overflow-x: hidden;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .albumpage-image-container {
@@ -30,8 +34,8 @@
   background-color: white;
 }
 
-.albumpage-image-container::after {
-  content: '';
+.album-image-container::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -143,7 +147,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #1DB954;
+  background: #1db954;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -197,12 +201,11 @@ body {
 
 .album-page {
   padding-top: 95px;
-  max-width: 500px; 
+  max-width: 500px;
   margin: 0 auto; /* Ensure centering */
 }
-
-.albumpage-photo {
-    margin-top: 25px;
+.album-photo {
+  margin-top: 25px;
 }
 
 .star-button {
@@ -214,11 +217,11 @@ body {
   margin-left: 10px;
   transition: color 0.3s;
 }
-  
+
 .star-button.filled {
   color: gold;
 }
-  
+
 .star-button:hover {
   color: orange;
 }
@@ -236,20 +239,20 @@ body {
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-  
+
 .admin-link:hover {
   background-color: black;
   color: white !important;
 }
-  
-  
+
 .album-header {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -270,16 +273,46 @@ html, body {
   margin-bottom: 6px;
 }
 
+@media (max-width: 360px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width: 430px) {
   .album-page {
     padding-left: 15px;
     padding-right: 15px;
   }
-  
+
   .back-button {
     left: 15px;
   }
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.edit-form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}

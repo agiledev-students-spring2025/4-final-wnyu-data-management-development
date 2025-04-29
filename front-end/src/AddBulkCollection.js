@@ -40,10 +40,22 @@ const AddBulkCollection = () => {
     }
   };
 
+  const handleDownloadTemplate = () => {
+    window.open("http://localhost:8080/api/albums/bulk/template", "_blank");
+  };
+
   return (
     <div className="add-collection-container">
       <form className="add-collection-form" onSubmit={handleUpload}>
         <h3>Bulk Upload Albums (CSV)</h3>
+
+        <button
+          className="add-collection-button"
+          type="button"
+          onClick={handleDownloadTemplate}
+        >
+          Download Template
+        </button>
 
         <label className="add-collection-input">Upload a CSV File</label>
         <input
@@ -53,9 +65,11 @@ const AddBulkCollection = () => {
           className="add-input-field"
         />
 
-        <button className="add-collection-button" type="submit">
-          Upload
-        </button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button className="add-collection-button" type="submit">
+            Upload
+          </button>
+        </div>
 
         {message && <p style={{ marginTop: "1rem" }}>{message}</p>}
       </form>
