@@ -17,7 +17,8 @@ const Contacts = ({ onContactClick }) => {
         const fetchContacts = async() => {
 
             try {
-                const response = await fetch("http://localhost:8080/contacts");
+                const response = await fetch(`${process.env.REACT_APP_API_URL}contacts`);
+                //const response = await fetch("http://localhost:8080/contacts");
                 const data = await response.json();
                 setContacts(data);
             } catch (error) {
@@ -38,7 +39,8 @@ const Contacts = ({ onContactClick }) => {
     const handleDeleteContact = async (id) => {
 
         try {
-            await fetch(`http://localhost:8080/contacts/${id}`, {
+            await fetch(`${process.env.REACT_APP_API_URL}contacts/${id}`, {
+            //await fetch(`http://localhost:8080/contacts/${id}`, {
                 method: "DELETE",
             });
 
