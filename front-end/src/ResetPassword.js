@@ -33,16 +33,21 @@ const ResetPassword = () => {
   return (
     <div className="reset-password-container">
       <h2>Reset Password for {email}</h2>
-      <form onSubmit={handleReset}>
-        <label>New Password</label>
+      <form onSubmit={handleReset} className="reset-password-box">
+        <label className="input-label">New Password</label>
         <input
-          type="password"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-          required
+            type="password"
+            className="input-field"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+            required
         />
-        <button type="submit">Reset</button>
-        {message && <p>{message}</p>}
+        <button type="submit" className="reset-password-button">Reset</button>
+        {message && (
+            <p className={message.includes('success') ? "success-message" : "error-message"}>
+            {message}
+            </p>
+        )}
       </form>
     </div>
   );
