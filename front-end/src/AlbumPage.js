@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import "./AlbumPage.css";
 
 const AlbumPage = () => {
@@ -10,6 +10,8 @@ const AlbumPage = () => {
   const [userRole, setUserRole] = useState(null);
 
   const [loadFailed, setLoadFailed] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAlbum = async () => {
@@ -83,21 +85,28 @@ const AlbumPage = () => {
       <button onClick={handleBack} className="back-button">
         ←
       </button>
-      
-      <div className="album-image-container">
+      <div className="albumpage-image-container">
         <img 
           src={album.imageUrl || "/default-album-cover.png"} 
           alt={album.title} 
-          className="album-photo" 
+          className="albumpage-photo" 
           onError={(e) => {e.target.src = "/default-album-cover.png"}}
         />
       </div>
-      
-      <div className="album-info">
-        <h1 className="album-title">{album.title}</h1>
-        <h2 className="album-artist">{album.artist || "Miles Davis"}</h2>
-        
-        <div className="album-meta">
+      <button
+        className={`star-button ${isFavorite ? "filled" : ""}`}
+        onClick={toggleFavorite}
+        disabled={loading}
+      >
+        {isFavorite ? "★" : "☆"}
+      </button>
+      {userRole === "Admin" && (
+        <Link to="/admin/staff-favorites" className="admin-link">
+          View All Staff Favorites
+        </Link>
+      )}
+
+      <div className="albumpage-meta">
           <div className="meta-item">
             <span className="meta-label">Genre</span>
             <div className="genre-badge">{album.genre || "Jazz"}</div>
@@ -126,7 +135,7 @@ const AlbumPage = () => {
           )}
         </div>
         
-        <blockquote className="album-bio">
+        <blockquote className="albumpage-bio">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis justo eget nisl commodo euismod.
         </blockquote>
         
@@ -141,7 +150,6 @@ const AlbumPage = () => {
             Listen on Spotify
           </button>
         </div>
-      </div>
     </div>
   );
 };

@@ -62,7 +62,6 @@ const Collection = ({ onAlbumClick }) => {
                         {album.releaseDate?.slice(0, 4) || "—"}
                       </span> 
                     </div>
-                    <div className="separator"></div>
                   </div> 
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}

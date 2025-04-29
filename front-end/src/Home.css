@@ -1,6 +1,10 @@
+body {
+    background-color: white !important;
+}
+
 a {
   text-decoration: none !important;
-  color: inherit !important;
+  color: white !important;
 }
 
 .home-container {
@@ -185,37 +189,6 @@ a {
   transform: scale(1.05);
 }
 
-.album-meta {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background: white;
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1;
-  width: 100%;
-}
-
-.meta-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-/* Format box styling */
-.album-format-box {
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: black;
-  padding: 2px 6px;
-  margin: 0;
-  line-height: 1;
-}
-
 .album-format-vinyl {
   background-color: #fba93f !important;
   color: black;
@@ -246,21 +219,37 @@ a {
   color: black;
 }
 
+.album-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+  background: white;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.album-format-box {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
+  background-color: transparent;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
 .album-release-year {
   font-size: 11px;
   font-weight: 600;
   color: black;
-  margin: 0;
-  line-height: 1;
-  margin-bottom: 8px;
-}
-
-/* Separator below format/year row */
-.separator {
-  width: 100%;
-  height: 1px;
-  background-color: black;
-  margin-top: 3px;
+  white-space: nowrap;
 }
 
 /* Album image */
@@ -289,26 +278,26 @@ a {
   font-weight: bold;
   color: black;
   font-family: "Inter", sans-serif;
-  line-height: 1.2;
-  max-height: 2.4em;
-  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.2;
+  max-height: 2.4em;
 }
 
 .album-artist {
   font-size: 14px;
   color: #555;
   margin: 1px 0;
-  line-height: 1.2;
-  max-height: 2.4em;
-  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.2;
+  max-height: 2.4em;
 }
 
 /* Remove underline from all links */
