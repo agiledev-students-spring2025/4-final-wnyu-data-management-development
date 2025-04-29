@@ -192,10 +192,10 @@ app.post("/resend-reset-link", async (req, res) => {
       });
 
       // Testing link
-      const resetLink = `http://localhost:3000/reset-password/${encodeURIComponent(email)}`;
+      //const resetLink = `http://localhost:3000/reset-password/${encodeURIComponent(email)}`;
 
       // Deployment link
-      //const resetLink = `${process.env.REACT_APP_API_URL}reset-password/${encodeURIComponent(email)}`;
+      const resetLink = `${process.env.REACT_APP_API_URL}reset-password/${encodeURIComponent(email)}`;
       await transporter.sendMail({
         from: process.env.EMAIL_USER,
         to: email,
