@@ -34,35 +34,36 @@ const Home = ({ onAlbumClick }) => {
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
-
-      let scrollAmount = 0.5;
+  
+      const scrollAmount = 0.5; // How many pixels to scroll per step
+      const scrollSpeed = 30;   // How often to scroll (ms between each scroll)
+  
       let scrollInterval = null;
-
-      // Use requestAnimationFrame for smoother scrolling
+  
       const startScrolling = () => {
-        if (scrollInterval) cancelAnimationFrame(scrollInterval);
-        
-        const scroll = () => {
+        stopScrolling(); // clear any existing interval
+  
+        scrollInterval = setInterval(() => {
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
             scrollContainer.scrollLeft = 0;
           }
           scrollContainer.scrollLeft += scrollAmount;
-          scrollInterval = requestAnimationFrame(scroll);
-        };
-        
-        scrollInterval = requestAnimationFrame(scroll);
+        }, scrollSpeed);
       };
-
+  
       const stopScrolling = () => {
-        if (scrollInterval) cancelAnimationFrame(scrollInterval);
+        if (scrollInterval) {
+          clearInterval(scrollInterval);
+          scrollInterval = null;
+        }
       };
-
+  
       startScrolling();
       scrollContainer.addEventListener("mouseenter", stopScrolling);
       scrollContainer.addEventListener("mouseleave", startScrolling);
-
+  
       return () => {
-        cancelAnimationFrame(scrollInterval);
+        stopScrolling();
         scrollContainer.removeEventListener("mouseenter", stopScrolling);
         scrollContainer.removeEventListener("mouseleave", startScrolling);
       };
@@ -113,15 +114,12 @@ const Home = ({ onAlbumClick }) => {
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <div className="album-meta">
-                    <div className="meta-row">
-                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
-                       {album.format}
-                      </span>
-                      <span className="album-release-year">
-                        {album.releaseDate?.slice(0, 4) || "—"}
-                      </span> 
-                    </div>
-                    <div className="separator"></div>
+                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                     {album.format}
+                    </span>
+                    <span className="album-release-year">
+                      {album.releaseDate?.slice(0, 4) || "—"}
+                    </span> 
                   </div> 
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
@@ -147,15 +145,12 @@ const Home = ({ onAlbumClick }) => {
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
                 <div className="album-item">
                   <div className="album-meta">
-                    <div className="meta-row">
-                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
-                       {album.format}
-                      </span>
-                      <span className="album-release-year">
-                        {album.releaseDate?.slice(0, 4) || "—"}
-                      </span> 
-                    </div>
-                    <div className="separator"></div>
+                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                     {album.format}
+                    </span>
+                    <span className="album-release-year">
+                      {album.releaseDate?.slice(0, 4) || "—"}
+                    </span> 
                   </div> 
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}

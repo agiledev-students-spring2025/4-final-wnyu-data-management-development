@@ -55,76 +55,78 @@ const Contacts = ({ onContactClick }) => {
     }
 
     return (
-        <div className="contacts-container">
-            <div className="contacts-header">
-                <h2>Contacts</h2>
-                {userRole === "Staff" || userRole === "Admin" ? (
-                <>
-                    <Link to="/AddContact" className="add-contact-button">Add Contact</Link>
-                    <button 
-                    className="add-contact-button"
-                    onClick={() => {
-                        const newRemoveMode = !removeMode;
-                        setRemoveMode(newRemoveMode);
-                        setRemoveMessage(newRemoveMode);
-                    }}
-                    >
-                        {removeMode ? "Cancel Remove" : "Remove Contact"}
-                    </button>
-                    {removeMessage && (
-                        <p className="remove-contact-message">
-                            Select a contact to remove.
-                        </p>
-                    )}
-                </>
-                ) : null}
-            </div>
-            <div className="contacts-grid">
-                {contacts.map((contact) => (
-                    <div key={contact.id} className="contact-card-wrapper">
-                        <div
-                        className="contact-card"
-                        onClick={() => {
-                            if (removeMode) {
-                                setContactToDelete(contact);
-                            } else {
-                                onContactClick(contact);
-                                navigate(`/contact/${contact.id}`);
-                            }
-                        }}
-                        >
-                        <img src={"/profile.png"} alt={contact.name} className="contact-photo" />
-                        <div className="contact-info">
-                            <h3>{contact.name}</h3>
-                            <p className="contact-title">{contact.role}</p>
-                            <p className="contact-email">{contact.email}</p>
-                            <p className="contact-phone">{contact.phone}</p>
-                        </div>
-                    </div>
-                </div>
-                ))}
-            </div>
-
-            {contactToDelete && (
-                <div className="confirm-delete-box">
-                    <p>
-                        Are you sure you want to delete{" "}
-                        <strong>{contactToDelete.name}</strong>?
-                    </p>
-                    <button
-                    className="confirm-delete-button"
-                    onClick={() => handleDeleteContact(contactToDelete.id)}
-                    >
-                        Yes
-                    </button>
-                    <button
-                    className="cancel-delete-button"
-                    onClick={() => setContactToDelete(null)}
-                    >
-                        Cancel
-                    </button>
-                </div>
-            )}
+        <div className="contacts-page-container">
+          <div className="contacts-container">
+              <div className="contacts-header">
+                  <h2>Contacts</h2>
+                  {userRole === "Staff" || userRole === "Admin" ? (
+                  <>
+                      <Link to="/AddContact" className="add-contact-button">Add Contact</Link>
+                      <button 
+                      className="add-contact-button"
+                      onClick={() => {
+                          const newRemoveMode = !removeMode;
+                          setRemoveMode(newRemoveMode);
+                          setRemoveMessage(newRemoveMode);
+                      }}
+                      >
+                          {removeMode ? "Cancel Remove" : "Remove Contact"}
+                      </button>
+                      {removeMessage && (
+                          <p className="remove-contact-message">
+                              Select a contact to remove.
+                          </p>
+                      )}
+                  </>
+                  ) : null}
+              </div>
+              <div className="contacts-grid">
+                  {contacts.map((contact) => (
+                      <div key={contact.id} className="contact-card-wrapper">
+                          <div
+                          className="contact-card"
+                          onClick={() => {
+                              if (removeMode) {
+                                  setContactToDelete(contact);
+                              } else {
+                                  onContactClick(contact);
+                                  navigate(`/contact/${contact.id}`);
+                              }
+                          }}
+                          >
+                          <img src={"/profile.png"} alt={contact.name} className="contact-photo" />
+                          <div className="contact-info">
+                              <h3>{contact.name}</h3>
+                              <p className="contact-title">{contact.role}</p>
+                              <p className="contact-email">{contact.email}</p>
+                              <p className="contact-phone">{contact.phone}</p>
+                          </div>
+                      </div>
+                  </div>
+                  ))}
+              </div>
+  
+              {contactToDelete && (
+                  <div className="confirm-delete-box">
+                      <p>
+                          Are you sure you want to delete{" "}
+                          <strong>{contactToDelete.name}</strong>?
+                      </p>
+                      <button
+                      className="confirm-delete-button"
+                      onClick={() => handleDeleteContact(contactToDelete.id)}
+                      >
+                          Yes
+                      </button>
+                      <button
+                      className="cancel-delete-button"
+                      onClick={() => setContactToDelete(null)}
+                      >
+                          Cancel
+                      </button>
+                  </div>
+              )}
+          </div>
         </div>
     );
 };

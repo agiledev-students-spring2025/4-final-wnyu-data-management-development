@@ -49,31 +49,26 @@ const Collection = ({ onAlbumClick }) => {
               onClick={() => onAlbumClick(album)}
             >
               <div className="album-item">
-                <div className="album-meta">
-                  <div className="meta-row">
-                    <span
-                      className={`album-format-box album-format-${album.format
-                        ?.toLowerCase()
-                        .replace(/\s+/g, "")}`}
-                    >
-                      {album.format}
-                    </span>
-                    <span className="album-release-year">
-                      {album.releaseDate?.slice(0, 4) || "—"}
-                    </span>
+                  <div className="album-meta">
+                    <div className="meta-row">
+                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                       {album.format}
+                      </span>
+                      <span className="album-release-year">
+                        {album.releaseDate?.slice(0, 4) || "—"}
+                      </span> 
+                    </div>
+                  </div> 
+                  <img
+                    src={album.imageUrl || "/default-album-cover.png"}
+                    alt={album.title}
+                    className="album-image"
+                  />
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
                   </div>
-                  <div className="separator"></div>
                 </div>
-                <img
-                  src={album.imageUrl || "/default-album-cover.png"}
-                  alt={album.title}
-                  className="album-image"
-                />
-                <div className="album-details">
-                  <h3 className="album-title">{album.title}</h3>
-                  <p className="album-artist">{album.artist}</p>
-                </div>
-              </div>
             </Link>
           ))
         ) : (

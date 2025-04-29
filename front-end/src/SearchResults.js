@@ -78,15 +78,12 @@ const SearchResults = () => {
                 <Link to={`/album/${album._id}`} key={album._id} className="album-link-wrapper">
                   <div className="album-item">
                   <div className="album-meta">
-                    <div className="meta-row">
-                      <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
-                       {album.format}
-                      </span>
-                      <span className="album-release-year">
-                        {album.releaseDate?.slice(0, 4) || "—"}
-                      </span> 
-                    </div>
-                    <div className="separator"></div>
+                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                     {album.format}
+                    </span>
+                    <span className="album-release-year">
+                      {album.releaseDate?.slice(0, 4) || "—"}
+                    </span> 
                   </div> 
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
