@@ -20,7 +20,7 @@ const StaffFavoritesPage = () => {
   useEffect(() => {
     if (userRole === "Admin") {
       fetch(`${process.env.REACT_APP_API_URL}api/albums/staff-favorites`)
-      //fetch("http://localhost:8080/api/albums/staff-favorites")
+        //fetch("http://localhost:8080/api/albums/staff-favorites")
         .then((res) => res.json())
         .then((data) => setAlbums(data))
         .catch((err) => console.error("Error fetching staff favorites:", err));
@@ -38,28 +38,34 @@ const StaffFavoritesPage = () => {
         <div className="album-grid">
           {albums.length > 0 ? (
             albums.map((album) => (
-              <Link to={`/album/${album._id}`} key={album._id} className="album-link-wrapper">
+              <Link
+                to={`/album/${album._id}`}
+                key={album._id}
+                className="album-link-wrapper"
+              >
                 <div className="album-item">
                   <div className="album-meta">
-                    <span className={`album-format-box album-format-${album.format.toLowerCase()}`}>
+                    <span
+                      className={`album-format-box album-format-${album.format.toLowerCase()}`}
+                    >
                       {album.format}
                     </span>
                     <span className="album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
                     </span>
-                  </div>  
+                  </div>
                   <img
-                  src={album.imageUrl || "/default-album-cover.png"}
-                  alt={album.title}
-                  className="album-image"
-                />
-  
-                <div className="album-details">
-                <h3 className="album-title">{album.title}</h3>
-                <p className="album-artist">{album.artist}</p>
-              </div>
-            </div>
-          </Link>
+                    src={album.imageUrl || "/default-album-cover.png"}
+                    alt={album.title}
+                    className="album-image"
+                  />
+
+                  <div className="album-details">
+                    <h3 className="album-title">{album.title}</h3>
+                    <p className="album-artist">{album.artist}</p>
+                  </div>
+                </div>
+              </Link>
             ))
           ) : (
             <p>No staff favorites found.</p>

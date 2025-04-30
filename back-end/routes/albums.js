@@ -35,33 +35,6 @@ router.get("/new", async (req, res) => {
   }
 });
 
-router.get("/staff-favorites", async (req, res) => {
-  try {
-    const favorites = await Album.find({ staffFavorite: true });
-    res.json(favorites);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Error fetching staff favorites" });
-  }
-});
-
-router.put("/:id/staff-favorite", async (req, res) => {
-  const albumId = req.params.id;
-  const { isFavorite } = req.body;
-
-  try {
-    const updated = await Album.findByIdAndUpdate(
-      albumId,
-      { staffFavorite: isFavorite },
-      { new: true }
-    );
-    res.json(updated);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Error updating staff favorite" });
-  }
-});
-
 router.post("/add", async (req, res) => {
   console.log("Incoming album data:", req.body);
   try {
@@ -84,6 +57,41 @@ router.post("/add", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error adding album." });
+  }
+});
+
+router.get("/staff-favorites", async (req, res) => {
+  try {
+    const favorites = await Album.find({ staffFavorite: true });
+    res.json(favorites);
+  } catch (err) {
+    console.error("Error fetching staff favorites:", err);
+    res.status(500).json({ message: "Error fetching staff favorites" });
+  }
+});
+
+router.put("/:id/staff-favorite", async (req, res) => {
+  const albumId = req.params.id; // this MUST come first
+  const { isFavorite } = req.body;
+
+  console.log("Toggling favorite:", albumId, "→", isFavorite); // after albumId is defined
+
+  try {
+    const updated = await Album.findByIdAndUpdate(
+      albumId,
+      { staffFavorite: isFavorite },
+      { new: true }
+    );
+
+    if (!updated) {
+      console.warn("Album not found for ID:", albumId);
+      return res.status(404).json({ message: "Album not found" });
+    }
+
+    res.json(updated);
+  } catch (err) {
+    console.error("Error updating staff favorite:", err);
+    res.status(500).json({ message: "Error updating staff favorite" });
   }
 });
 

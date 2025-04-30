@@ -10,13 +10,15 @@ const Contact = () => {
   useEffect(() => {
     const fetchContact = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}contacts`);
+        const response = await fetch(
+          `${process.env.REACT_APP_API_URL}contacts`
+        );
         //const response = await fetch(`http://localhost:8080/contacts`);
         const data = await response.json();
-        const foundContact = data.find(c => String(c.id) === id);
+        const foundContact = data.find((c) => String(c.id) === id);
         setContact(foundContact);
       } catch (error) {
-        console.error("Couldn't fetch contact:", error)
+        console.error("Couldn't fetch contact:", error);
       }
     };
 
@@ -30,7 +32,7 @@ const Contact = () => {
 
   if (!contact) {
     return (
-      <div className="contact-page" style={{justifyContent: "center"}}>
+      <div className="contact-page" style={{ justifyContent: "center" }}>
         <div className="loading-spinner"></div>
         <p>Loading contact information...</p>
       </div>
