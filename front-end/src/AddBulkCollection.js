@@ -49,7 +49,7 @@ const AddBulkCollection = () => {
       `${process.env.REACT_APP_API_URL}api/albums/bulk/template`,
       "_blank"
     );
-    //window.open("http://localhost:8080/api/albums/bulk/template", "_blank");
+    // window.open("http://localhost:8080/api/albums/bulk/template", "_blank");
   };
 
   return (

@@ -19,7 +19,7 @@ const Home = ({ onAlbumClick }) => {
         const resNew = await fetch(
           `${process.env.REACT_APP_API_URL}api/albums/new`
         );
-        //const resNew = await fetch("http://localhost:8080/api/albums/new");
+        // const resNew = await fetch("http://localhost:8080/api/albums/new");
         const resStaff = await fetch(
           `${process.env.REACT_APP_API_URL}api/albums/staff-favorites`
         );
