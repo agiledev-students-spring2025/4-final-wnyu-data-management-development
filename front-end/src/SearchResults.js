@@ -18,8 +18,8 @@ const SearchResults = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        //const res = await fetch(`${process.env.REACT_APP_API_URL}api/search?type=${searchType}&query=${searchQuery}`);
-        const res = await fetch(`http://localhost:8080/api/search?type=${searchType}&query=${searchQuery}`);
+        const res = await fetch(`${process.env.REACT_APP_API_URL}api/search?type=${searchType}&query=${searchQuery}`);
+        //const res = await fetch(`http://localhost:8080/api/search?type=${searchType}&query=${searchQuery}`);
         const data = await res.json();
         setResults(data);
       } catch (err) {
