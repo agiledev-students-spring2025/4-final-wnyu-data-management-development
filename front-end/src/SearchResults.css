@@ -361,6 +361,7 @@
   .search-results-album-item {
     width: 145px;
     height: auto;
+    min-height: 280px;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -387,13 +388,14 @@
     display: flex;
     justify-content: space-between;
     padding: 0 8px;
-    font-size: 11px;
+    font-size: 12px;
     margin: 6px 0;
+    margin-bottom: 0;
     background: white;
   }
 
   .search-results-album-format-box {
-    font-size: 10px;
+    font-size: 12px;
     padding: 2px 6px;
     border-radius: 4px;
     background-color: transparent;
@@ -401,7 +403,7 @@
   }
 
   .search-results-album-release-year {
-    font-size: 10px;
+    font-size: 12px;
     color: black;
   }
 
