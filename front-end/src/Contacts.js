@@ -16,7 +16,7 @@ const Contacts = ({ onContactClick }) => {
         const response = await fetch(
           `${process.env.REACT_APP_API_URL}contacts`
         );
-        //const response = await fetch("http://localhost:8080/contacts");
+        // const response = await fetch("http://localhost:8080/contacts");
         const data = await response.json();
         setContacts(data);
       } catch (error) {
@@ -35,7 +35,7 @@ const Contacts = ({ onContactClick }) => {
   const handleDeleteContact = async (id) => {
     try {
       await fetch(`${process.env.REACT_APP_API_URL}contacts/${id}`, {
-        //await fetch(`http://localhost:8080/contacts/${id}`, {
+        // await fetch(`http://localhost:8080/contacts/${id}`, {
         method: "DELETE",
       });
 
@@ -56,7 +56,7 @@ const Contacts = ({ onContactClick }) => {
           <h2>Contacts</h2>
           {userRole === "Staff" || userRole === "Admin" ? (
             <>
-              <Link to="/AddContact" className="add-contact-button">
+              <Link to="/AddContact" className="add-contact-button" color="black">
                 Add Contact
               </Link>
               <button
