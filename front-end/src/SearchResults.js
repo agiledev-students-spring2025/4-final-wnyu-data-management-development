@@ -18,8 +18,8 @@ const SearchResults = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}api/search?type=${searchType}&query=${searchQuery}`);
-        //const res = await fetch(`http://localhost:8080/api/search?type=${searchType}&query=${searchQuery}`);
+        //const res = await fetch(`${process.env.REACT_APP_API_URL}api/search?type=${searchType}&query=${searchQuery}`);
+        const res = await fetch(`http://localhost:8080/api/search?type=${searchType}&query=${searchQuery}`);
         const data = await res.json();
         setResults(data);
       } catch (err) {
@@ -45,25 +45,25 @@ const SearchResults = () => {
 
   return (
     <div className="search-results-page">
-      <div className="search-header-block">
-        <div className="search-bar-results">
-          <form onSubmit={handleSearch} className="search-form">
+      <div className="search-results-search-header-block">
+        <div className="search-results-search-bar">
+          <form onSubmit={handleSearch} className="search-results-search-form">
             <input
               type="text"
-              className="search-input"
+              className="search-results-search-input"
               placeholder={`Search by ${newSearchType}`}
               value={newSearchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <select
-              className="search-select"
+              className="search-results-search-select"
               value={newSearchType}
               onChange={(e) => setSearchType(e.target.value)}
             >
               <option value="artist">Artist</option>
               <option value="title">Album Title</option>
             </select>
-            <button type="submit" className="search-button">Search</button>
+            <button type="submit" className="search-results-search-button">Search</button>
           </form>
         </div>
       </div>
@@ -73,27 +73,27 @@ const SearchResults = () => {
       ) : results.length > 0 ? (
         <div className="search-results-container">
           <h2>Search Results for “{searchQuery}”</h2>
-          <div className="album-grid-wrapper">    
-            <div className="album-grid">
+          <div className="search-results-album-grid-wrapper">    
+            <div className="search-results-album-grid">
               {results.map((album) => (
-                <Link to={`/album/${album._id}`} key={album._id} className="album-link-wrapper">
-                  <div className="album-item">
-                  <div className="album-meta">
-                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                <Link to={`/album/${album._id}`} key={album._id} className="search-results-album-link-wrapper">
+                  <div className="search-results-album-item">
+                  <div className="search-results-album-meta">
+                    <span className={`search-results-album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
                      {album.format}
                     </span>
-                    <span className="album-release-year">
+                    <span className="search-results-album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
                     </span> 
                   </div> 
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
                     alt={album.title}
-                    className="album-image"
+                    className="search-results-album-image"
                   />
-                  <div className="album-details">
-                    <h3 className="album-title">{album.title}</h3>
-                    <p className="album-artist">{album.artist}</p>
+                  <div className="search-results-album-details">
+                    <h3 className="search-results-album-title">{album.title}</h3>
+                    <p className="search-results-album-artist">{album.artist}</p>
                   </div>
                 </div>
                 </Link>

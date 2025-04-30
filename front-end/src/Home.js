@@ -16,10 +16,10 @@ const Home = ({ onAlbumClick }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resNew = await fetch(`${process.env.REACT_APP_API_URL}api/albums/new`);
-        //const resNew = await fetch("http://localhost:8080/api/albums/new");
-        const resStaff = await fetch(`${process.env.REACT_APP_API_URL}api/albums/staff-favorites`);
-        //const resStaff = await fetch("http://localhost:8080/api/albums/staff-favorites");
+        //const resNew = await fetch(`${process.env.REACT_APP_API_URL}api/albums/new`);
+        const resNew = await fetch("http://localhost:8080/api/albums/new");
+        //const resStaff = await fetch(`${process.env.REACT_APP_API_URL}api/albums/staff-favorites`);
+        const resStaff = await fetch("http://localhost:8080/api/albums/staff-favorites");
         const newData = await resNew.json();
         const staffData = await resStaff.json();
         setNewlyAddedAlbums(newData);
@@ -87,24 +87,24 @@ const Home = ({ onAlbumClick }) => {
 
   return (
     <div className="home-container">
-      <div className="search-bar">
-        <form onSubmit={handleSearch} className="search-form">
+      <div className="home-search-bar">
+        <form onSubmit={handleSearch} className="home-search-form">
           <input
             type="text"
-            className="search-input"
+            className="home-search-input"
             placeholder={`Search by ${searchType}`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <select
-            className="search-select"
+            className="home-search-select"
             value={searchType}
             onChange={(e) => setSearchType(e.target.value)}
           >
             <option value="artist">Artist</option>
             <option value="title">Album Title</option>
           </select>
-          <button type="submit" className="search-button">Search</button>
+          <button type="submit" className="home-search-button">Search</button>
         </form>
       </div>
 
@@ -114,23 +114,23 @@ const Home = ({ onAlbumClick }) => {
           <div className="scroll-wrapper">
             {extendedNewlyAdded.map((album, index) => (
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
-                <div className="album-item">
-                  <div className="album-meta">
-                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                <div className="home-album-item">
+                  <div className="home-album-meta">
+                    <span className={`home-album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
                      {album.format}
                     </span>
-                    <span className="album-release-year">
+                    <span className="home-album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
                     </span> 
                   </div> 
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
                     alt={album.title}
-                    className="album-image"
+                    className="home-album-image"
                   />
-                  <div className="album-details">
-                    <h3 className="album-title">{album.title}</h3>
-                    <p className="album-artist">{album.artist}</p>
+                  <div className="home-album-details">
+                    <h3 className="home-album-title">{album.title}</h3>
+                    <p className="home-album-artist">{album.artist}</p>
                   </div>
                 </div>
               </Link>
@@ -145,23 +145,23 @@ const Home = ({ onAlbumClick }) => {
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
               <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
-                <div className="album-item">
-                  <div className="album-meta">
-                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
+                <div className="home-album-item">
+                  <div className="home-album-meta">
+                    <span className={`home-album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
                      {album.format}
                     </span>
-                    <span className="album-release-year">
+                    <span className="home-album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
                     </span> 
                   </div> 
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
                     alt={album.title}
-                    className="album-image"
+                    className="home-album-image"
                   />
-                  <div className="album-details">
-                    <h3 className="album-title">{album.title}</h3>
-                    <p className="album-artist">{album.artist}</p>
+                  <div className="home-album-details">
+                    <h3 className="home-album-title">{album.title}</h3>
+                    <p className="home-album-artist">{album.artist}</p>
                   </div>
                 </div>
               </Link>
