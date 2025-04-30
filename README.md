@@ -23,9 +23,5 @@ The current General Manager of WNYU, also the founding member of our team, reali
 [How to Contribute](https://github.com/agiledev-students-spring2025/4-final-wnyu-data-management-development/blob/master/CONTRIBUTING.md)
 
 ## Instructions for Building and Testing
-
-To be added.
-
-## Other Links
-
-To be added.
+### Backennd
+In the back-end directory, run npm run test for testing
