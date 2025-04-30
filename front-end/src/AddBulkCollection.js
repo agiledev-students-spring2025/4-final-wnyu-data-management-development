@@ -23,10 +23,9 @@ const AddBulkCollection = () => {
     formData.append("file", file);
 
     try {
-      const res = await fetch(
-        `${process.env.REACT_APP_API_URL}api/albums/bulk`,
-        {
-          //const res = await fetch("http://localhost:8080/api/albums/bulk", {
+      // const res = await fetch(
+      //   `${process.env.REACT_APP_API_URL}api/albums/bulk`, {
+          const res = await fetch("http://localhost:8080/api/albums/bulk", {
           method: "POST",
           body: formData,
         }
@@ -45,11 +44,11 @@ const AddBulkCollection = () => {
   };
 
   const handleDownloadTemplate = () => {
-    window.open(
-      `${process.env.REACT_APP_API_URL}api/albums/bulk/template`,
-      "_blank"
-    );
-    //window.open("http://localhost:8080/api/albums/bulk/template", "_blank");
+    // window.open(
+    //   `${process.env.REACT_APP_API_URL}api/albums/bulk/template`,
+    //   "_blank"
+    // );
+    window.open("http://localhost:8080/api/albums/bulk/template", "_blank");
   };
 
   return (

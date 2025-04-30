@@ -16,16 +16,16 @@ const Home = ({ onAlbumClick }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resNew = await fetch(
-          `${process.env.REACT_APP_API_URL}api/albums/new`
-        );
-        //const resNew = await fetch("http://localhost:8080/api/albums/new");
-        const resStaff = await fetch(
-          `${process.env.REACT_APP_API_URL}api/albums/staff-favorites`
-        );
-        // const resStaff = await fetch(
-        //   "http://localhost:8080/api/albums/staff-favorites"
+        // const resNew = await fetch(
+        //   `${process.env.REACT_APP_API_URL}api/albums/new`
         // );
+        const resNew = await fetch("http://localhost:8080/api/albums/new");
+        // const resStaff = await fetch(
+        //   `${process.env.REACT_APP_API_URL}api/albums/staff-favorites`
+        // );
+        const resStaff = await fetch(
+          "http://localhost:8080/api/albums/staff-favorites"
+        );
         const newData = await resNew.json();
         const staffData = await resStaff.json();
         setNewlyAddedAlbums(newData);

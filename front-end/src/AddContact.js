@@ -22,10 +22,9 @@ const AddContact = () => {
     };
 
     try {
-      //const response = await fetch("http://localhost:8080/contacts/add", {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}contacts/add`,
-        {
+      const response = await fetch("http://localhost:8080/contacts/add", {
+      // const response = await fetch(
+      //   `${process.env.REACT_APP_API_URL}contacts/add`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
