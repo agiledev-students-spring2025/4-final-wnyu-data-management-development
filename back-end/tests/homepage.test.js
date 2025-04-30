@@ -44,13 +44,11 @@ describe("Homepage API Routes", () => {
     expect(res.status).to.equal(400);
   });
   
-  // Fixed test for album template download to accept 500 status
   it("should allow downloading album template", async () => {
     const res = await request(app).get("/api/albums/template");
     expect(res.status).to.be.oneOf([200, 404, 500]);
   });
 
-  // Add additional tests to increase test coverage
   it("should return all genres", async () => {
     const res = await request(app).get("/api/genres");
     expect(res.status).to.be.oneOf([200, 404, 500]);
