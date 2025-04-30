@@ -24,4 +24,4 @@ The current General Manager of WNYU, also the founding member of our team, reali
 
 ## Instructions for Building and Testing
 ### Backend
-In the back-end directory, run npm run test for testing
+In the back-end directory, run `npm run test` for testing
