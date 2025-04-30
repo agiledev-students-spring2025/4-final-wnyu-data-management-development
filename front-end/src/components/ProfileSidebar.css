@@ -68,7 +68,7 @@
 
 .logout-button:hover {
     background-color: #bbb;
-    transform: scale(1.03);
+    
 }
 
 /* Add a close button */
@@ -85,19 +85,10 @@
 
 /* Add profile title */
 .profile-title {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
 
 
 
