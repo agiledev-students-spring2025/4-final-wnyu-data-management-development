@@ -132,6 +132,7 @@ const AlbumPage = () => {
         `${process.env.REACT_APP_API_URL}api/albums/${album.id}`,
         // `http://localhost:8080/api/albums/${album.id}`,
         {
+          //const res = await fetch(`http://localhost:8080/api/albums/${album.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),

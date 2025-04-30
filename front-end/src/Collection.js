@@ -45,7 +45,7 @@ const Collection = ({ onAlbumClick }) => {
       <div className="album-grid">
         {albums.length > 0 ? (
           albums.map((album, index) => (
-            <div className="album-item" key={index}>
+            <div className="collection-album-item" key={index}>
               <Link
                 to={`/album/${album.id}`}
                 state={{ album }}
@@ -56,28 +56,26 @@ const Collection = ({ onAlbumClick }) => {
                   display: "block",
                 }}
               >
-                <div className="album-meta">
-                  <div className="meta-row">
-                    <span
-                      className={`album-format-box album-format-${album.format
-                        ?.toLowerCase()
-                        .replace(/\s+/g, "")}`}
-                    >
-                      {album.format}
-                    </span>
-                    <span className="album-release-year">
-                      {album.releaseDate?.slice(0, 4) || "—"}
-                    </span>
-                  </div>
+                <div className="collection-album-meta">
+                  <span
+                    className={`collection-album-format-box album-format-${album.format
+                      ?.toLowerCase()
+                      .replace(/\s+/g, "")}`}
+                  >
+                    {album.format}
+                  </span>
+                  <span className="collection-album-release-year">
+                    {album.releaseDate?.slice(0, 4) || "—"}
+                  </span>
                 </div>
                 <img
                   src={album.imageUrl || "/default-album-cover.png"}
                   alt={album.title}
-                  className="album-image"
+                  className="collection-album-image"
                 />
-                <div className="album-details">
-                  <h3 className="album-title">{album.title}</h3>
-                  <p className="album-artist">{album.artist}</p>
+                <div className="collection-album-details">
+                  <h3 className="collection-album-title">{album.title}</h3>
+                  <p className="collection-album-artist">{album.artist}</p>
                 </div>
               </Link>
             </div>
