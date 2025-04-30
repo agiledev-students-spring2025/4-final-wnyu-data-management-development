@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import './ForgotPassword.css';
-import { useNavigate } from 'react-router-dom';
+import "./ForgotPassword.css";
+import { useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
@@ -11,26 +11,26 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}resend-reset-link`, {
-        //const response = await fetch('http://localhost:8080/resend-reset-link', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
-        });
-  
-        const data = await response.json();
-        setMessage(data.message);
-  
-        if (response.ok) {
-          setTimeout(() => {
-            navigate('/login');
-          }, 2000);
-        }
-      } catch (error) {
-        console.error('Error sending reset link:', error);
-        setMessage('Something went wrong. Please try again later.');
+      //const response = await fetch(`${process.env.REACT_APP_API_URL}resend-reset-link`, {
+      const response = await fetch("http://localhost:8080/resend-reset-link", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+      setMessage(data.message);
+
+      if (response.ok) {
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000);
       }
-    };
+    } catch (error) {
+      console.error("Error sending reset link:", error);
+      setMessage("Something went wrong. Please try again later.");
+    }
+  };
 
   return (
     <div className="forgot-password-container">

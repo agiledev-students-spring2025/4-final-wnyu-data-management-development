@@ -16,10 +16,12 @@ const Home = ({ onAlbumClick }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resNew = await fetch(`${process.env.REACT_APP_API_URL}api/albums/new`);
-        //const resNew = await fetch("http://localhost:8080/api/albums/new");
-        const resStaff = await fetch(`${process.env.REACT_APP_API_URL}api/albums/staff-favorites`);
-        //const resStaff = await fetch("http://localhost:8080/api/albums/staff-favorites");
+        //const resNew = await fetch(`${process.env.REACT_APP_API_URL}api/albums/new`);
+        const resNew = await fetch("http://localhost:8080/api/albums/new");
+        //const resStaff = await fetch(`${process.env.REACT_APP_API_URL}api/albums/staff-favorites`);
+        const resStaff = await fetch(
+          "http://localhost:8080/api/albums/staff-favorites"
+        );
         const newData = await resNew.json();
         const staffData = await resStaff.json();
         setNewlyAddedAlbums(newData);
@@ -36,15 +38,15 @@ const Home = ({ onAlbumClick }) => {
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
-  
+
       const scrollAmount = 0.5; // How many pixels to scroll per step
-      const scrollSpeed = 30;   // How often to scroll (ms between each scroll)
-  
+      const scrollSpeed = 30; // How often to scroll (ms between each scroll)
+
       let scrollInterval = null;
-  
+
       const startScrolling = () => {
         stopScrolling(); // clear any existing interval
-  
+
         scrollInterval = setInterval(() => {
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
             scrollContainer.scrollLeft = 0;
@@ -52,18 +54,18 @@ const Home = ({ onAlbumClick }) => {
           scrollContainer.scrollLeft += scrollAmount;
         }, scrollSpeed);
       };
-  
+
       const stopScrolling = () => {
         if (scrollInterval) {
           clearInterval(scrollInterval);
           scrollInterval = null;
         }
       };
-  
+
       startScrolling();
       scrollContainer.addEventListener("mouseenter", stopScrolling);
       scrollContainer.addEventListener("mouseleave", startScrolling);
-  
+
       return () => {
         stopScrolling();
         scrollContainer.removeEventListener("mouseenter", stopScrolling);
@@ -81,7 +83,11 @@ const Home = ({ onAlbumClick }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?type=${searchType}&query=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(
+        `/search?type=${searchType}&query=${encodeURIComponent(
+          searchQuery.trim()
+        )}`
+      );
     }
   };
 
@@ -104,7 +110,9 @@ const Home = ({ onAlbumClick }) => {
             <option value="artist">Artist</option>
             <option value="title">Album Title</option>
           </select>
-          <button type="submit" className="search-button">Search</button>
+          <button type="submit" className="search-button">
+            Search
+          </button>
         </form>
       </div>
 
@@ -113,16 +121,24 @@ const Home = ({ onAlbumClick }) => {
         <div className="scroll-container" ref={scrollRef1}>
           <div className="scroll-wrapper">
             {extendedNewlyAdded.map((album, index) => (
-              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+              <Link
+                to={`/album/${album.id}`}
+                key={index}
+                onClick={() => onAlbumClick(album)}
+              >
                 <div className="album-item">
                   <div className="album-meta">
-                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
-                     {album.format}
+                    <span
+                      className={`album-format-box album-format-${album.format
+                        ?.toLowerCase()
+                        .replace(/\s+/g, "")}`}
+                    >
+                      {album.format}
                     </span>
                     <span className="album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
-                    </span> 
-                  </div> 
+                    </span>
+                  </div>
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
                     alt={album.title}
@@ -144,16 +160,24 @@ const Home = ({ onAlbumClick }) => {
         <div className="scroll-container" ref={scrollRef2}>
           <div className="scroll-wrapper">
             {extendedStaffFavorites.map((album, index) => (
-              <Link to={`/album/${album.id}`} key={index} onClick={() => onAlbumClick(album)}>
+              <Link
+                to={`/album/${album.id}`}
+                key={index}
+                onClick={() => onAlbumClick(album)}
+              >
                 <div className="album-item">
                   <div className="album-meta">
-                    <span className={`album-format-box album-format-${album.format?.toLowerCase().replace(/\s+/g, "")}`}>
-                     {album.format}
+                    <span
+                      className={`album-format-box album-format-${album.format
+                        ?.toLowerCase()
+                        .replace(/\s+/g, "")}`}
+                    >
+                      {album.format}
                     </span>
                     <span className="album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
-                    </span> 
-                  </div> 
+                    </span>
+                  </div>
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
                     alt={album.title}

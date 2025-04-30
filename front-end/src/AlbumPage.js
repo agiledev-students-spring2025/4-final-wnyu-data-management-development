@@ -9,6 +9,7 @@ const AlbumPage = () => {
 
   const [userRole, setUserRole] = useState(null);
   const [album, setAlbum] = useState(location.state?.album || null);
+  const [isFavorite, setIsFavorite] = useState(false);
   const [loading, setLoading] = useState(!location.state?.album);
   const [showEditModal, setShowEditModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -31,16 +32,17 @@ const AlbumPage = () => {
       fetchAlbum();
     } else if (album) {
       populateForm(album);
+      setIsFavorite(album.staffFavorite || false);
     }
   }, [album, id]);
 
   const fetchAlbum = async () => {
     setLoading(true);
     try {
-      const res = await fetch(
-        `${process.env.REACT_APP_API_URL}api/albums/${id}`
-      );
-      //const res = await fetch(`http://localhost:8080/api/albums/${id}`);
+      // const res = await fetch(
+      //   `${process.env.REACT_APP_API_URL}api/albums/${id}`
+      // );
+      const res = await fetch(`http://localhost:8080/api/albums/${id}`);
       if (!res.ok) throw new Error("Failed to fetch album");
       const data = await res.json();
       setAlbum(data);
@@ -64,6 +66,31 @@ const AlbumPage = () => {
     });
   };
 
+  const toggleFavorite = async () => {
+    console.log("Sending favorite toggle request", album._id, !isFavorite);
+    setLoading(true);
+    try {
+      const res = await fetch(
+        `http://localhost:8080/api/albums/${album._id}/staff-favorite`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ isFavorite: !isFavorite }),
+        }
+      );
+
+      if (res.ok) {
+        setIsFavorite((prev) => !prev);
+      } else {
+        console.error("Failed to toggle favorite");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleBack = () => {
     navigate("/collection");
   };
@@ -72,8 +99,8 @@ const AlbumPage = () => {
     if (window.confirm("Are you sure you want to delete this album?")) {
       try {
         const res = await fetch(
-          `${process.env.REACT_APP_API_URL}api/albums/${album._id}`,
-          //`http://localhost:8080/api/albums/${album._id}`,
+          //`${process.env.REACT_APP_API_URL}api/albums/${album._id}`,
+          `http://localhost:8080/api/albums/${album._id}`,
           {
             method: "DELETE",
           }
@@ -101,9 +128,9 @@ const AlbumPage = () => {
     e.preventDefault();
     try {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL}api/albums/${album.id}`,
+        //`${process.env.REACT_APP_API_URL}api/albums/${album.id}`,
+        `http://localhost:8080/api/albums/${album.id}`,
         {
-          //const res = await fetch(`http://localhost:8080/api/albums/${album.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
@@ -153,9 +180,20 @@ const AlbumPage = () => {
 
   return (
     <div className="album-page">
-      <button onClick={handleBack} className="back-button">
-        ←
-      </button>
+      <div style={{ position: "relative" }}>
+        <button onClick={handleBack} className="back-button">
+          ←
+        </button>
+        {(userRole === "Staff" || userRole === "Admin") && (
+          <button
+            className={`star-button ${isFavorite ? "filled" : ""}`}
+            onClick={toggleFavorite}
+            disabled={loading}
+          >
+            {isFavorite ? "★" : "☆"}
+          </button>
+        )}
+      </div>
 
       <div className="album-image-container">
         <img
@@ -209,6 +247,11 @@ const AlbumPage = () => {
             >
               Delete Album
             </button>
+            {userRole === "Admin" && (
+              <Link to="/admin/staff-favorites" className="admin-link">
+                View All Staff Favorites
+              </Link>
+            )}
           </div>
         )}
       </div>
@@ -246,7 +289,6 @@ const AlbumPage = () => {
                   type="button"
                   onClick={() => setShowEditModal(false)}
                   className="spotify-button"
-                  style={{ marginLeft: "10px" }}
                 >
                   Cancel
                 </button>
