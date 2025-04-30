@@ -11,12 +11,15 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     try {
-      //const response = await fetch(`${process.env.REACT_APP_API_URL}resend-reset-link`, {
-      const response = await fetch("http://localhost:8080/resend-reset-link", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}resend-reset-link`,
+        {
+          //const response = await fetch("http://localhost:8080/resend-reset-link", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }
+      );
 
       const data = await response.json();
       setMessage(data.message);

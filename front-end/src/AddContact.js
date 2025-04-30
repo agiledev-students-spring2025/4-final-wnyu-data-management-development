@@ -22,14 +22,17 @@ const AddContact = () => {
     };
 
     try {
-      //const response = await fetch(`${process.env.REACT_APP_API_URL}contacts/add`, {
-      const response = await fetch("http://localhost:8080/contacts/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newContact),
-      });
+      //const response = await fetch("http://localhost:8080/contacts/add", {
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}contacts/add`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newContact),
+        }
+      );
 
       const data = await response.json();
 
