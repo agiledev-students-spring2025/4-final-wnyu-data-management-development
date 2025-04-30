@@ -47,7 +47,7 @@ const StaffFavoritesPage = () => {
                     <span className="staff-favorites-album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
                     </span>
-                  </div>  
+                  </div>
                   <img
                   src={album.imageUrl || "/default-album-cover.png"}
                   alt={album.title}

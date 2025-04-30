@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import './SearchResults.css';
+import "./SearchResults.css";
 
 const SearchResults = () => {
   const location = useLocation();
@@ -39,7 +39,11 @@ const SearchResults = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?type=${newSearchType}&query=${encodeURIComponent(newSearchQuery.trim())}`);
+      navigate(
+        `/search?type=${newSearchType}&query=${encodeURIComponent(
+          newSearchQuery.trim()
+        )}`
+      );
     }
   };
 

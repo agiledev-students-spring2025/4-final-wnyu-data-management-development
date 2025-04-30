@@ -36,15 +36,15 @@ const Home = ({ onAlbumClick }) => {
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
-  
+
       const scrollAmount = 0.5; // How many pixels to scroll per step
-      const scrollSpeed = 30;   // How often to scroll (ms between each scroll)
-  
+      const scrollSpeed = 30; // How often to scroll (ms between each scroll)
+
       let scrollInterval = null;
-  
+
       const startScrolling = () => {
         stopScrolling(); // clear any existing interval
-  
+
         scrollInterval = setInterval(() => {
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
             scrollContainer.scrollLeft = 0;
@@ -52,18 +52,18 @@ const Home = ({ onAlbumClick }) => {
           scrollContainer.scrollLeft += scrollAmount;
         }, scrollSpeed);
       };
-  
+
       const stopScrolling = () => {
         if (scrollInterval) {
           clearInterval(scrollInterval);
           scrollInterval = null;
         }
       };
-  
+
       startScrolling();
       scrollContainer.addEventListener("mouseenter", stopScrolling);
       scrollContainer.addEventListener("mouseleave", startScrolling);
-  
+
       return () => {
         stopScrolling();
         scrollContainer.removeEventListener("mouseenter", stopScrolling);
@@ -81,7 +81,11 @@ const Home = ({ onAlbumClick }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?type=${searchType}&query=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(
+        `/search?type=${searchType}&query=${encodeURIComponent(
+          searchQuery.trim()
+        )}`
+      );
     }
   };
 
@@ -121,8 +125,8 @@ const Home = ({ onAlbumClick }) => {
                     </span>
                     <span className="home-album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
-                    </span> 
-                  </div> 
+                    </span>
+                  </div>
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
                     alt={album.title}
@@ -152,8 +156,8 @@ const Home = ({ onAlbumClick }) => {
                     </span>
                     <span className="home-album-release-year">
                       {album.releaseDate?.slice(0, 4) || "—"}
-                    </span> 
-                  </div> 
+                    </span>
+                  </div>
                   <img
                     src={album.imageUrl || "/default-album-cover.png"}
                     alt={album.title}

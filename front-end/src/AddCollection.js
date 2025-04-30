@@ -17,22 +17,25 @@ const AddCollection = () => {
     e.preventDefault();
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}api/albums/add`, {
       //const response = await fetch("http://localhost:8080/api/albums/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title,
-          artist,
-          genre,
-          format,
-          releaseDate,
-          description,
-          imageUrl: coverImage, // field expected by the backend
-        }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}api/albums/add`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title,
+            artist,
+            genre,
+            format,
+            releaseDate,
+            description,
+            imageUrl: coverImage, // field expected by the backend
+          }),
+        }
+      );
 
       if (response.ok) {
         alert("Album added!");
