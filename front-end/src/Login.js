@@ -62,6 +62,7 @@ const Login = () => {
 
         {error && <p className="error">{error}</p>}
 
+        {/**
         <div
           className="signup-text"
           onClick={() => navigate("/forgot-password")}
@@ -69,6 +70,7 @@ const Login = () => {
         >
           Forgot My Password
         </div>
+        */}
         <div className="signup-text">Don't have an account?</div>
         <button className="signup-button" onClick={() => navigate("/signup")}>
           Sign Up
