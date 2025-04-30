@@ -26,6 +26,7 @@ body {
   100% { transform: translateY(-10px); }
 }
 
+/*
 .profile-page-container::before {
   content: '';
   position: absolute;
@@ -48,6 +49,7 @@ body {
   50% { transform: rotate(-5deg) scale(1.05); }
   100% { transform: rotate(-10deg) scale(0.98); }
 }
+*/
 
 .profile-pic {
   width: 160px;
@@ -144,6 +146,7 @@ body {
   font-size: 20px;
 }
 
+/*
 .logout-button {
   width: 100%;
   padding: 16px;
@@ -201,6 +204,7 @@ body {
     opacity: 0;
   }
 }
+*/
 
 /* Media query for iPhone 14 Pro Max */
 @media (max-width: 430px) {
