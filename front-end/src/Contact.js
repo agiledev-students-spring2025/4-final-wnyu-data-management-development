@@ -13,7 +13,7 @@ const Contact = () => {
         const response = await fetch(
           `${process.env.REACT_APP_API_URL}contacts`
         );
-        //const response = await fetch(`http://localhost:8080/contacts`);
+        // const response = await fetch(`http://localhost:8080/contacts`);
         const data = await response.json();
         const foundContact = data.find((c) => String(c.id) === id);
         setContact(foundContact);
