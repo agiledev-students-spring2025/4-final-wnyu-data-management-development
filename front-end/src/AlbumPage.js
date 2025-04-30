@@ -7,6 +7,7 @@ const AlbumPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [userRole, setUserRole] = useState(null);
   const [album, setAlbum] = useState(location.state?.album || null);
   const [loading, setLoading] = useState(!location.state?.album);
   const [showEditModal, setShowEditModal] = useState(false);
@@ -21,6 +22,11 @@ const AlbumPage = () => {
   });
 
   useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser && storedUser.role) {
+      setUserRole(storedUser.role);
+    }
+
     if (!album && id) {
       fetchAlbum();
     } else if (album) {
@@ -31,7 +37,9 @@ const AlbumPage = () => {
   const fetchAlbum = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}api/albums/${id}`);
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}api/albums/${id}`
+      );
       //const res = await fetch(`http://localhost:8080/api/albums/${id}`);
       if (!res.ok) throw new Error("Failed to fetch album");
       const data = await res.json();
@@ -65,7 +73,7 @@ const AlbumPage = () => {
       try {
         const res = await fetch(
           `${process.env.REACT_APP_API_URL}api/albums/${album._id}`,
-          `http://localhost:8080/api/albums/${album._id}`,
+          //`http://localhost:8080/api/albums/${album._id}`,
           {
             method: "DELETE",
           }
@@ -92,12 +100,15 @@ const AlbumPage = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}api/albums/${album.id}`, {
-      //const res = await fetch(`http://localhost:8080/api/albums/${album.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}api/albums/${album.id}`,
+        {
+          //const res = await fetch(`http://localhost:8080/api/albums/${album.id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (res.ok) {
         alert("Album updated!");
@@ -183,22 +194,23 @@ const AlbumPage = () => {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="action-buttons">
-          <button
-            className="spotify-button"
-            onClick={() => setShowEditModal(true)}
-          >
-            Edit Album
-          </button>
-          <button
-            className="spotify-button"
-            onClick={handleDelete}
-            style={{ marginLeft: "10px", backgroundColor: "red" }}
-          >
-            Delete Album
-          </button>
-        </div>
+        {(userRole === "Staff" || userRole === "Admin") && (
+          <div className="action-buttons">
+            <button
+              className="spotify-button"
+              onClick={() => setShowEditModal(true)}
+            >
+              Edit Album
+            </button>
+            <button
+              className="spotify-button"
+              onClick={handleDelete}
+              style={{ marginLeft: "10px", backgroundColor: "red" }}
+            >
+              Delete Album
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Edit Modal */}
