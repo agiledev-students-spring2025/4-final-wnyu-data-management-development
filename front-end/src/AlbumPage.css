@@ -57,7 +57,7 @@
 .album-info {
   display: flex;
   flex-direction: column;
-  padding: 0 15px; /* More padding */
+  padding: 0 15px;
   width: 100%;
   box-sizing: border-box;
 }

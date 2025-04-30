@@ -10,6 +10,7 @@ const AlbumPage = () => {
   const [userRole, setUserRole] = useState(null);
   const [album, setAlbum] = useState(location.state?.album || null);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [favoriteLoading, setFavoriteLoading] = useState(false);
   const [loading, setLoading] = useState(!location.state?.album);
   const [showEditModal, setShowEditModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -42,7 +43,7 @@ const AlbumPage = () => {
       const res = await fetch(
         `${process.env.REACT_APP_API_URL}api/albums/${id}`
       );
-      // const res = await fetch(`http://localhost:8080/api/albums/${id}`);
+       //const res = await fetch(`http://localhost:8080/api/albums/${id}`);
       if (!res.ok) throw new Error("Failed to fetch album");
       const data = await res.json();
       setAlbum(data);
@@ -68,18 +69,18 @@ const AlbumPage = () => {
 
   const toggleFavorite = async () => {
     console.log("Sending favorite toggle request", album._id, !isFavorite);
-    setLoading(true);
+    setFavoriteLoading(true);
     try {
       const res = await fetch(
         `${process.env.REACT_APP_API_URL}api/albums/${album._id}/staff-favorite`,
-        // `http://localhost:8080/api/albums/${album._id}/staff-favorite`,
         {
+         //`http://localhost:8080/api/albums/${album._id}/staff-favorite`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ isFavorite: !isFavorite }),
         }
       );
-
+  
       if (res.ok) {
         setIsFavorite((prev) => !prev);
       } else {
@@ -88,7 +89,7 @@ const AlbumPage = () => {
     } catch (err) {
       console.error("Error:", err);
     } finally {
-      setLoading(false);
+      setFavoriteLoading(false);
     }
   };
 
@@ -190,7 +191,7 @@ const AlbumPage = () => {
           <button
             className={`star-button ${isFavorite ? "filled" : ""}`}
             onClick={toggleFavorite}
-            disabled={loading}
+            disabled={favoriteLoading}
           >
             {isFavorite ? "★" : "☆"}
           </button>
