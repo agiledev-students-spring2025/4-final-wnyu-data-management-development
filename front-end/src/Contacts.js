@@ -34,8 +34,8 @@ const Contacts = ({ onContactClick }) => {
 
   const handleDeleteContact = async (id) => {
     try {
-      //await fetch(`${process.env.REACT_APP_API_URL}contacts/${id}`, {
-        await fetch(`http://localhost:8080/contacts/${id}`, {
+      await fetch(`${process.env.REACT_APP_API_URL}contacts/${id}`, {
+        //await fetch(`http://localhost:8080/contacts/${id}`, {
         method: "DELETE",
       });
 

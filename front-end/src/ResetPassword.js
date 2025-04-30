@@ -12,10 +12,10 @@ const ResetPassword = () => {
     e.preventDefault();
 
     try {
-      // const response = await fetch(
-      //   `${process.env.REACT_APP_API_URL}reset-password`,
-      //   {
-          const response = await fetch("http://localhost:8080/reset-password", {
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}reset-password`,
+        {
+          //const response = await fetch("http://localhost:8080/reset-password", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, newPassword }),

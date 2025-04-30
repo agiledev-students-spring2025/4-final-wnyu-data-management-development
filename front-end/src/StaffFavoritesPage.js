@@ -19,8 +19,8 @@ const StaffFavoritesPage = () => {
 
   useEffect(() => {
     if (userRole === "Admin") {
-      //fetch(`${process.env.REACT_APP_API_URL}api/albums/staff-favorites`)
-        fetch("http://localhost:8080/api/albums/staff-favorites")
+      fetch(`${process.env.REACT_APP_API_URL}api/albums/staff-favorites`)
+        //fetch("http://localhost:8080/api/albums/staff-favorites")
         .then((res) => res.json())
         .then((data) => setAlbums(data))
         .catch((err) => console.error("Error fetching staff favorites:", err));
